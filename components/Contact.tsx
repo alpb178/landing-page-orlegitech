@@ -86,8 +86,8 @@ export default function ContactUs() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Information */}
-          <div className="space-y-8">
-            <div className="bg-white rounded-2xl p-8 shadow-md">
+          <div className="flex flex-col gap-8 justify-between space-y-8 items-center">
+            <div className="bg-white w-full rounded-2xl p-8 shadow-md">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
                 Información de Contacto
               </h3>
@@ -138,7 +138,7 @@ export default function ContactUs() {
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl p-6 shadow-md">
+            <div className="bg-white w-full rounded-2xl p-6 shadow-md">
               <h4 className="text-lg font-semibold text-gray-900 mb-4">
                 Servicios Disponibles
               </h4>

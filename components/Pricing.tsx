@@ -90,38 +90,6 @@ export default function Pricing() {
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   {plan.name}
                 </h3>
-                <div className="mb-4">
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-gray-900">
-                      {plan.annualPrice}
-                    </span>
-                    <span className="text-2xl text-gray-600 ml-1">
-                      {plan.currency}
-                    </span>
-                  </div>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-gray-900">
-                      {plan.monthlyPrice}
-                    </span>
-                    <span className="text-2xl text-gray-600 ml-1">
-                      {plan.currency}
-                    </span>
-                  </div>
-                  <p className="text-gray-600 mt-2">{plan.period}</p>
-                </div>
-                <div className="text-sm text-gray-500 mb-4">
-                  <p>Importe mínimo {plan.minAnnual}</p>
-                  <p>Importe mínimo {plan.minMonthly}</p>
-                </div>
-              </div>
-
-              <div className="text-center mb-8">
-                <button className="bg-[#1a4d3a] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#2d6b52] transition-colors mb-4">
-                  Pruébalo gratis 14 días
-                </button>
-                <p className="text-sm text-gray-500">
-                  Sin compromiso y sin tarjeta de crédito
-                </p>
               </div>
 
               <ul className="space-y-3">
