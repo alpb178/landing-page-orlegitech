@@ -8,15 +8,45 @@ import { Menu, X } from "lucide-react";
 export default function Header() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isInSection2, setIsInSection2] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      // Cambiar a flotante después de 50px de scroll
       setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const servicesSection = document.getElementById("services");
+    if (!servicesSection) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsInSection2(true);
+          } else {
+            const rect = entry.boundingClientRect;
+            if (rect.top > window.innerHeight) {
+              setIsInSection2(false);
+            }
+          }
+        });
+      },
+      {
+        threshold: 0.1, // Se activa cuando el 10% de la sección es visible
+        rootMargin: "-100px 0px 0px 0px", // Offset para activar antes de llegar
+      }
+    );
+
+    observer.observe(servicesSection);
+
+    return () => {
+      observer.disconnect();
+    };
   }, []);
 
   const toggleDrawer = () => {
@@ -37,12 +67,20 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent text-white`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isInSection2
+            ? "bg-white/80 backdrop-blur-sm text-gray-800 shadow-md"
+            : isScrolled
+            ? "bg-white text-gray-800 shadow-md"
+            : "bg-transparent text-white"
+        }`}
       >
         <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Link
             className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-colors ${
-              isScrolled ? "bg-gray-200" : "bg-gray-200/90 backdrop-blur-sm"
+              isInSection2 || isScrolled
+                ? "bg-gray-200"
+                : "bg-gray-200/90 backdrop-blur-sm"
             }`}
             href="#home"
           >

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 interface Service {
   title: string;
-  description: string;
+  description: React.ReactNode;
   image: string;
   showStars?: boolean;
   showMapOverlay?: boolean;
@@ -12,21 +12,69 @@ export default function Services() {
   const services: Service[] = [
     {
       title: "APP",
-      description: "Aplicación móvil",
+
       image: "/images/services/app.png",
       showStars: true,
+      description: (
+        <div className="space-y-2">
+          <p className="text-black font-bold text-lg">
+            Tu club, digitalizado al completo
+          </p>
+          <p className="text-gray-600 text-sm">
+            •Gestión del personal y tareas
+          </p>
+          <p className="text-gray-600 text-sm">
+            •Control de riego y maquinaria
+          </p>
+          <p className="text-gray-600 text-sm">
+            •Informes automáticos y alertas
+          </p>
+          <p className="text-gray-600 text-sm">
+            •Todo desde el móvil o la tablet.
+          </p>
+        </div>
+      ),
     },
     {
       title: "Drone",
-      description: "Servicios de drone",
+      description: (
+        <div className="space-y-2">
+          <p className="text-black font-bold text-lg">
+            Análisis aéreo multiespectral
+          </p>
+          <p className="text-gray-600 text-sm">
+            •Obtén mapas NDVI, NDRE y estado del césped en minutos.
+          </p>
+          <p className="text-gray-600 text-sm">
+            •Detecta estrés hídrico, zonas débiles y necesidades reales de
+            mantenimiento.
+          </p>
+        </div>
+      ),
       image: "/images/services/drone.png",
+
       showStars: true,
     },
     {
       title: "Buggy",
-      description: "Alquiler de buggies",
+
       image: "/images/services/buggy.png",
       showStars: true,
+      description: (
+        <div className="space-y-2">
+          <p className="text-black font-bold text-lg">
+            Localización y control de la flota
+          </p>
+          <p className="text-gray-600 text-sm">•GPS en tiempo real.</p>
+          <p className="text-gray-600 text-sm">•Rutas y uso de vehículos</p>
+          <p className="text-gray-600 text-sm">
+            •Seguridad y eficiencia en el campo
+          </p>
+          <p className="text-gray-600 text-sm">
+            •Optimiza la operativa diaria del club.
+          </p>
+        </div>
+      ),
       showMapOverlay: true,
     },
   ];
@@ -64,14 +112,17 @@ export default function Services() {
                 </div>
               </div>
               {/* Image Card */}
-              <div className="relative w-full  md:h-[496px] h-[300px] rounded-2xl shadow-lg overflow-hidden">
+              <div className="relative w-auto h-[496px] rounded-2xl shadow-lg overflow-hidden">
                 <Image
                   src={service.image}
-                  alt={service.description}
+                  alt={service.title + " image"}
                   width={352}
                   height={496}
-                  className="object-cover w-full h-full"
+                  className="object-cover w-full h-[290px]"
                 />
+                <div className="bg-white/20 text-xl backdrop-blur-md rounded-2xl p-8">
+                  {service.description}
+                </div>
               </div>
             </div>
           ))}
