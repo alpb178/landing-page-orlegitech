@@ -11,44 +11,48 @@ import { UserIcon } from "@/components/icons/User";
 export default function AboutUs() {
   const features = [
     {
-      Icon: UserIcon,
-      title: "Aplicación móvil",
-      description: "Reserva de campos y gestión de partidas",
-    },
-    {
       Icon: ReportsFlyIcon,
-      title: "Más de 150 campos",
-      description: "Disponibles en 10 países diferentes",
+      title: "Informes aéreos",
+      description:
+        "Mapas multiespectrales de vigor, estrés y densidad del césped.",
     },
     {
       Icon: TasksIcon,
-      title: "Seguimiento de partidas",
-      description: "Estadísticas y análisis de tu juego",
+      title: "Gestión de tareas",
+      description:
+        "Planificación inteligente para greenkeepers y personal del campo.",
     },
     {
       Icon: VehicleIcon,
-      title: "Alquiler de buggies",
-      description: "Reserva online de vehículos",
+      title: "Flota de vehículos",
+      description: "Control GPS de buggies, maquinaria y rutas operativas.",
     },
     {
       Icon: PlannerIcon,
-      title: "Servicios de drone",
-      description: "Análisis aéreo y mapeo de campos",
+      title: "Planificación de riego",
+      description: "Optimiza agua y tiempo con recomendaciones automáticas.",
     },
     {
       Icon: ProjectsIcon,
-      title: "Monitoreo de condiciones",
-      description: "Informes detallados del campo",
+      title: "Control de proyectos",
+      description:
+        "Obras, mejoras y trabajos estacionales bajo seguimiento real.",
     },
     {
-      Icon: EmployeeIcon,
-      title: "Múltiples ubicaciones",
-      description: "Flota disponible en varios campos",
+      Icon: UserIcon,
+      title: "Gestión de operarios",
+      description: "Roles, horarios, partes de trabajo y productividad.",
     },
     {
       Icon: BudgetIcon,
-      title: "Experiencia completa",
-      description: "Todo lo que necesitas para jugar golf",
+      title: "Presupuestos",
+      description:
+        "Costes reales del mantenimiento del campo en un solo panel.",
+    },
+    {
+      Icon: EmployeeIcon,
+      title: "Fichaje de usuarios",
+      description: "Control horario digital integrado con la app del club.",
     },
   ];
 
@@ -76,7 +80,6 @@ export default function AboutUs() {
           {/* Image and Text Cards with Glassmorphism */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {/* Image Card */}
-
             <div className="relative w-full h-[400px] rounded-lg overflow-hidden">
               <Image
                 src="/images/about/personal.png"
@@ -87,24 +90,22 @@ export default function AboutUs() {
             </div>
 
             {/* Text Card */}
-            <div className="bg-white/20 backdrop-blur-md rounded-2xl p-8">
+            <div className="bg-white/20 text-xl backdrop-blur-md rounded-2xl p-8">
               <p className="text-white leading-relaxed mb-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+                Expertos en tecnología aplicada al golf
               </p>
               <p className="text-white leading-relaxed mb-4">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident, sunt in culpa qui officia deserunt
-                mollit anim id est laborum.
+                En OrlegiTech combinamos agronomía, inteligencia artificial y
+                análisis aéreo para mejorar el rendimiento de cada campo.
+                Nuestro objetivo es ayudarte a mantener el césped en su estado
+                óptimo, reducir costes operativos y facilitar la planificación
+                diaria del personal.
               </p>
               <p className="text-white leading-relaxed">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore veritatis et quasi architecto beatae
-                vitae dicta sunt explicabo.
+                Trabajamos con greenkeepers, directores de club y equipos de
+                mantenimiento para transformar datos complejos en decisiones
+                claras. Nuestro sistema se adapta a cada campo según
+                presupuesto, categoría, climatología y recursos disponibles.
               </p>
             </div>
           </div>
