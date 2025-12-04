@@ -67,7 +67,7 @@ export default function Hero() {
       </section>
 
       <video
-        src="/movies/movie-web.mp4"
+        src="/movies/movie-app.mp4"
         className=" flex md:hidden w-full h-full object-cover"
         controls
         autoPlay
