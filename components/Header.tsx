@@ -157,7 +157,7 @@ export default function Header() {
                 className="w-6 h-6"
               />
               <span className="text-white text-lg font-semibold">
-                orlegitech
+                Orlegitech
               </span>
             </div>
             <button
