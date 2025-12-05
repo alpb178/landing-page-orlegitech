@@ -14,7 +14,7 @@ export default function Footer() {
                 height={32}
               />
             </div>
-            <span className="text-xl font-semibold">orlegitech</span>
+            <span className="text-xl font-semibold">Orlegitech</span>
           </div>
           <p className="text-sm text-green-200 text-center">
             Copyright © 2025 Orlegitech. Todos los derechos reservados.

@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import Pricing from "@/components/Pricing";
 import { Metadata } from "next";
 import ContactUs from "@/components/Contact";
+import SectionAnimation from "@/components/SectionAnimation";
 
 export const metadata: Metadata = {
   title: "Orlegitech - Tu aliado para una experiencia de golf inigualable",
@@ -32,11 +33,21 @@ export default function Home() {
     <main className="min-h-screen">
       <Header />
       <Hero />
-      <Services />
-      <AboutUs />
-      <Pricing />
-      <ContactUs />
-      <Footer />
+      <SectionAnimation delay={100}>
+        <Services />
+      </SectionAnimation>
+      <SectionAnimation delay={200}>
+        <AboutUs />
+      </SectionAnimation>
+      <SectionAnimation delay={400}>
+        <Pricing />
+      </SectionAnimation>
+      <SectionAnimation delay={600}>
+        <ContactUs />
+      </SectionAnimation>
+      <SectionAnimation delay={800}>
+        <Footer />
+      </SectionAnimation>
     </main>
   );
 }

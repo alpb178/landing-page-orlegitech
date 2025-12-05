@@ -1,4 +1,7 @@
+"use client";
+
 import { Check } from "lucide-react";
+import AnimatedCard from "./AnimatedCard";
 
 export default function Pricing() {
   const plans = [
@@ -80,9 +83,10 @@ export default function Pricing() {
       <div className="max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
           {plans.map((plan, index) => (
-            <div
+            <AnimatedCard
               key={index}
-              className={`relative bg-white rounded-2xl shadow-lg p-8 ${
+              delay={index * 200}
+              className={`relative bg-white rounded-2xl shadow-lg p-8 transition-all duration-300 ease-out hover:scale-105 ${
                 plan.popular ? "ring-2 ring-[#1a4d3a] scale-105" : ""
               }`}
             >
@@ -100,7 +104,7 @@ export default function Pricing() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </AnimatedCard>
           ))}
         </div>
       </div>

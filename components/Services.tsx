@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import AnimatedCard from "./AnimatedCard";
 
 interface Service {
   title: string;
@@ -87,8 +90,12 @@ export default function Services() {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-          {services.map((service) => (
-            <div key={service.title} className="relative mb-10">
+          {services.map((service, index) => (
+            <AnimatedCard
+              key={service.title}
+              delay={index * 150}
+              className="relative mb-10"
+            >
               {/* Title and stars positioned outside and above the card */}
               <div className="absolute top-0 left-1/2 -translate-x-1/2 z-10">
                 <div className="flex flex-col items-center bg-white w-[200px] justify-center rounded-full shadow-sm gap-2">
@@ -124,7 +131,7 @@ export default function Services() {
                   {service.description}
                 </div>
               </div>
-            </div>
+            </AnimatedCard>
           ))}
         </div>
       </div>

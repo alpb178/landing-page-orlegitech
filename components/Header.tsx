@@ -7,41 +7,34 @@ import { Menu, X } from "lucide-react";
 
 export default function Header() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isInHero, setIsInHero] = useState(true);
   const [isInSection2, setIsInSection2] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  useEffect(() => {
+    const heroSection = document.getElementById("home");
     const servicesSection = document.getElementById("services");
-    if (!servicesSection) return;
+
+    if (!heroSection || !servicesSection) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsInSection2(true);
-          } else {
-            const rect = entry.boundingClientRect;
-            if (rect.top > window.innerHeight) {
-              setIsInSection2(false);
-            }
+          if (entry.target.id === "home") {
+            // Si el Hero está visible, estamos en la primera sección
+            setIsInHero(entry.isIntersecting);
+          } else if (entry.target.id === "services") {
+            // Si Services está visible, estamos en la segunda sección
+            setIsInSection2(entry.isIntersecting);
           }
         });
       },
       {
-        threshold: 0.1, // Se activa cuando el 10% de la sección es visible
-        rootMargin: "-100px 0px 0px 0px", // Offset para activar antes de llegar
+        threshold: 0.1,
+        rootMargin: "-100px 0px 0px 0px",
       }
     );
 
+    observer.observe(heroSection);
     observer.observe(servicesSection);
 
     return () => {
@@ -68,19 +61,17 @@ export default function Header() {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isInSection2
+          isInHero
+            ? "bg-transparent text-white"
+            : isInSection2
             ? "bg-white/80 backdrop-blur-sm text-gray-800 shadow-md"
-            : isScrolled
-            ? "bg-white text-gray-800 shadow-md"
-            : "bg-transparent text-white"
+            : "bg-white text-gray-800 shadow-md"
         }`}
       >
         <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Link
             className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-colors ${
-              isInSection2 || isScrolled
-                ? "bg-gray-200"
-                : "bg-gray-200/90 backdrop-blur-sm"
+              isInHero ? "bg-gray-200/90 backdrop-blur-sm" : "bg-gray-200"
             }`}
             href="#home"
           >
@@ -103,11 +94,7 @@ export default function Header() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className={`transition text-lg ${
-                      isScrolled
-                        ? "text-white hover:text-green-300"
-                        : "text-white hover:text-green-300"
-                    }`}
+                    className="transition text-lg text-white hover:text-green-300"
                   >
                     {link.label}
                   </Link>
@@ -157,7 +144,7 @@ export default function Header() {
                 className="w-6 h-6"
               />
               <span className="text-white text-lg font-semibold">
-                orlegitech
+                Orlegitech
               </span>
             </div>
             <button
