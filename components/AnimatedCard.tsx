@@ -37,6 +37,7 @@ export default function AnimatedCard({
 
     return () => {
       if (cardRef.current) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         observer.unobserve(cardRef.current);
       }
     };
@@ -58,5 +59,3 @@ export default function AnimatedCard({
     </div>
   );
 }
-
-
