@@ -27,7 +27,7 @@ export default function Hero() {
               className="w-16 h-16"
             />
             <span className="text-6xl md:text-7xl font-bold text-white">
-              orlegitech
+              Orlegitech
             </span>
           </div>
 
@@ -66,16 +66,18 @@ export default function Hero() {
         </div>
       </section>
 
-      <video
-        src="/movies/movie-app.mp4"
-        className=" flex md:hidden w-full h-full object-cover"
-        controls
-        autoPlay
-        muted
-        loop
-        playsInline
-        poster="/images/hero/background.png"
-      />
+      <div className=" block md:hidden w-full h-full">
+        <video
+          src="/movies/movie-app.mp4"
+          className="w-full h-full "
+          controls
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/images/hero/background.png"
+        />
+      </div>
 
       <div className="absolute hidden md:block top-[50%] left-0 right-0 mt-20 bg-[#F5F5F0] rounded-lg p-8 max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
