@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { ReportsFlyIcon } from "@/components/icons/ReportsFly";
 import { TasksIcon } from "@/components/icons/Task";
@@ -7,6 +9,7 @@ import { ProjectsIcon } from "@/components/icons/Projects";
 import { EmployeeIcon } from "@/components/icons/Employee";
 import { BudgetIcon } from "@/components/icons/Budget";
 import { UserIcon } from "@/components/icons/User";
+import AnimatedCard from "./AnimatedCard";
 
 export default function AboutUs() {
   const features = [
@@ -119,7 +122,11 @@ export default function AboutUs() {
             {features.map((feature, index) => {
               const IconComponent = feature.Icon;
               return (
-                <div key={index} className="text-center">
+                <AnimatedCard
+                  key={index}
+                  delay={index * 100}
+                  className="text-center"
+                >
                   <div className="flex justify-center mb-4">
                     <IconComponent />
                   </div>
@@ -127,7 +134,7 @@ export default function AboutUs() {
                     {feature.title}
                   </h3>
                   <p className="text-white/80 text-sm">{feature.description}</p>
-                </div>
+                </AnimatedCard>
               );
             })}
           </div>
