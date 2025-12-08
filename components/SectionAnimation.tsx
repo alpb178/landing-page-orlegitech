@@ -52,9 +52,13 @@ export default function SectionAnimation({
       ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}
       ${className}
     `}
-      style={{
-        transitionDelay: `${delay}ms`,
-      }}
+      style={
+        delay > 0
+          ? {
+              transitionDelay: `${delay}ms`,
+            }
+          : undefined
+      }
     >
       {children}
     </div>

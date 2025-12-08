@@ -1,6 +1,10 @@
+"use client";
+
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function Footer() {
+  const t = useTranslations("footer");
   return (
     <footer className="bg-[#1a4d3a] text-white py-12">
       <div className="container mx-auto px-4">
@@ -17,7 +21,7 @@ export default function Footer() {
             <span className="text-xl font-semibold">Orlegitech</span>
           </div>
           <p className="text-sm text-green-200 text-center">
-            Copyright © 2025 Orlegitech. Todos los derechos reservados.
+            {t("copyright")}
           </p>
         </div>
       </div>

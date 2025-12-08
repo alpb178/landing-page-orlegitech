@@ -1,12 +1,15 @@
 "use client";
 
 import { Check } from "lucide-react";
-import AnimatedCard from "./AnimatedCard";
+import { useTranslations } from "next-intl";
+import AnimatedCard from "@/components/AnimatedCard";
 
 export default function Pricing() {
+  const t = useTranslations("pricing");
+
   const plans = [
     {
-      name: "Plan Básico",
+      name: t("plans.basic.name"),
       monthlyPrice: "9,99",
       annualPrice: "8,99",
       currency: "€",
@@ -14,20 +17,20 @@ export default function Pricing() {
       minMonthly: "9,99 €",
       minAnnual: "107,88 €",
       features: [
-        "Acceso a la aplicación móvil",
-        "Reserva de campos de golf",
-        "Más de 150 campos disponibles",
-        "Seguimiento de partidas",
-        "Estadísticas básicas de juego",
-        "Historial de reservas",
-        "Notificaciones de recordatorios",
-        "Soporte por email",
-        "Actualizaciones de la app",
+        t("plans.basic.features.1"),
+        t("plans.basic.features.2"),
+        t("plans.basic.features.3"),
+        t("plans.basic.features.4"),
+        t("plans.basic.features.5"),
+        t("plans.basic.features.6"),
+        t("plans.basic.features.7"),
+        t("plans.basic.features.8"),
+        t("plans.basic.features.9"),
       ],
       popular: false,
     },
     {
-      name: "Plan Premium",
+      name: t("plans.premium.name"),
       monthlyPrice: "19,99",
       annualPrice: "17,99",
       currency: "€",
@@ -35,20 +38,20 @@ export default function Pricing() {
       minMonthly: "19,99 €",
       minAnnual: "215,88 €",
       features: [
-        "Todo lo incluido en Plan Básico, además de:",
-        "Servicios de drone incluidos",
-        "Análisis aéreo de campos",
-        "Mapeo detallado de recorridos",
-        "Informes de condiciones del campo",
-        "Estadísticas avanzadas",
-        "Análisis de rendimiento",
-        "Reserva prioritaria de campos",
-        "Soporte prioritario 24/7",
+        t("plans.premium.features.1"),
+        t("plans.premium.features.2"),
+        t("plans.premium.features.3"),
+        t("plans.premium.features.4"),
+        t("plans.premium.features.5"),
+        t("plans.premium.features.6"),
+        t("plans.premium.features.7"),
+        t("plans.premium.features.8"),
+        t("plans.premium.features.9"),
       ],
       popular: true,
     },
     {
-      name: "Plan Completo",
+      name: t("plans.complete.name"),
       monthlyPrice: "29,99",
       annualPrice: "26,99",
       currency: "€",
@@ -56,15 +59,15 @@ export default function Pricing() {
       minMonthly: "29,99 €",
       minAnnual: "323,88 €",
       features: [
-        "Todo lo incluido en Plan Premium, además de:",
-        "Alquiler de buggies incluido",
-        "Reserva de buggies online",
-        "Descuentos en alquileres",
-        "Acceso a flota premium",
-        "Múltiples ubicaciones",
-        "Programa de fidelización",
-        "Eventos exclusivos",
-        "Asistente personal de golf",
+        t("plans.complete.features.1"),
+        t("plans.complete.features.2"),
+        t("plans.complete.features.3"),
+        t("plans.complete.features.4"),
+        t("plans.complete.features.5"),
+        t("plans.complete.features.6"),
+        t("plans.complete.features.7"),
+        t("plans.complete.features.8"),
+        t("plans.complete.features.9"),
       ],
       popular: false,
     },
@@ -77,7 +80,7 @@ export default function Pricing() {
     >
       <div className="max-w-7xl text-center px-4 sm:px-6  lg:px-8 mb-20">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          Precios y Planes
+          {t("title")}
         </h1>
       </div>
       <div className="max-w-7xl px-4 sm:px-6 lg:px-8">
