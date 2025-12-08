@@ -1,11 +1,13 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
+import LanguageSelector from "./LanguageSelector";
 
 export default function Header() {
+  const t = useTranslations("header.nav");
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isInHero, setIsInHero] = useState(true);
   const [isInSection2, setIsInSection2] = useState(false);
@@ -20,10 +22,8 @@ export default function Header() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.target.id === "home") {
-            // Si el Hero está visible, estamos en la primera sección
             setIsInHero(entry.isIntersecting);
           } else if (entry.target.id === "services") {
-            // Si Services está visible, estamos en la segunda sección
             setIsInSection2(entry.isIntersecting);
           }
         });
@@ -51,10 +51,10 @@ export default function Header() {
   };
 
   const navLinks = [
-    { href: "#about-us", label: "Sobre nosotros" },
-    { href: "#services", label: "Servicios" },
-    { href: "#pricing", label: "Precios" },
-    { href: "#contact-us", label: "Contáctanos" },
+    { href: "#about-us", label: t("about") },
+    { href: "#services", label: t("services") },
+    { href: "#pricing", label: t("pricing") },
+    { href: "#contact-us", label: t("contact") },
   ];
 
   return (
@@ -69,8 +69,8 @@ export default function Header() {
         }`}
       >
         <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link
-            className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-colors ${
+          <a
+            className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-colors cursor-pointer ${
               isInHero ? "bg-gray-200/90 backdrop-blur-sm" : "bg-gray-200"
             }`}
             href="#home"
@@ -85,36 +85,42 @@ export default function Header() {
             <span className="text-[#1a4d3a] text-lg font-semibold">
               Orlegitech
             </span>
-          </Link>
+          </a>
 
-          {/* Desktop Navigation - Dark green rounded bar */}
-          <div className="hidden md:block bg-[#1a4d3a] px-6 py-2 rounded-lg">
-            <ul className="flex gap-6">
-              {navLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="transition text-lg text-white hover:text-green-300"
-                  >
-                    {link.label}
-                  </Link>
+          <div className="hidden md:flex items-center gap-4">
+            <div className="bg-[#1a4d3a] px-6 py-2 rounded-lg">
+              <ul className="flex gap-6 items-center">
+                {navLinks.map((link) => (
+                  <li key={link.href}>
+                    <a
+                      href={link.href}
+                      className="transition text-lg text-white hover:text-green-300"
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+                <li className="mt-1">
+                  <LanguageSelector />
                 </li>
-              ))}
-            </ul>
+              </ul>
+            </div>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={toggleDrawer}
-            className="md:hidden bg-[#1a4d3a] p-2 rounded-lg text-white hover:bg-[#2d6b52] transition-colors"
-            aria-label="Toggle menu"
-          >
-            {isDrawerOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
-            )}
-          </button>
+          <div className="md:hidden flex items-center gap-2">
+            <LanguageSelector variant="mobile" />
+            <button
+              onClick={toggleDrawer}
+              className="bg-[#1a4d3a] p-2 rounded-lg text-white hover:bg-[#2d6b52] transition-colors"
+              aria-label="Toggle menu"
+            >
+              {isDrawerOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
+            </button>
+          </div>
         </nav>
       </header>
 
@@ -147,6 +153,7 @@ export default function Header() {
                 Orlegitech
               </span>
             </div>
+
             <button
               onClick={closeDrawer}
               className="p-2 text-white hover:bg-green-700 rounded-lg transition-colors"
@@ -161,13 +168,13 @@ export default function Header() {
             <ul className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <Link
+                  <a
                     href={link.href}
                     onClick={closeDrawer}
                     className="block text-white text-lg py-3 px-4 rounded-lg hover:bg-green-700 transition-colors"
                   >
                     {link.label}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>

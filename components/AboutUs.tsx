@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { ReportsFlyIcon } from "@/components/icons/ReportsFly";
 import { TasksIcon } from "@/components/icons/Task";
 import { VehicleIcon } from "@/components/icons/Vehicle";
@@ -12,50 +13,48 @@ import { UserIcon } from "@/components/icons/User";
 import AnimatedCard from "./AnimatedCard";
 
 export default function AboutUs() {
+  const t = useTranslations("about");
+
   const features = [
     {
       Icon: ReportsFlyIcon,
-      title: "Informes aéreos",
-      description:
-        "Mapas multiespectrales de vigor, estrés y densidad del césped.",
+      title: t("features.aerialReports.title"),
+      description: t("features.aerialReports.description"),
     },
     {
       Icon: TasksIcon,
-      title: "Gestión de tareas",
-      description:
-        "Planificación inteligente para greenkeepers y personal del campo.",
+      title: t("features.taskManagement.title"),
+      description: t("features.taskManagement.description"),
     },
     {
       Icon: VehicleIcon,
-      title: "Flota de vehículos",
-      description: "Control GPS de buggies, maquinaria y rutas operativas.",
+      title: t("features.vehicleFleet.title"),
+      description: t("features.vehicleFleet.description"),
     },
     {
       Icon: PlannerIcon,
-      title: "Planificación de riego",
-      description: "Optimiza agua y tiempo con recomendaciones automáticas.",
+      title: t("features.irrigationPlanning.title"),
+      description: t("features.irrigationPlanning.description"),
     },
     {
       Icon: ProjectsIcon,
-      title: "Control de proyectos",
-      description:
-        "Obras, mejoras y trabajos estacionales bajo seguimiento real.",
+      title: t("features.projectControl.title"),
+      description: t("features.projectControl.description"),
     },
     {
       Icon: UserIcon,
-      title: "Gestión de operarios",
-      description: "Roles, horarios, partes de trabajo y productividad.",
+      title: t("features.operatorManagement.title"),
+      description: t("features.operatorManagement.description"),
     },
     {
       Icon: BudgetIcon,
-      title: "Presupuestos",
-      description:
-        "Costes reales del mantenimiento del campo en un solo panel.",
+      title: t("features.budgets.title"),
+      description: t("features.budgets.description"),
     },
     {
       Icon: EmployeeIcon,
-      title: "Fichaje de usuarios",
-      description: "Control horario digital integrado con la app del club.",
+      title: t("features.userCheckIn.title"),
+      description: t("features.userCheckIn.description"),
     },
   ];
 
@@ -77,7 +76,7 @@ export default function AboutUs() {
 
         <div className="relative z-10 container mx-auto px-4 py-20">
           <h2 className="text-5xl md:text-6xl font-bold text-center text-white mb-12">
-            Nosotros
+            {t("title")}
           </h2>
 
           {/* Image and Text Cards with Glassmorphism */}
@@ -95,20 +94,13 @@ export default function AboutUs() {
             {/* Text Card */}
             <div className="bg-white/20 text-xl backdrop-blur-md rounded-2xl p-8">
               <p className="text-white leading-relaxed mb-4">
-                Expertos en tecnología aplicada al golf
+                {t("description.1")}
               </p>
               <p className="text-white leading-relaxed mb-4">
-                En OrlegiTech combinamos agronomía, inteligencia artificial y
-                análisis aéreo para mejorar el rendimiento de cada campo.
-                Nuestro objetivo es ayudarte a mantener el césped en su estado
-                óptimo, reducir costes operativos y facilitar la planificación
-                diaria del personal.
+                {t("description.2")}
               </p>
               <p className="text-white leading-relaxed">
-                Trabajamos con greenkeepers, directores de club y equipos de
-                mantenimiento para transformar datos complejos en decisiones
-                claras. Nuestro sistema se adapta a cada campo según
-                presupuesto, categoría, climatología y recursos disponibles.
+                {t("description.3")}
               </p>
             </div>
           </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import AnimatedCard from "./AnimatedCard";
 
 interface Service {
@@ -12,70 +13,64 @@ interface Service {
 }
 
 export default function Services() {
+  const t = useTranslations("services");
+
   const services: Service[] = [
     {
-      title: "APP",
-
+      title: t("app.title"),
       image: "/images/services/app.png",
       showStars: true,
       description: (
         <div className="space-y-2">
           <p className="text-black font-bold text-lg">
-            Tu club, digitalizado al completo
+            {t("app.mainTitle")}
           </p>
           <p className="text-gray-600 text-sm">
-            •Gestión del personal y tareas
+            •{t("app.features.1")}
           </p>
           <p className="text-gray-600 text-sm">
-            •Control de riego y maquinaria
+            •{t("app.features.2")}
           </p>
           <p className="text-gray-600 text-sm">
-            •Informes automáticos y alertas
+            •{t("app.features.3")}
           </p>
           <p className="text-gray-600 text-sm">
-            •Todo desde el móvil o la tablet.
+            •{t("app.features.4")}
           </p>
         </div>
       ),
     },
     {
-      title: "Drone",
+      title: t("drone.title"),
       description: (
         <div className="space-y-2">
           <p className="text-black font-bold text-lg">
-            Análisis aéreo multiespectral
+            {t("drone.mainTitle")}
           </p>
           <p className="text-gray-600 text-sm">
-            •Obtén mapas NDVI, NDRE y estado del césped en minutos.
+            •{t("drone.features.1")}
           </p>
           <p className="text-gray-600 text-sm">
-            •Detecta estrés hídrico, zonas débiles y necesidades reales de
-            mantenimiento.
+            •{t("drone.features.2")}
           </p>
         </div>
       ),
       image: "/images/services/drone.png",
-
       showStars: true,
     },
     {
-      title: "Buggy",
-
+      title: t("buggy.title"),
       image: "/images/services/buggy.png",
       showStars: true,
       description: (
         <div className="space-y-2">
           <p className="text-black font-bold text-lg">
-            Localización y control de la flota
+            {t("buggy.mainTitle")}
           </p>
-          <p className="text-gray-600 text-sm">•GPS en tiempo real.</p>
-          <p className="text-gray-600 text-sm">•Rutas y uso de vehículos</p>
-          <p className="text-gray-600 text-sm">
-            •Seguridad y eficiencia en el campo
-          </p>
-          <p className="text-gray-600 text-sm">
-            •Optimiza la operativa diaria del club.
-          </p>
+          <p className="text-gray-600 text-sm">•{t("buggy.features.1")}</p>
+          <p className="text-gray-600 text-sm">•{t("buggy.features.2")}</p>
+          <p className="text-gray-600 text-sm">•{t("buggy.features.3")}</p>
+          <p className="text-gray-600 text-sm">•{t("buggy.features.4")}</p>
         </div>
       ),
       showMapOverlay: true,
@@ -86,7 +81,7 @@ export default function Services() {
     <section id="services" className="py-20 bg-[#F5F5F0]">
       <div className="container mx-auto px-5">
         <h2 className="text-7xl font-bold text-center text-gray-800 mb-[200px]">
-          Servicios
+          {t("title")}
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
