@@ -2,7 +2,7 @@
 
 import { Check } from "lucide-react";
 import { useTranslations } from "next-intl";
-import AnimatedCard from "./AnimatedCard";
+import AnimatedCard from "@/components/AnimatedCard";
 
 export default function Pricing() {
   const t = useTranslations("pricing");

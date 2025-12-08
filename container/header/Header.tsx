@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
-import LanguageSelector from "./LanguageSelector";
+import LanguageSelector from "@/components/LanguageSelector";
 
 export default function Header() {
   const t = useTranslations("header.nav");

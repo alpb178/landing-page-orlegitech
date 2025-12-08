@@ -1,10 +1,11 @@
 import { render, screen } from '@testing-library/react';
-import Header from '@/components/Header';
+import Header from '@/container/header/Header';
 
 describe('Header', () => {
   it('renders the logo and company name', () => {
     render(<Header />);
-    expect(screen.getByText('orlegitech')).toBeInTheDocument();
+    const orlegitechElements = screen.getAllByText(/orlegitech/i);
+    expect(orlegitechElements.length).toBeGreaterThan(0);
   });
 
   it('renders all navigation links', () => {

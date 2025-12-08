@@ -10,7 +10,7 @@ import { ProjectsIcon } from "@/components/icons/Projects";
 import { EmployeeIcon } from "@/components/icons/Employee";
 import { BudgetIcon } from "@/components/icons/Budget";
 import { UserIcon } from "@/components/icons/User";
-import AnimatedCard from "./AnimatedCard";
+import AnimatedCard from "@/components/AnimatedCard";
 
 export default function AboutUs() {
   const t = useTranslations("about");
@@ -99,9 +99,7 @@ export default function AboutUs() {
               <p className="text-white leading-relaxed mb-4">
                 {t("description.2")}
               </p>
-              <p className="text-white leading-relaxed">
-                {t("description.3")}
-              </p>
+              <p className="text-white leading-relaxed">{t("description.3")}</p>
             </div>
           </div>
         </div>

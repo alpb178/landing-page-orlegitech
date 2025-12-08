@@ -1,11 +1,11 @@
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import Services from "@/components/Services";
-import AboutUs from "@/components/AboutUs";
-import Footer from "@/components/Footer";
-import Pricing from "@/components/Pricing";
-import ContactUs from "@/components/Contact";
 import SectionAnimation from "@/components/SectionAnimation";
+import AboutUs from "@/container/about/AboutUs";
+import ContactUs from "@/container/contact/Contact";
+import Footer from "@/container/footer/Footer";
+import Header from "@/container/header/Header";
+import Hero from "@/container/hero/Hero";
+import Pricing from "@/container/price/Pricing";
+import Services from "@/container/services/Services";
 
 export default function Home() {
   return (
@@ -24,9 +24,7 @@ export default function Home() {
       <SectionAnimation delay={600}>
         <ContactUs />
       </SectionAnimation>
-      <SectionAnimation delay={800}>
-        <Footer />
-      </SectionAnimation>
+      <Footer />
     </main>
   );
 }

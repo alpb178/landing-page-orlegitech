@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import AnimatedCard from "./AnimatedCard";
+import AnimatedCard from "@/components/AnimatedCard";
 
 interface Service {
   title: string;
@@ -22,21 +22,11 @@ export default function Services() {
       showStars: true,
       description: (
         <div className="space-y-2">
-          <p className="text-black font-bold text-lg">
-            {t("app.mainTitle")}
-          </p>
-          <p className="text-gray-600 text-sm">
-            •{t("app.features.1")}
-          </p>
-          <p className="text-gray-600 text-sm">
-            •{t("app.features.2")}
-          </p>
-          <p className="text-gray-600 text-sm">
-            •{t("app.features.3")}
-          </p>
-          <p className="text-gray-600 text-sm">
-            •{t("app.features.4")}
-          </p>
+          <p className="text-black font-bold text-lg">{t("app.mainTitle")}</p>
+          <p className="text-gray-600 text-sm">•{t("app.features.1")}</p>
+          <p className="text-gray-600 text-sm">•{t("app.features.2")}</p>
+          <p className="text-gray-600 text-sm">•{t("app.features.3")}</p>
+          <p className="text-gray-600 text-sm">•{t("app.features.4")}</p>
         </div>
       ),
     },
@@ -44,15 +34,9 @@ export default function Services() {
       title: t("drone.title"),
       description: (
         <div className="space-y-2">
-          <p className="text-black font-bold text-lg">
-            {t("drone.mainTitle")}
-          </p>
-          <p className="text-gray-600 text-sm">
-            •{t("drone.features.1")}
-          </p>
-          <p className="text-gray-600 text-sm">
-            •{t("drone.features.2")}
-          </p>
+          <p className="text-black font-bold text-lg">{t("drone.mainTitle")}</p>
+          <p className="text-gray-600 text-sm">•{t("drone.features.1")}</p>
+          <p className="text-gray-600 text-sm">•{t("drone.features.2")}</p>
         </div>
       ),
       image: "/images/services/drone.png",
@@ -64,9 +48,7 @@ export default function Services() {
       showStars: true,
       description: (
         <div className="space-y-2">
-          <p className="text-black font-bold text-lg">
-            {t("buggy.mainTitle")}
-          </p>
+          <p className="text-black font-bold text-lg">{t("buggy.mainTitle")}</p>
           <p className="text-gray-600 text-sm">•{t("buggy.features.1")}</p>
           <p className="text-gray-600 text-sm">•{t("buggy.features.2")}</p>
           <p className="text-gray-600 text-sm">•{t("buggy.features.3")}</p>

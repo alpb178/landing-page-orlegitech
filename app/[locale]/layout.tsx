@@ -5,6 +5,7 @@ import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
+import { LanguageCode } from "@/constant/languages";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,6 +27,19 @@ export const metadata: Metadata = {
   title: "Orlegitech - Tu aliado para una experiencia de golf inigualable",
   description:
     "Orlegitech ofrece servicios de golf con más de 150 campos en 10 países. Aplicación móvil, drones y alquiler de buggies.",
+  icons: {
+    icon: "/icons.svg",
+  },
+  openGraph: {
+    images: "/icons.svg",
+    title: "Orlegitech - Tu aliado para una experiencia de golf inigualable",
+    description:
+      "Orlegitech ofrece servicios de golf con más de 150 campos en 10 países. Aplicación móvil, drones y alquiler de buggies.",
+    url: "https://orlegitech.com",
+    siteName: "Orlegitech",
+    locale: "es",
+    type: "website",
+  },
 };
 
 export function generateStaticParams() {
@@ -42,7 +56,7 @@ export default async function LocaleLayout({
   const { locale } = await params;
 
   // Ensure that the incoming `locale` is valid
-  if (!routing.locales.includes(locale as any)) {
+  if (!routing.locales.includes(locale as LanguageCode)) {
     notFound();
   }
 
@@ -62,4 +76,3 @@ export default async function LocaleLayout({
     </html>
   );
 }
-
