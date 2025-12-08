@@ -1,7 +1,9 @@
 "use client";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function Hero() {
+  const t = useTranslations("hero");
   return (
     <div className="relative" id="home">
       <section className="relative h-[1080px] flex items-center justify-center">
@@ -33,12 +35,11 @@ export default function Hero() {
 
           {/* Tagline */}
           <p className="text-2xl md:text-3xl font-bold text-white mb-8 italic">
-            Tu campo de golf en perfectas condiciones
+            {t("tagline")}
           </p>
 
           <p className="text-2xl md:text-3xl  text-white mb-8 italic">
-            Tecnología inteligente para mantener el césped, la flota y la
-            operativa del club bajo control total.
+            {t("description")}
           </p>
 
           {/* CTA Button */}
@@ -46,7 +47,7 @@ export default function Hero() {
             onClick={() => (window.location.href = "#contact-us")}
             className="bg-[#1a4d3a] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#2d6b52] transition-colors flex items-center gap-2 mx-auto"
           >
-            “Contáctanos”
+            {t("cta")}
             <span>→</span>
           </button>
         </div>
@@ -82,27 +83,26 @@ export default function Hero() {
       <div className="absolute hidden md:block top-[50%] left-0 right-0 mt-20 bg-[#F5F5F0] rounded-lg p-8 max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="border-r border-gray-300 pr-8">
-            <p className="text-4xl font-bold text-[#1a4d3a] mb-2">198 campos</p>
+            <p className="text-4xl font-bold text-[#1a4d3a] mb-2">
+              {t("stats.fields")}
+            </p>
             <p className="text-gray-600 text-sm">
-              Confían en nuestra tecnología a nivel nacional e internacional.
+              {t("stats.fieldsDescription")}
             </p>
           </div>
           <div className="border-r border-gray-300 pr-8">
             <p className="text-4xl font-bold text-[#1a4d3a] mb-2">
-              +1M usuarios
+              {t("stats.users")}
             </p>
             <p className="text-gray-600 text-sm">
-              Gestionando tareas, rondas y mantenimiento desde la app.
+              {t("stats.usersDescription")}
             </p>
           </div>
           <div className="text-gray-700 text-sm">
             <p className="text-xl font-bold text-[#1a4d3a] mb-2">
-              Gestión inteligente del césped
+              {t("stats.management")}
             </p>
-            <p>
-              Decisiones basadas en datos reales: análisis multiespectral,
-              seguimiento de riego y planificación de labores.
-            </p>
+            <p>{t("stats.managementDescription")}</p>
           </div>
         </div>
       </div>

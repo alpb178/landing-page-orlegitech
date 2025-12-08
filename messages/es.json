@@ -1,0 +1,197 @@
+{
+  "header": {
+    "nav": {
+      "about": "Sobre nosotros",
+      "services": "Servicios",
+      "pricing": "Precios",
+      "contact": "Contáctanos"
+    }
+  },
+  "hero": {
+    "tagline": "Tu campo de golf en perfectas condiciones",
+    "description": "Tecnología inteligente para mantener el césped, la flota y la operativa del club bajo control total.",
+    "cta": "Contáctanos",
+    "stats": {
+      "fields": "198 campos",
+      "fieldsDescription": "Confían en nuestra tecnología a nivel nacional e internacional.",
+      "users": "+1M usuarios",
+      "usersDescription": "Gestionando tareas, rondas y mantenimiento desde la app.",
+      "management": "Gestión inteligente del césped",
+      "managementDescription": "Decisiones basadas en datos reales: análisis multiespectral, seguimiento de riego y planificación de labores."
+    }
+  },
+  "services": {
+    "title": "Servicios",
+    "app": {
+      "title": "APP",
+      "mainTitle": "Tu club, digitalizado al completo",
+      "features": {
+        "1": "Gestión del personal y tareas",
+        "2": "Control de riego y maquinaria",
+        "3": "Informes automáticos y alertas",
+        "4": "Todo desde el móvil o la tablet."
+      }
+    },
+    "drone": {
+      "title": "Drone",
+      "mainTitle": "Análisis aéreo multiespectral",
+      "features": {
+        "1": "Obtén mapas NDVI, NDRE y estado del césped en minutos.",
+        "2": "Detecta estrés hídrico, zonas débiles y necesidades reales de mantenimiento."
+      }
+    },
+    "buggy": {
+      "title": "Buggy",
+      "mainTitle": "Localización y control de la flota",
+      "features": {
+        "1": "GPS en tiempo real.",
+        "2": "Rutas y uso de vehículos",
+        "3": "Seguridad y eficiencia en el campo",
+        "4": "Optimiza la operativa diaria del club."
+      }
+    }
+  },
+  "about": {
+    "title": "Nosotros",
+    "description": {
+      "1": "Expertos en tecnología aplicada al golf",
+      "2": "En OrlegiTech combinamos agronomía, inteligencia artificial y análisis aéreo para mejorar el rendimiento de cada campo. Nuestro objetivo es ayudarte a mantener el césped en su estado óptimo, reducir costes operativos y facilitar la planificación diaria del personal.",
+      "3": "Trabajamos con greenkeepers, directores de club y equipos de mantenimiento para transformar datos complejos en decisiones claras. Nuestro sistema se adapta a cada campo según presupuesto, categoría, climatología y recursos disponibles."
+    },
+    "features": {
+      "aerialReports": {
+        "title": "Informes aéreos",
+        "description": "Mapas multiespectrales de vigor, estrés y densidad del césped."
+      },
+      "taskManagement": {
+        "title": "Gestión de tareas",
+        "description": "Planificación inteligente para greenkeepers y personal del campo."
+      },
+      "vehicleFleet": {
+        "title": "Flota de vehículos",
+        "description": "Control GPS de buggies, maquinaria y rutas operativas."
+      },
+      "irrigationPlanning": {
+        "title": "Planificación de riego",
+        "description": "Optimiza agua y tiempo con recomendaciones automáticas."
+      },
+      "projectControl": {
+        "title": "Control de proyectos",
+        "description": "Obras, mejoras y trabajos estacionales bajo seguimiento real."
+      },
+      "operatorManagement": {
+        "title": "Gestión de operarios",
+        "description": "Roles, horarios, partes de trabajo y productividad."
+      },
+      "budgets": {
+        "title": "Presupuestos",
+        "description": "Costes reales del mantenimiento del campo en un solo panel."
+      },
+      "userCheckIn": {
+        "title": "Fichaje de usuarios",
+        "description": "Control horario digital integrado con la app del club."
+      }
+    }
+  },
+  "pricing": {
+    "title": "Precios y Planes",
+    "plans": {
+      "basic": {
+        "name": "Plan Básico",
+        "features": {
+          "1": "Acceso a la aplicación móvil",
+          "2": "Reserva de campos de golf",
+          "3": "Más de 150 campos disponibles",
+          "4": "Seguimiento de partidas",
+          "5": "Estadísticas básicas de juego",
+          "6": "Historial de reservas",
+          "7": "Notificaciones de recordatorios",
+          "8": "Soporte por email",
+          "9": "Actualizaciones de la app"
+        }
+      },
+      "premium": {
+        "name": "Plan Premium",
+        "features": {
+          "1": "Todo lo incluido en Plan Básico, además de:",
+          "2": "Servicios de drone incluidos",
+          "3": "Análisis aéreo de campos",
+          "4": "Mapeo detallado de recorridos",
+          "5": "Informes de condiciones del campo",
+          "6": "Estadísticas avanzadas",
+          "7": "Análisis de rendimiento",
+          "8": "Reserva prioritaria de campos",
+          "9": "Soporte prioritario 24/7"
+        }
+      },
+      "complete": {
+        "name": "Plan Completo",
+        "features": {
+          "1": "Todo lo incluido en Plan Premium, además de:",
+          "2": "Alquiler de buggies incluido",
+          "3": "Reserva de buggies online",
+          "4": "Descuentos en alquileres",
+          "5": "Acceso a flota premium",
+          "6": "Múltiples ubicaciones",
+          "7": "Programa de fidelización",
+          "8": "Eventos exclusivos",
+          "9": "Asistente personal de golf"
+        }
+      }
+    }
+  },
+  "contact": {
+    "title": "Contacta con Nosotros",
+    "subtitle": "¿Tienes alguna pregunta? Estamos aquí para ayudarte. Ponte en contacto con nuestro equipo y te responderemos lo antes posible.",
+    "contactInfo": {
+      "title": "Información de Contacto",
+      "email": "Email",
+      "phone": "Teléfono",
+      "office": "Oficina",
+      "officeAddress": "Calle del Golf, 123\n28001 Madrid, España",
+      "hours": "Lunes a Viernes: 9:00 - 18:00"
+    },
+    "services": {
+      "title": "Servicios Disponibles",
+      "1": "Aplicación móvil para golf",
+      "2": "Servicios de drone",
+      "3": "Alquiler de buggies",
+      "4": "Más de 150 campos en 10 países"
+    },
+    "form": {
+      "title": "Envíanos un Mensaje",
+      "name": "Nombre*",
+      "namePlaceholder": "Tu nombre",
+      "lastName": "Apellidos*",
+      "lastNamePlaceholder": "Tus apellidos",
+      "email": "Email*",
+      "emailPlaceholder": "tu@email.com",
+      "phone": "Teléfono",
+      "phonePlaceholder": "+34 600 000 000",
+      "service": "Servicio de Interés",
+      "servicePlaceholder": "Selecciona un servicio",
+      "services": {
+        "app": "Aplicación móvil (APP)",
+        "drone": "Servicios de drone",
+        "buggy": "Alquiler de buggies",
+        "premium": "Plan Premium",
+        "complete": "Plan Completo",
+        "general": "Información general"
+      },
+      "message": "Mensaje*",
+      "messagePlaceholder": "Cuéntanos cómo podemos ayudarte...",
+      "privacy": "Al enviar este formulario, acepto la",
+      "privacyLink": "Política de privacidad",
+      "terms": "y las",
+      "termsLink": "Condiciones de uso",
+      "submit": "Enviar Mensaje",
+      "success": "Se abrirá tu cliente de correo. Completa el envío desde allí."
+    }
+  },
+  "footer": {
+    "copyright": "Copyright © 2025 Orlegitech. Todos los derechos reservados."
+  }
+}
+
+
+

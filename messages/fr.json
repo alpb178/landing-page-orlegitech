@@ -1,0 +1,197 @@
+{
+  "header": {
+    "nav": {
+      "about": "À propos de nous",
+      "services": "Services",
+      "pricing": "Tarifs",
+      "contact": "Contactez-nous"
+    }
+  },
+  "hero": {
+    "tagline": "Votre terrain de golf en parfait état",
+    "description": "Technologie intelligente pour maintenir le gazon, la flotte et les opérations du club sous contrôle total.",
+    "cta": "Contactez-nous",
+    "stats": {
+      "fields": "198 parcours",
+      "fieldsDescription": "Font confiance à notre technologie au niveau national et international.",
+      "users": "+1M utilisateurs",
+      "usersDescription": "Gestion des tâches, des parcours et de la maintenance depuis l'application.",
+      "management": "Gestion intelligente du gazon",
+      "managementDescription": "Décisions basées sur des données réelles : analyse multispectrale, suivi de l'irrigation et planification des travaux."
+    }
+  },
+  "services": {
+    "title": "Services",
+    "app": {
+      "title": "APP",
+      "mainTitle": "Votre club, entièrement numérisé",
+      "features": {
+        "1": "Gestion du personnel et des tâches",
+        "2": "Contrôle de l'irrigation et des machines",
+        "3": "Rapports automatiques et alertes",
+        "4": "Tout depuis votre mobile ou tablette."
+      }
+    },
+    "drone": {
+      "title": "Drone",
+      "mainTitle": "Analyse aérienne multispectrale",
+      "features": {
+        "1": "Obtenez des cartes NDVI, NDRE et l'état du gazon en quelques minutes.",
+        "2": "Détectez le stress hydrique, les zones faibles et les besoins réels de maintenance."
+      }
+    },
+    "buggy": {
+      "title": "Buggy",
+      "mainTitle": "Localisation et contrôle de la flotte",
+      "features": {
+        "1": "GPS en temps réel.",
+        "2": "Itinéraires et utilisation des véhicules",
+        "3": "Sécurité et efficacité sur le terrain",
+        "4": "Optimisez les opérations quotidiennes du club."
+      }
+    }
+  },
+  "about": {
+    "title": "À propos de nous",
+    "description": {
+      "1": "Experts en technologie appliquée au golf",
+      "2": "Chez OrlegiTech, nous combinons l'agronomie, l'intelligence artificielle et l'analyse aérienne pour améliorer les performances de chaque parcours. Notre objectif est de vous aider à maintenir le gazon dans un état optimal, réduire les coûts opérationnels et faciliter la planification quotidienne du personnel.",
+      "3": "Nous travaillons avec les greenkeepers, les directeurs de club et les équipes de maintenance pour transformer des données complexes en décisions claires. Notre système s'adapte à chaque parcours selon le budget, la catégorie, la climatologie et les ressources disponibles."
+    },
+    "features": {
+      "aerialReports": {
+        "title": "Rapports aériens",
+        "description": "Cartes multispectrales de vigueur, stress et densité du gazon."
+      },
+      "taskManagement": {
+        "title": "Gestion des tâches",
+        "description": "Planification intelligente pour les greenkeepers et le personnel du terrain."
+      },
+      "vehicleFleet": {
+        "title": "Flotte de véhicules",
+        "description": "Contrôle GPS des buggies, machines et itinéraires opérationnels."
+      },
+      "irrigationPlanning": {
+        "title": "Planification de l'irrigation",
+        "description": "Optimisez l'eau et le temps avec des recommandations automatiques."
+      },
+      "projectControl": {
+        "title": "Contrôle des projets",
+        "description": "Travaux, améliorations et travaux saisonniers sous suivi en temps réel."
+      },
+      "operatorManagement": {
+        "title": "Gestion des opérateurs",
+        "description": "Rôles, horaires, rapports de travail et productivité."
+      },
+      "budgets": {
+        "title": "Budgets",
+        "description": "Coûts réels de maintenance du terrain dans un seul panneau."
+      },
+      "userCheckIn": {
+        "title": "Pointage des utilisateurs",
+        "description": "Contrôle horaire numérique intégré à l'application du club."
+      }
+    }
+  },
+  "pricing": {
+    "title": "Tarifs et Forfaits",
+    "plans": {
+      "basic": {
+        "name": "Forfait de Base",
+        "features": {
+          "1": "Accès à l'application mobile",
+          "2": "Réservation de terrains de golf",
+          "3": "Plus de 150 parcours disponibles",
+          "4": "Suivi des parcours",
+          "5": "Statistiques de jeu de base",
+          "6": "Historique des réservations",
+          "7": "Notifications de rappel",
+          "8": "Support par email",
+          "9": "Mises à jour de l'application"
+        }
+      },
+      "premium": {
+        "name": "Forfait Premium",
+        "features": {
+          "1": "Tout ce qui est inclus dans le Forfait de Base, plus :",
+          "2": "Services de drone inclus",
+          "3": "Analyse aérienne des parcours",
+          "4": "Cartographie détaillée des parcours",
+          "5": "Rapports sur l'état des parcours",
+          "6": "Statistiques avancées",
+          "7": "Analyse des performances",
+          "8": "Réservation prioritaire des parcours",
+          "9": "Support prioritaire 24/7"
+        }
+      },
+      "complete": {
+        "name": "Forfait Complet",
+        "features": {
+          "1": "Tout ce qui est inclus dans le Forfait Premium, plus :",
+          "2": "Location de buggies incluse",
+          "3": "Réservation de buggies en ligne",
+          "4": "Remises sur les locations",
+          "5": "Accès à la flotte premium",
+          "6": "Plusieurs emplacements",
+          "7": "Programme de fidélité",
+          "8": "Événements exclusifs",
+          "9": "Assistant personnel de golf"
+        }
+      }
+    }
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Avez-vous des questions ? Nous sommes là pour vous aider. Contactez notre équipe et nous vous répondrons dans les plus brefs délais.",
+    "contactInfo": {
+      "title": "Informations de Contact",
+      "email": "Email",
+      "phone": "Téléphone",
+      "office": "Bureau",
+      "officeAddress": "Rue du Golf, 123\n28001 Madrid, Espagne",
+      "hours": "Lundi au Vendredi : 9h00 - 18h00"
+    },
+    "services": {
+      "title": "Services Disponibles",
+      "1": "Application mobile pour le golf",
+      "2": "Services de drone",
+      "3": "Location de buggies",
+      "4": "Plus de 150 parcours dans 10 pays"
+    },
+    "form": {
+      "title": "Envoyez-nous un Message",
+      "name": "Nom*",
+      "namePlaceholder": "Votre nom",
+      "lastName": "Nom de famille*",
+      "lastNamePlaceholder": "Votre nom de famille",
+      "email": "Email*",
+      "emailPlaceholder": "votre@email.com",
+      "phone": "Téléphone",
+      "phonePlaceholder": "+34 600 000 000",
+      "service": "Service d'Intérêt",
+      "servicePlaceholder": "Sélectionnez un service",
+      "services": {
+        "app": "Application mobile (APP)",
+        "drone": "Services de drone",
+        "buggy": "Location de buggies",
+        "premium": "Forfait Premium",
+        "complete": "Forfait Complet",
+        "general": "Informations générales"
+      },
+      "message": "Message*",
+      "messagePlaceholder": "Dites-nous comment nous pouvons vous aider...",
+      "privacy": "En soumettant ce formulaire, j'accepte la",
+      "privacyLink": "Politique de confidentialité",
+      "terms": "et les",
+      "termsLink": "Conditions d'utilisation",
+      "submit": "Envoyer le Message",
+      "success": "Votre client de messagerie s'ouvrira. Complétez l'envoi depuis là."
+    }
+  },
+  "footer": {
+    "copyright": "Copyright © 2025 Orlegitech. Tous droits réservés."
+  }
+}
+
+
+

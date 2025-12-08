@@ -1,9 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 export default function ContactUs() {
+  const t = useTranslations("contact");
   const [formData, setFormData] = useState({
     name: "",
     lastName: "",
@@ -34,7 +36,7 @@ export default function ContactUs() {
 
     // Construir el asunto del email
     const subject = encodeURIComponent(
-      `Contacto Orlegitech - ${formData.service || "Información general"}`
+      `Contacto Orlegitech - ${formData.service || t("form.services.general")}`
     );
 
     // Construir el cuerpo del email
@@ -55,7 +57,7 @@ export default function ContactUs() {
     // Mostrar mensaje de éxito
     setSubmitStatus({
       type: "success",
-      message: "Se abrirá tu cliente de correo. Completa el envío desde allí.",
+      message: t("form.success"),
     });
 
     // Limpiar el formulario después de un breve delay
@@ -76,11 +78,10 @@ export default function ContactUs() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center bg-white rounded-2xl p-8 shadow-md mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Contacta con Nosotros
+            {t("title")}
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            ¿Tienes alguna pregunta? Estamos aquí para ayudarte. Ponte en
-            contacto con nuestro equipo y te responderemos lo antes posible.
+            {t("subtitle")}
           </p>
         </div>
 
@@ -89,7 +90,7 @@ export default function ContactUs() {
           <div className="flex flex-col gap-8 justify-between space-y-8 items-center">
             <div className="bg-white w-full rounded-2xl p-8 shadow-md">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Información de Contacto
+                {t("contactInfo.title")}
               </h3>
               <div className="space-y-6">
                 <div className="flex items-start">
@@ -98,7 +99,7 @@ export default function ContactUs() {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-lg font-semibold text-gray-900 mb-1">
-                      Email
+                      {t("contactInfo.email")}
                     </h4>
                     <p className="text-gray-600">info@orlegitech.com</p>
                     <p className="text-gray-600">soporte@orlegitech.com</p>
@@ -111,12 +112,10 @@ export default function ContactUs() {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-lg font-semibold text-gray-900 mb-1">
-                      Teléfono
+                      {t("contactInfo.phone")}
                     </h4>
                     <p className="text-gray-600">+34 900 123 456</p>
-                    <p className="text-gray-600">
-                      Lunes a Viernes: 9:00 - 18:00
-                    </p>
+                    <p className="text-gray-600">{t("contactInfo.hours")}</p>
                   </div>
                 </div>
 
@@ -126,12 +125,10 @@ export default function ContactUs() {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-lg font-semibold text-gray-900 mb-1">
-                      Oficina
+                      {t("contactInfo.office")}
                     </h4>
-                    <p className="text-gray-600">
-                      Calle del Golf, 123
-                      <br />
-                      28001 Madrid, España
+                    <p className="text-gray-600 whitespace-pre-line">
+                      {t("contactInfo.officeAddress")}
                     </p>
                   </div>
                 </div>
@@ -140,13 +137,13 @@ export default function ContactUs() {
 
             <div className="bg-white w-full rounded-2xl p-6 shadow-md">
               <h4 className="text-lg font-semibold text-gray-900 mb-4">
-                Servicios Disponibles
+                {t("services.title")}
               </h4>
               <ul className="space-y-2 text-gray-600">
-                <li>• Aplicación móvil para golf</li>
-                <li>• Servicios de drone</li>
-                <li>• Alquiler de buggies</li>
-                <li>• Más de 150 campos en 10 países</li>
+                <li>• {t("services.1")}</li>
+                <li>• {t("services.2")}</li>
+                <li>• {t("services.3")}</li>
+                <li>• {t("services.4")}</li>
               </ul>
             </div>
           </div>
@@ -154,7 +151,7 @@ export default function ContactUs() {
           {/* Contact Form */}
           <div className="bg-white rounded-2xl p-8 shadow-lg">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">
-              Envíanos un Mensaje
+              {t("form.title")}
             </h3>
 
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -173,7 +170,7 @@ export default function ContactUs() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Nombre*
+                    {t("form.name")}
                   </label>
                   <input
                     type="text"
@@ -182,12 +179,12 @@ export default function ContactUs() {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a4d3a] focus:border-transparent"
-                    placeholder="Tu nombre"
+                    placeholder={t("form.namePlaceholder")}
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Apellidos*
+                    {t("form.lastName")}
                   </label>
                   <input
                     type="text"
@@ -196,14 +193,14 @@ export default function ContactUs() {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a4d3a] focus:border-transparent"
-                    placeholder="Tus apellidos"
+                    placeholder={t("form.lastNamePlaceholder")}
                   />
                 </div>
               </div>
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Email*
+                  {t("form.email")}
                 </label>
                 <input
                   type="email"
@@ -212,13 +209,13 @@ export default function ContactUs() {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a4d3a] focus:border-transparent"
-                  placeholder="tu@email.com"
+                  placeholder={t("form.emailPlaceholder")}
                 />
               </div>
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Teléfono
+                  {t("form.phone")}
                 </label>
                 <input
                   type="tel"
@@ -226,13 +223,13 @@ export default function ContactUs() {
                   value={formData.phone}
                   onChange={handleChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a4d3a] focus:border-transparent"
-                  placeholder="+34 600 000 000"
+                  placeholder={t("form.phonePlaceholder")}
                 />
               </div>
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Servicio de Interés
+                  {t("form.service")}
                 </label>
                 <select
                   name="service"
@@ -240,25 +237,31 @@ export default function ContactUs() {
                   onChange={handleChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a4d3a] focus:border-transparent"
                 >
-                  <option value="">Selecciona un servicio</option>
-                  <option value="Aplicación móvil (APP)">
-                    Aplicación móvil (APP)
+                  <option value="">{t("form.servicePlaceholder")}</option>
+                  <option value={t("form.services.app")}>
+                    {t("form.services.app")}
                   </option>
-                  <option value="Servicios de drone">Servicios de drone</option>
-                  <option value="Alquiler de buggies">
-                    Alquiler de buggies
+                  <option value={t("form.services.drone")}>
+                    {t("form.services.drone")}
                   </option>
-                  <option value="Plan Premium">Plan Premium</option>
-                  <option value="Plan Completo">Plan Completo</option>
-                  <option value="Información general">
-                    Información general
+                  <option value={t("form.services.buggy")}>
+                    {t("form.services.buggy")}
+                  </option>
+                  <option value={t("form.services.premium")}>
+                    {t("form.services.premium")}
+                  </option>
+                  <option value={t("form.services.complete")}>
+                    {t("form.services.complete")}
+                  </option>
+                  <option value={t("form.services.general")}>
+                    {t("form.services.general")}
                   </option>
                 </select>
               </div>
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Mensaje*
+                  {t("form.message")}
                 </label>
                 <textarea
                   name="message"
@@ -267,20 +270,20 @@ export default function ContactUs() {
                   required
                   rows={5}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a4d3a] focus:border-transparent"
-                  placeholder="Cuéntanos cómo podemos ayudarte..."
+                  placeholder={t("form.messagePlaceholder")}
                 ></textarea>
               </div>
 
               <div className="flex items-start">
                 <input type="checkbox" className="mt-1 mr-3" required />
                 <p className="text-sm text-gray-600">
-                  Al enviar este formulario, acepto la{" "}
+                  {t("form.privacy")}{" "}
                   <a href="#" className="text-[#1a4d3a] hover:underline">
-                    Política de privacidad
+                    {t("form.privacyLink")}
                   </a>{" "}
-                  y las{" "}
+                  {t("form.terms")}{" "}
                   <a href="#" className="text-[#1a4d3a] hover:underline">
-                    Condiciones de uso
+                    {t("form.termsLink")}
                   </a>
                 </p>
               </div>
@@ -290,7 +293,7 @@ export default function ContactUs() {
                   type="submit"
                   className="w-full bg-[#1a4d3a] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#2d6b52] transition-colors"
                 >
-                  Enviar Mensaje
+                  {t("form.submit")}
                 </button>
               </div>
             </form>

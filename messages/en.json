@@ -1,0 +1,194 @@
+{
+  "header": {
+    "nav": {
+      "about": "About Us",
+      "services": "Services",
+      "pricing": "Pricing",
+      "contact": "Contact Us"
+    }
+  },
+  "hero": {
+    "tagline": "Your golf course in perfect condition",
+    "description": "Smart technology to keep the turf, fleet and club operations under total control.",
+    "cta": "Contact Us",
+    "stats": {
+      "fields": "198 courses",
+      "fieldsDescription": "Trust our technology nationally and internationally.",
+      "users": "+1M users",
+      "usersDescription": "Managing tasks, rounds and maintenance from the app.",
+      "management": "Smart turf management",
+      "managementDescription": "Data-driven decisions: multispectral analysis, irrigation tracking and task planning."
+    }
+  },
+  "services": {
+    "title": "Services",
+    "app": {
+      "title": "APP",
+      "mainTitle": "Your club, fully digitized",
+      "features": {
+        "1": "Staff and task management",
+        "2": "Irrigation and machinery control",
+        "3": "Automatic reports and alerts",
+        "4": "Everything from your mobile or tablet."
+      }
+    },
+    "drone": {
+      "title": "Drone",
+      "mainTitle": "Multispectral aerial analysis",
+      "features": {
+        "1": "Get NDVI, NDRE maps and turf status in minutes.",
+        "2": "Detect water stress, weak areas and real maintenance needs."
+      }
+    },
+    "buggy": {
+      "title": "Buggy",
+      "mainTitle": "Fleet location and control",
+      "features": {
+        "1": "Real-time GPS.",
+        "2": "Routes and vehicle usage",
+        "3": "Safety and efficiency on the course",
+        "4": "Optimize the club's daily operations."
+      }
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "description": {
+      "1": "Experts in golf technology",
+      "2": "At OrlegiTech we combine agronomy, artificial intelligence and aerial analysis to improve the performance of each course. Our goal is to help you keep the turf in optimal condition, reduce operating costs and facilitate daily staff planning.",
+      "3": "We work with greenkeepers, club directors and maintenance teams to transform complex data into clear decisions. Our system adapts to each course according to budget, category, climate and available resources."
+    },
+    "features": {
+      "aerialReports": {
+        "title": "Aerial reports",
+        "description": "Multispectral maps of vigor, stress and turf density."
+      },
+      "taskManagement": {
+        "title": "Task management",
+        "description": "Smart planning for greenkeepers and course staff."
+      },
+      "vehicleFleet": {
+        "title": "Vehicle fleet",
+        "description": "GPS control of buggies, machinery and operational routes."
+      },
+      "irrigationPlanning": {
+        "title": "Irrigation planning",
+        "description": "Optimize water and time with automatic recommendations."
+      },
+      "projectControl": {
+        "title": "Project control",
+        "description": "Works, improvements and seasonal tasks under real-time tracking."
+      },
+      "operatorManagement": {
+        "title": "Operator management",
+        "description": "Roles, schedules, work reports and productivity."
+      },
+      "budgets": {
+        "title": "Budgets",
+        "description": "Real maintenance costs of the course in a single panel."
+      },
+      "userCheckIn": {
+        "title": "User check-in",
+        "description": "Digital time control integrated with the club app."
+      }
+    }
+  },
+  "pricing": {
+    "title": "Pricing and Plans",
+    "plans": {
+      "basic": {
+        "name": "Basic Plan",
+        "features": {
+          "1": "Access to the mobile application",
+          "2": "Golf course reservations",
+          "3": "More than 150 courses available",
+          "4": "Round tracking",
+          "5": "Basic game statistics",
+          "6": "Reservation history",
+          "7": "Reminder notifications",
+          "8": "Email support",
+          "9": "App updates"
+        }
+      },
+      "premium": {
+        "name": "Premium Plan",
+        "features": {
+          "1": "Everything included in Basic Plan, plus:",
+          "2": "Drone services included",
+          "3": "Aerial course analysis",
+          "4": "Detailed course mapping",
+          "5": "Course condition reports",
+          "6": "Advanced statistics",
+          "7": "Performance analysis",
+          "8": "Priority course reservations",
+          "9": "24/7 priority support"
+        }
+      },
+      "complete": {
+        "name": "Complete Plan",
+        "features": {
+          "1": "Everything included in Premium Plan, plus:",
+          "2": "Buggy rental included",
+          "3": "Online buggy reservations",
+          "4": "Rental discounts",
+          "5": "Premium fleet access",
+          "6": "Multiple locations",
+          "7": "Loyalty program",
+          "8": "Exclusive events",
+          "9": "Personal golf assistant"
+        }
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Do you have any questions? We are here to help you. Contact our team and we will respond as soon as possible.",
+    "contactInfo": {
+      "title": "Contact Information",
+      "email": "Email",
+      "phone": "Phone",
+      "office": "Office",
+      "officeAddress": "Golf Street, 123\n28001 Madrid, Spain",
+      "hours": "Monday to Friday: 9:00 - 18:00"
+    },
+    "services": {
+      "title": "Available Services",
+      "1": "Mobile golf application",
+      "2": "Drone services",
+      "3": "Buggy rental",
+      "4": "More than 150 courses in 10 countries"
+    },
+    "form": {
+      "title": "Send us a Message",
+      "name": "Name*",
+      "namePlaceholder": "Your name",
+      "lastName": "Last Name*",
+      "lastNamePlaceholder": "Your last name",
+      "email": "Email*",
+      "emailPlaceholder": "your@email.com",
+      "phone": "Phone",
+      "phonePlaceholder": "+34 600 000 000",
+      "service": "Service of Interest",
+      "servicePlaceholder": "Select a service",
+      "services": {
+        "app": "Mobile application (APP)",
+        "drone": "Drone services",
+        "buggy": "Buggy rental",
+        "premium": "Premium Plan",
+        "complete": "Complete Plan",
+        "general": "General information"
+      },
+      "message": "Message*",
+      "messagePlaceholder": "Tell us how we can help you...",
+      "privacy": "By submitting this form, I accept the",
+      "privacyLink": "Privacy Policy",
+      "terms": "and the",
+      "termsLink": "Terms of Use",
+      "submit": "Send Message",
+      "success": "Your email client will open. Complete the sending from there."
+    }
+  },
+  "footer": {
+    "copyright": "Copyright © 2025 Orlegitech. All rights reserved."
+  }
+}
