@@ -18,35 +18,37 @@ export default function Hero() {
           />
         </div>
 
-        <div className="relative z-10 container mx-auto px-4 py-32 text-center">
-          {/* Main Logo with Leaf Icon */}
-          <div className="mb-8 flex justify-center items-center gap-4">
-            <Image
-              src="/logo-main.svg"
-              alt="orlegitech leaf icon"
-              width={64}
-              height={64}
-              className="w-full h-full"
-            />
+        <div className="absolute inset-0">
+          <div className="relative z-10 container mx-auto px-4 py-32 text-center">
+            {/* Main Logo with Leaf Icon */}
+            <div className="mb-8 flex justify-center items-center gap-4">
+              <Image
+                src="/logo-main.svg"
+                alt="orlegitech leaf icon"
+                width={64}
+                height={64}
+                className="w-full h-full"
+              />
+            </div>
+
+            {/* Tagline */}
+            <p className="text-2xl md:text-3xl font-bold text-white mb-8 italic font-['Inter']">
+              {t("tagline")}
+            </p>
+
+            <p className="text-2xl md:text-3xl  text-white mb-8 italic font-['Inter']">
+              {t("description")}
+            </p>
+
+            {/* CTA Button */}
+            <button
+              onClick={() => (window.location.href = "#contact-us")}
+              className="bg-[#1a4d3a] text-[#E2ECCA] px-8 py-4 rounded-xl shadow-lg text-lg font-semibold hover:bg-[#2d6b52] transition-colors flex items-center gap-2 mx-auto"
+            >
+              {t("cta")}
+              <span>→</span>
+            </button>
           </div>
-
-          {/* Tagline */}
-          <p className="text-2xl md:text-3xl font-bold text-white mb-8 italic font-['Inter']">
-            {t("tagline")}
-          </p>
-
-          <p className="text-2xl md:text-3xl  text-white mb-8 italic font-['Inter']">
-            {t("description")}
-          </p>
-
-          {/* CTA Button */}
-          <button
-            onClick={() => (window.location.href = "#contact-us")}
-            className="bg-[#1a4d3a] text-[#E2ECCA] px-8 py-4 rounded-xl shadow-lg text-lg font-semibold hover:bg-[#2d6b52] transition-colors flex items-center gap-2 mx-auto"
-          >
-            {t("cta")}
-            <span>→</span>
-          </button>
         </div>
       </section>
       <section className=" hidden md:flex h-[800px] w-full aspect-video bg-[#01261A] items-center justify-center">
