@@ -22,37 +22,34 @@ export default function Hero() {
           {/* Main Logo with Leaf Icon */}
           <div className="mb-8 flex justify-center items-center gap-4">
             <Image
-              src="/icons.svg"
+              src="/logo-main.svg"
               alt="orlegitech leaf icon"
               width={64}
               height={64}
-              className="w-16 h-16"
+              className="w-full h-full"
             />
-            <span className="text-6xl md:text-7xl font-bold text-white">
-              Orlegitech
-            </span>
           </div>
 
           {/* Tagline */}
-          <p className="text-2xl md:text-3xl font-bold text-white mb-8 italic">
+          <p className="text-2xl md:text-3xl font-bold text-white mb-8 italic font-['Inter']">
             {t("tagline")}
           </p>
 
-          <p className="text-2xl md:text-3xl  text-white mb-8 italic">
+          <p className="text-2xl md:text-3xl  text-white mb-8 italic font-['Inter']">
             {t("description")}
           </p>
 
           {/* CTA Button */}
           <button
             onClick={() => (window.location.href = "#contact-us")}
-            className="bg-[#1a4d3a] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#2d6b52] transition-colors flex items-center gap-2 mx-auto"
+            className="bg-[#1a4d3a] text-[#E2ECCA] px-8 py-4 rounded-xl shadow-lg text-lg font-semibold hover:bg-[#2d6b52] transition-colors flex items-center gap-2 mx-auto"
           >
             {t("cta")}
             <span>→</span>
           </button>
         </div>
       </section>
-      <section className=" hidden md:flex h-[800px] w-full aspect-video bg-[#1a4d3a] items-center justify-center">
+      <section className=" hidden md:flex h-[800px] w-full aspect-video bg-[#01261A] items-center justify-center">
         <div className="relative hidden md:block aspect-video rounded-lg max-w-full">
           <video
             src="/movies/movie-web.mp4"
@@ -80,7 +77,7 @@ export default function Hero() {
         />
       </div>
 
-      <div className="absolute hidden md:block top-[50%] left-0 right-0 mt-20 bg-[#F5F5F0] rounded-lg p-8 max-w-6xl mx-auto">
+      <div className="absolute hidden md:block top-[50%] left-0 right-0 mt-20 bg-[#E2ECCA] rounded-lg p-8 max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="border-r border-gray-300 pr-8">
             <p className="text-4xl font-bold text-[#1a4d3a] mb-2">
