@@ -69,32 +69,24 @@ export default function Header() {
         }`}
       >
         <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <a
-            className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-colors cursor-pointer ${
-              isInHero ? "bg-gray-200/90 backdrop-blur-sm" : "bg-gray-200"
-            }`}
-            href="#home"
-          >
+          <a href="#home">
             <Image
-              src="/icons.svg"
+              src="/logo-navbar.svg"
               alt="orlegitech logo"
               width={24}
               height={24}
-              className="w-6 h-6"
+              className="w-full h-full"
             />
-            <span className="text-[#1a4d3a] text-lg font-semibold">
-              Orlegitech
-            </span>
           </a>
 
           <div className="hidden md:flex items-center gap-4">
-            <div className="bg-[#1a4d3a] px-6 py-2 rounded-lg">
+            <div className="bg-[#01261A] px-6 py-2 rounded-full">
               <ul className="flex gap-6 items-center">
                 {navLinks.map((link) => (
                   <li key={link.href}>
                     <a
                       href={link.href}
-                      className="transition text-lg text-white hover:text-green-300"
+                      className="transition text-lg text-[#E2ECCA] hover:text-green-300 font-bold"
                     >
                       {link.label}
                     </a>
@@ -171,7 +163,7 @@ export default function Header() {
                   <a
                     href={link.href}
                     onClick={closeDrawer}
-                    className="block text-white text-lg py-3 px-4 rounded-lg hover:bg-green-700 transition-colors"
+                    className="block text-[#E2ECCA] text-lg py-3 px-4 rounded-lg hover:bg-green-700 transition-colors"
                   >
                     {link.label}
                   </a>
