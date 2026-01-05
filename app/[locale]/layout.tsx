@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Dancing_Script } from "next/font/google";
+import { Inter, Dancing_Script, Montserrat_Alternates } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -10,6 +10,13 @@ import { LanguageCode } from "@/constant/languages";
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap",
+});
+
+const montserratAlternates = Montserrat_Alternates({
+  variable: "--font-montserrat-alternates",
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   display: "swap",
 });
 
@@ -63,7 +70,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <body
-        className={`${inter.variable} ${dancingScript.variable} font-sans antialiased`}
+        className={`${inter.variable} ${montserratAlternates.variable} ${dancingScript.variable} font-sans antialiased`}
       >
         <NextIntlClientProvider messages={messages} locale={locale}>
           {children}
