@@ -102,7 +102,6 @@ export default function ContactUs() {
                       {t("contactInfo.email")}
                     </h4>
                     <p className="text-gray-600">info@orlegitech.com</p>
-                    <p className="text-gray-600">soporte@orlegitech.com</p>
                   </div>
                 </div>
 
@@ -114,7 +113,7 @@ export default function ContactUs() {
                     <h4 className="text-lg font-semibold text-gray-900 mb-1">
                       {t("contactInfo.phone")}
                     </h4>
-                    <p className="text-gray-600">+34 900 123 456</p>
+                    <p className="text-gray-600">+34 681264526</p>
                     <p className="text-gray-600">{t("contactInfo.hours")}</p>
                   </div>
                 </div>
@@ -125,26 +124,14 @@ export default function ContactUs() {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-lg font-semibold text-gray-900 mb-1">
-                      {t("contactInfo.office")}
+                      Calle Ferrerías 19
                     </h4>
                     <p className="text-gray-600 whitespace-pre-line">
-                      {t("contactInfo.officeAddress")}
+                      20011 Donostia-San Sebastián, España
                     </p>
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div className="bg-white w-full rounded-2xl p-6 shadow-md">
-              <h4 className="text-lg font-semibold text-gray-900 mb-4">
-                {t("services.title")}
-              </h4>
-              <ul className="space-y-2 text-gray-600">
-                <li>• {t("services.1")}</li>
-                <li>• {t("services.2")}</li>
-                <li>• {t("services.3")}</li>
-                <li>• {t("services.4")}</li>
-              </ul>
             </div>
           </div>
 
