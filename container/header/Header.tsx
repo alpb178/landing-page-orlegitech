@@ -73,9 +73,9 @@ export default function Header() {
             <Image
               src="/logo-navbar.svg"
               alt="orlegitech logo"
-              width={24}
-              height={24}
-              className="w-full h-full"
+              width={203}
+              height={64}
+              className="w-auto h-auto"
             />
           </a>
 
@@ -86,7 +86,7 @@ export default function Header() {
                   <li key={link.href}>
                     <a
                       href={link.href}
-                      className="transition text-lg text-[#E2ECCA] hover:text-green-300 font-bold"
+                      className="transition text-lg text-[#EADFD1] hover:text-green-300 font-bold"
                     >
                       {link.label}
                     </a>

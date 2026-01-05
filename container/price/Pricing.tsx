@@ -26,6 +26,7 @@ export default function Pricing() {
         t("plans.basic.features.7"),
         t("plans.basic.features.8"),
         t("plans.basic.features.9"),
+        t("plans.basic.features.10"),
       ],
       popular: false,
     },
@@ -46,7 +47,6 @@ export default function Pricing() {
         t("plans.premium.features.6"),
         t("plans.premium.features.7"),
         t("plans.premium.features.8"),
-        t("plans.premium.features.9"),
       ],
       popular: true,
     },
@@ -66,8 +66,25 @@ export default function Pricing() {
         t("plans.complete.features.5"),
         t("plans.complete.features.6"),
         t("plans.complete.features.7"),
-        t("plans.complete.features.8"),
-        t("plans.complete.features.9"),
+      ],
+      popular: false,
+    },
+    {
+      name: t("plans.drone.name"),
+      monthlyPrice: "29,99",
+      annualPrice: "26,99",
+      currency: "€",
+      period: "mes",
+      minMonthly: "29,99 €",
+      minAnnual: "323,88 €",
+      features: [
+        t("plans.drone.features.1"),
+        t("plans.drone.features.2"),
+        t("plans.drone.features.3"),
+        t("plans.drone.features.4"),
+        t("plans.drone.features.5"),
+        t("plans.drone.features.6"),
+        t("plans.drone.features.7"),
       ],
       popular: false,
     },
@@ -84,7 +101,7 @@ export default function Pricing() {
         </h1>
       </div>
       <div className="max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-10">
           {plans.map((plan, index) => (
             <AnimatedCard
               key={index}
