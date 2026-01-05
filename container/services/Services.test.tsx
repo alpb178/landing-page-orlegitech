@@ -11,6 +11,6 @@ describe("Services", () => {
     render(<Services />);
     expect(screen.getByText("APP")).toBeInTheDocument();
     expect(screen.getByText("Drone")).toBeInTheDocument();
-    expect(screen.getByText("Buggy")).toBeInTheDocument();
+    expect(screen.getByText("Riego")).toBeInTheDocument();
   });
 });
