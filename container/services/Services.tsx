@@ -44,7 +44,7 @@ export default function Services() {
     },
     {
       title: t("buggy.title"),
-      image: "/images/services/buggy.png",
+      image: "/images/services/irrigation.png",
       showStars: true,
       description: (
         <div className="space-y-2">
@@ -62,7 +62,7 @@ export default function Services() {
   return (
     <section id="services" className="py-20 bg-[#F5F5F0]">
       <div className="container mx-auto px-5">
-        <h2 className="text-7xl font-bold text-center text-gray-800 mb-[200px]">
+        <h2 className="text-7xl font-['Montserrat_Alternates'] font-semibold text-center text-gray-800 mb-[100px]">
           {t("title")}
         </h2>
 

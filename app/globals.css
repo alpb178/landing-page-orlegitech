@@ -2,6 +2,7 @@
 
 @theme {
   --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+  --font-montserrat-alternates: var(--font-montserrat-alternates), system-ui, -apple-system, sans-serif;
 }
 
 :root {

@@ -10,14 +10,10 @@
   "hero": {
     "tagline": "Tu campo de golf en perfectas condiciones",
     "description": "Tecnología inteligente para mantener el césped, la flota y la operativa del club bajo control total.",
+    "description2": "",
     "cta": "Contáctanos",
     "stats": {
-      "fields": "198 campos",
-      "fieldsDescription": "Confían en nuestra tecnología a nivel nacional e internacional.",
-      "users": "+1M usuarios",
-      "usersDescription": "Gestionando tareas, rondas y mantenimiento desde la app.",
-      "management": "Gestión inteligente del césped",
-      "managementDescription": "Decisiones basadas en datos reales: análisis multiespectral, seguimiento de riego y planificación de labores."
+      "description": "OrlegiTech utiliza inteligencia artificial, análisis aéreo y control en tiempo real para ayudar a los campos de golf a mantener un césped en condiciones óptimas y gestionar sus recursos de forma más eficiente."
     }
   },
   "services": {
@@ -41,7 +37,7 @@
       }
     },
     "buggy": {
-      "title": "Buggy",
+      "title": "Riego",
       "mainTitle": "Localización y control de la flota",
       "features": {
         "1": "GPS en tiempo real.",
@@ -97,45 +93,56 @@
     "title": "Precios y Planes",
     "plans": {
       "basic": {
-        "name": "Plan Básico",
+        "name": "Plan Base",
         "features": {
-          "1": "Acceso a la aplicación móvil",
-          "2": "Reserva de campos de golf",
-          "3": "Más de 150 campos disponibles",
-          "4": "Seguimiento de partidas",
-          "5": "Estadísticas básicas de juego",
-          "6": "Historial de reservas",
-          "7": "Notificaciones de recordatorios",
-          "8": "Soporte por email",
-          "9": "Actualizaciones de la app"
+          "1": "Gestión de empleados y departamentos",
+          "2": "Gestión de proyectos (Proyectos, tareas, Chrono, Check-list, gastos)",
+          "3": "Fichajes.",
+          "4": "Planificación (Vacaciones, turnos, calendario, ausencias)",
+          "5": "Adjuntos",
+          "6": "Informes fichajes",
+          "7": "Presupuestos",
+          "8": "Informes Fitosanitarios",
+          "9": "Banderas",
+          "10": "Estado de campo"
         }
       },
       "premium": {
         "name": "Plan Premium",
         "features": {
-          "1": "Todo lo incluido en Plan Básico, además de:",
-          "2": "Servicios de drone incluidos",
-          "3": "Análisis aéreo de campos",
-          "4": "Mapeo detallado de recorridos",
-          "5": "Informes de condiciones del campo",
-          "6": "Estadísticas avanzadas",
-          "7": "Análisis de rendimiento",
-          "8": "Reserva prioritaria de campos",
-          "9": "Soporte prioritario 24/7"
+          "1": "Plan base +",
+          "2": "Velocidad de juego",
+          "3": "Portal del socio",
+          "4": "Asistente IA para greenkeper",
+          "5": "Comparativas anuales",
+          "6": "CHAT",
+          "7": "Prioridad en soporte",
+          "8": "Movilidad"
         }
       },
       "complete": {
-        "name": "Plan Completo",
+        "name": "Módulo de riego inteligente",
         "features": {
-          "1": "Todo lo incluido en Plan Premium, además de:",
-          "2": "Alquiler de buggies incluido",
-          "3": "Reserva de buggies online",
-          "4": "Descuentos en alquileres",
-          "5": "Acceso a flota premium",
-          "6": "Múltiples ubicaciones",
-          "7": "Programa de fidelización",
-          "8": "Eventos exclusivos",
-          "9": "Asistente personal de golf"
+          "1": "Humedad real del suelo (la base de todo)",
+          "2": "Decisión por green (no riego genérico)",
+          "3": "Cálculo de pérdida de agua (ET / demanda hídrica)",
+          "4": "Minutos exactos y ciclos inteligentes",
+          "5": "Reglas del club y control humano",
+          "6": "KPIs avanzadas (no solo datos)",
+          "7": "Recomendación clara y explicable"
+        }
+      },
+      "drone": {
+        "name": "Módulo de informes aéreos con dron multiespectral a través de IA",
+        "features": {
+          "1": "1 vuelo cada 3 meses",
+          "2": "Piloto profesional incluido",
+          "3": "Planificación por zonas",
+          "4": "Fotos + vídeo",
+          "5": "Informe PDF ejecutivo",
+          "6": "Histórico comparativo",
+          "7": "Marcado de incidencias",
+          "8": "Generación automática de tareas"
         }
       }
     }
@@ -189,10 +196,6 @@
     }
   },
   "footer": {
-    "copyright": "Copyright © 2025 Orlegitech. Todos los derechos reservados."
+    "copyright": "Copyright © 2026 Orlegitech. Todos los derechos reservados."
   }
 }
-
-
-
-

@@ -8,16 +8,12 @@
     }
   },
   "hero": {
-    "tagline": "Your golf course in perfect condition",
-    "description": "Smart technology to keep the turf, fleet and club operations under total control.",
+    "tagline": "Experts in Golf Technology",
+    "description": "At OrlegiTech, we combine agronomy, artificial intelligence, and aerial analysis to enhance the performance of every golf course. Our mission is to help you maintain turf in optimal condition, reduce operational costs, and streamline daily staff planning.",
+    "description2": "We work closely with greenkeepers, club managers, and maintenance teams to turn complex data into clear, actionable decisions. Our system adapts to each course based on its budget, category, climate, and available resources.",
     "cta": "Contact Us",
     "stats": {
-      "fields": "198 courses",
-      "fieldsDescription": "Trust our technology nationally and internationally.",
-      "users": "+1M users",
-      "usersDescription": "Managing tasks, rounds and maintenance from the app.",
-      "management": "Smart turf management",
-      "managementDescription": "Data-driven decisions: multispectral analysis, irrigation tracking and task planning."
+      "description": "OrlegiTech uses artificial intelligence, aerial analysis, and real-time control to help golf courses maintain optimal turf conditions and manage their resources more efficiently."
     }
   },
   "services": {
@@ -41,7 +37,7 @@
       }
     },
     "buggy": {
-      "title": "Buggy",
+      "title": "Irrigation",
       "mainTitle": "Fleet location and control",
       "features": {
         "1": "Real-time GPS.",
@@ -99,43 +95,54 @@
       "basic": {
         "name": "Basic Plan",
         "features": {
-          "1": "Access to the mobile application",
-          "2": "Golf course reservations",
-          "3": "More than 150 courses available",
-          "4": "Round tracking",
-          "5": "Basic game statistics",
-          "6": "Reservation history",
-          "7": "Reminder notifications",
-          "8": "Email support",
-          "9": "App updates"
+          "1": "Employee and department management",
+          "2": "Project management (Projects, tasks, Chrono, Check-list, expenses)",
+          "3": "Fichages",
+          "4": "Planification (Vacations, shifts, calendar, absences)",
+          "5": "Attachments",
+          "6": "Fichages reports",
+          "7": "Budgets",
+          "8": "Fitosanitary reports",
+          "9": "Banners",
+          "10": "Field status"
         }
       },
       "premium": {
         "name": "Premium Plan",
         "features": {
-          "1": "Everything included in Basic Plan, plus:",
-          "2": "Drone services included",
-          "3": "Aerial course analysis",
-          "4": "Detailed course mapping",
-          "5": "Course condition reports",
-          "6": "Advanced statistics",
-          "7": "Performance analysis",
-          "8": "Priority course reservations",
-          "9": "24/7 priority support"
+          "1": "Basic Plan +",
+          "2": "Game speed",
+          "3": "Member portal",
+          "4": "AI assistant for greenkeeper",
+          "5": "Annual comparisons",
+          "6": "CHAT",
+          "7": "Priority in support",
+          "8": "Mobility"
         }
       },
       "complete": {
-        "name": "Complete Plan",
+        "name": "Intelligent irrigation module",
         "features": {
-          "1": "Everything included in Premium Plan, plus:",
-          "2": "Buggy rental included",
-          "3": "Online buggy reservations",
-          "4": "Rental discounts",
-          "5": "Premium fleet access",
-          "6": "Multiple locations",
-          "7": "Loyalty program",
-          "8": "Exclusive events",
-          "9": "Personal golf assistant"
+          "1": "Real soil humidity (the base of everything)",
+          "2": "Decision by green (no generic irrigation)",
+          "3": "Water loss calculation (ET / water demand)",
+          "4": "Exact minutes and intelligent cycles",
+          "5": "Club rules and human control",
+          "6": "Advanced KPIs (not just data)",
+          "7": "Clear and understandable recommendation"
+        }
+      },
+      "drone": {
+        "name": "Aerial reports module with multispectral drone through AI",
+        "features": {
+          "1": "1 flight every 3 months",
+          "2": "Professional pilot included",
+          "3": "Zone planning",
+          "4": "Photos + video",
+          "5": "Executive PDF report",
+          "6": "Comparative history",
+          "7": "Incident marking",
+          "8": "Automatic task generation"
         }
       }
     }
@@ -189,6 +196,6 @@
     }
   },
   "footer": {
-    "copyright": "Copyright © 2025 Orlegitech. All rights reserved."
+    "copyright": "Copyright © 2026 Orlegitech. All rights reserved."
   }
 }

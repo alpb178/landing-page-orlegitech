@@ -10,14 +10,10 @@
   "hero": {
     "tagline": "Votre terrain de golf en parfait état",
     "description": "Technologie intelligente pour maintenir le gazon, la flotte et les opérations du club sous contrôle total.",
+    "description2": "Nous travaillons avec les greenkeepers, les dirigeants de club et les équipes de maintenance pour transformer des données complexes en décisions claires et exploitables. Notre système s’adapte à chaque parcours en fonction du budget, de la catégorie, des conditions climatiques et des ressources disponibles.",
     "cta": "Contactez-nous",
     "stats": {
-      "fields": "198 parcours",
-      "fieldsDescription": "Font confiance à notre technologie au niveau national et international.",
-      "users": "+1M utilisateurs",
-      "usersDescription": "Gestion des tâches, des parcours et de la maintenance depuis l'application.",
-      "management": "Gestion intelligente du gazon",
-      "managementDescription": "Décisions basées sur des données réelles : analyse multispectrale, suivi de l'irrigation et planification des travaux."
+      "description": "OrlegiTech utilise l'intelligence artificielle, l'analyse aérienne et le contrôle en temps réel pour aider les terrains de golf à maintenir un gazon en bon état et à gérer ses ressources de manière plus efficace."
     }
   },
   "services": {
@@ -41,7 +37,7 @@
       }
     },
     "buggy": {
-      "title": "Buggy",
+      "title": "Irrigation",
       "mainTitle": "Localisation et contrôle de la flotte",
       "features": {
         "1": "GPS en temps réel.",
@@ -99,43 +95,54 @@
       "basic": {
         "name": "Forfait de Base",
         "features": {
-          "1": "Accès à l'application mobile",
-          "2": "Réservation de terrains de golf",
-          "3": "Plus de 150 parcours disponibles",
-          "4": "Suivi des parcours",
-          "5": "Statistiques de jeu de base",
-          "6": "Historique des réservations",
-          "7": "Notifications de rappel",
-          "8": "Support par email",
-          "9": "Mises à jour de l'application"
+          "1": "Gestion des employés et des départements",
+          "2": "Gestion de projets (Projets, tâches, Chrono, Check-list, frais)",
+          "3": "Fichages",
+          "4": "Planification (Vacances, horaires, calendrier, absences)",
+          "5": "Pièces jointes",
+          "6": "Informes fichages",
+          "7": "Budgets",
+          "8": "Informes fitosanitaires",
+          "9": "Bannières",
+          "10": "Statut du terrain"
         }
       },
       "premium": {
         "name": "Forfait Premium",
         "features": {
-          "1": "Tout ce qui est inclus dans le Forfait de Base, plus :",
-          "2": "Services de drone inclus",
-          "3": "Analyse aérienne des parcours",
-          "4": "Cartographie détaillée des parcours",
-          "5": "Rapports sur l'état des parcours",
-          "6": "Statistiques avancées",
-          "7": "Analyse des performances",
-          "8": "Réservation prioritaire des parcours",
-          "9": "Support prioritaire 24/7"
+          "1": "Forfait de Base +",
+          "2": "Vitesse de jeu",
+          "3": "Portail du membre",
+          "4": "Assistant IA pour greenkeeper",
+          "5": "Comparaisons annuelles",
+          "6": "CHAT",
+          "7": "Priorité en support",
+          "8": "Mobilité"
         }
       },
       "complete": {
-        "name": "Forfait Complet",
+        "name": "Module d'irrigation intelligent",
         "features": {
-          "1": "Tout ce qui est inclus dans le Forfait Premium, plus :",
-          "2": "Location de buggies incluse",
-          "3": "Réservation de buggies en ligne",
-          "4": "Remises sur les locations",
-          "5": "Accès à la flotte premium",
-          "6": "Plusieurs emplacements",
-          "7": "Programme de fidélité",
-          "8": "Événements exclusifs",
-          "9": "Assistant personnel de golf"
+          "1": "Humidité du sol réelle (base de tout)",
+          "2": "Décision par green (pas d'irrigation générique)",
+          "3": "Calcul de la perte d'eau (ET / demande d'eau)",
+          "4": "Minutes exactes et cycles intelligents",
+          "5": "Règles du club et contrôle humain",
+          "6": "KPIs avancés (pas seulement des données)",
+          "7": "Recommandation claire et explicable"
+        }
+      },
+      "drone": {
+        "name": "Module d'informes aériens avec drone multiespectral via IA",
+        "features": {
+          "1": "1 vol par 3 mois",
+          "2": "Pilote professionnel inclus",
+          "3": "Planification par zone",
+          "4": "Photos + vidéo",
+          "5": "Rapport PDF exécutif",
+          "6": "Historique comparatif",
+          "7": "Marquage des incidents",
+          "8": "Génération automatique de tâches"
         }
       }
     }
@@ -189,11 +196,6 @@
     }
   },
   "footer": {
-    "copyright": "Copyright © 2025 Orlegitech. Tous droits réservés."
+    "copyright": "Copyright © 2026 Orlegitech. Tous droits réservés."
   }
 }
-
-
-
-
-
