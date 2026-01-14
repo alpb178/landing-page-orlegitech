@@ -28,7 +28,7 @@ export default function VehiclesFleetContainer() {
 
       <div className="space-y-6">
         <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
-          <span>🚜</span> Vehículos
+          Vehículos
         </h3>
         <p className="text-lg leading-relaxed">
           OrlegiTech centraliza todo el parque móvil del campo en un solo lugar:
@@ -46,7 +46,7 @@ export default function VehiclesFleetContainer() {
 
       <div className="space-y-6">
         <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
-          <span>🛠️</span> Mantenimiento
+          Mantenimiento
         </h3>
         <p className="text-lg leading-relaxed">
           Cada vehículo y máquina tiene su historial de mantenimiento:
@@ -69,7 +69,7 @@ export default function VehiclesFleetContainer() {
 
       <div className="space-y-6">
         <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
-          <span>📍</span> Rastrear (geolocalización en tiempo real)
+          Rastrear (geolocalización en tiempo real)
         </h3>
         <p className="text-lg leading-relaxed">
           OrlegiTech permite rastrear por geolocalización todos los vehículos

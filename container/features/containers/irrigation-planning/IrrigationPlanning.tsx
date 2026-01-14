@@ -33,7 +33,7 @@ export default function IrrigationPlanningContainer() {
 
       <div className="space-y-6">
         <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
-          <span>💧</span> Humedad de green
+          Humedad de green
         </h3>
         <p className="text-lg leading-relaxed">
           Control en tiempo real de la humedad de los greens y zonas clave del
@@ -45,7 +45,7 @@ export default function IrrigationPlanningContainer() {
 
       <div className="space-y-6">
         <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
-          <span>🌤️</span> Clima
+          Clima
         </h3>
         <p className="text-lg leading-relaxed">
           Integración de datos meteorológicos actuales y previsiones. El sistema
@@ -57,7 +57,7 @@ export default function IrrigationPlanningContainer() {
 
       <div className="space-y-6">
         <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
-          <span>⚡️</span> Tarifas de luz
+          Tarifas de luz
         </h3>
         <p className="text-lg leading-relaxed">
           OrlegiTech analiza las tarifas eléctricas para regar en las horas más
@@ -68,7 +68,7 @@ export default function IrrigationPlanningContainer() {
 
       <div className="space-y-6">
         <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
-          <span>🤖</span> Recomendación de riego
+          Recomendación de riego
         </h3>
         <p className="text-lg leading-relaxed">
           El corazón del sistema: la inteligencia artificial cruza todos los

@@ -25,7 +25,7 @@ export default function ProjectControlContainer() {
 
       <div className="space-y-6">
         <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
-          <span>📁</span> Un repositorio documental inteligente
+          Un repositorio documental inteligente
         </h3>
         <p className="text-lg leading-relaxed">
           En OrlegiTech puedes guardar y consultar:
@@ -48,7 +48,7 @@ export default function ProjectControlContainer() {
 
       <div className="space-y-6">
         <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
-          <span>🔗</span> Documentos vinculados a lo que realmente importa
+          Documentos vinculados a lo que realmente importa
         </h3>
         <p className="text-lg leading-relaxed">
           Lo potente de OrlegiTech es que los adjuntos no están sueltos: están
@@ -73,7 +73,7 @@ export default function ProjectControlContainer() {
 
       <div className="space-y-6">
         <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
-          <span>🕒</span> Historial y trazabilidad completa
+          Historial y trazabilidad completa
         </h3>
         <p className="text-lg leading-relaxed">Cada documento queda:</p>
         <ul className="list-disc list-inside space-y-2 ml-4 text-lg">

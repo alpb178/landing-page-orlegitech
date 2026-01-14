@@ -18,7 +18,7 @@ export default function UserCheckInContainer() {
 
       <div className="space-y-6">
         <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
-          <span>⏱️</span> Fichajes de entrada y salida
+          Fichajes de entrada y salida
         </h3>
         <p className="text-lg leading-relaxed">Cada empleado puede:</p>
         <ul className="list-disc list-inside space-y-2 ml-4 text-lg">
@@ -34,7 +34,7 @@ export default function UserCheckInContainer() {
 
       <div className="space-y-6">
         <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
-          <span>📊</span> Informes automáticos de horas trabajadas
+          Informes automáticos de horas trabajadas
         </h3>
         <p className="text-lg leading-relaxed">
           OrlegiTech genera automáticamente:
@@ -52,7 +52,7 @@ export default function UserCheckInContainer() {
 
       <div className="space-y-6">
         <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
-          <span>⚖️</span> Cumplimiento de la normativa laboral
+          Cumplimiento de la normativa laboral
         </h3>
         <p className="text-lg leading-relaxed">
           El sistema de control horario de OrlegiTech cumple con:

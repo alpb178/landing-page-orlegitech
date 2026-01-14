@@ -28,7 +28,7 @@ export default function OperatorManagementContainer() {
 
       <div className="space-y-6">
         <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
-          <span>👥</span> Empleados: la ficha completa de cada persona
+          Empleados: la ficha completa de cada persona
         </h3>
         <p className="text-lg leading-relaxed">
           Cada empleado tiene su perfil completo dentro de OrlegiTech, donde se
@@ -53,7 +53,7 @@ export default function OperatorManagementContainer() {
 
       <div className="space-y-6">
         <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
-          <span>📊</span> Control real del trabajo y del tiempo
+          Control real del trabajo y del tiempo
         </h3>
         <p className="text-lg leading-relaxed">
           La dirección del campo puede ver en cada empleado:
@@ -73,7 +73,7 @@ export default function OperatorManagementContainer() {
 
       <div className="space-y-6">
         <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
-          <span>🏗️</span> Conexión directa con proyectos y trabajos del campo
+          Conexión directa con proyectos y trabajos del campo
         </h3>
         <p className="text-lg leading-relaxed">
           Cada empleado está conectado con:
@@ -93,7 +93,7 @@ export default function OperatorManagementContainer() {
 
       <div className="space-y-6">
         <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
-          <span>🗂️</span> Departamentos y organización interna
+          Departamentos y organización interna
         </h3>
         <p className="text-lg leading-relaxed">
           El sistema permite organizar el personal por:

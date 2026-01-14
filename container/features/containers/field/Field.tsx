@@ -33,7 +33,7 @@ export default function FieldContainer() {
 
       <div className="space-y-6">
         <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
-          <span>🏆</span> Torneos
+          Torneos
         </h3>
         <p className="text-lg leading-relaxed">
           El club puede publicar, organizar y comunicar torneos de forma
@@ -45,7 +45,7 @@ export default function FieldContainer() {
 
       <div className="space-y-6">
         <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
-          <span>⏱️</span> Velocidad de juego
+          Velocidad de juego
         </h3>
         <p className="text-lg leading-relaxed">
           Uno de los grandes problemas de cualquier campo de golf: las rondas
@@ -57,7 +57,7 @@ export default function FieldContainer() {
 
       <div className="space-y-6">
         <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
-          <span>🚩</span> Banderas
+          Banderas
         </h3>
         <p className="text-lg leading-relaxed">
           Cada día, los socios pueden consultar fácilmente la posición de
@@ -68,7 +68,7 @@ export default function FieldContainer() {
 
       <div className="space-y-6">
         <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
-          <span>🌱</span> Estado del campo
+          Estado del campo
         </h3>
         <p className="text-lg leading-relaxed">
           Comunicación transparente sobre el estado del recorrido: trabajos de
@@ -80,7 +80,7 @@ export default function FieldContainer() {
 
       <div className="space-y-6">
         <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
-          <span>⚠️</span> Incidencias
+          Incidencias
         </h3>
         <p className="text-lg leading-relaxed">
           Tanto el personal como los socios pueden notificar problemas:
