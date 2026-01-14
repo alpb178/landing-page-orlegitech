@@ -10,7 +10,7 @@
   "hero": {
     "tagline": "Votre terrain de golf en parfait état",
     "description": "Technologie intelligente pour maintenir le gazon, la flotte et les opérations du club sous contrôle total.",
-    "description2": "Nous travaillons avec les greenkeepers, les dirigeants de club et les équipes de maintenance pour transformer des données complexes en décisions claires et exploitables. Notre système s’adapte à chaque parcours en fonction du budget, de la catégorie, des conditions climatiques et des ressources disponibles.",
+    "description2": "",
     "cta": "Contactez-nous",
     "stats": {
       "description": "OrlegiTech utilise l'intelligence artificielle, l'analyse aérienne et le contrôle en temps réel pour aider les terrains de golf à maintenir un gazon en bon état et à gérer ses ressources de manière plus efficace."
@@ -59,9 +59,9 @@
         "title": "Rapports aériens",
         "description": "Cartes multispectrales de vigueur, stress et densité du gazon."
       },
-      "taskManagement": {
-        "title": "Gestion des tâches",
-        "description": "Planification intelligente pour les greenkeepers et le personnel du terrain."
+      "assistantIA": {
+        "title": "Assistant IA",
+        "description": "Assistant Virtuel du Greenkeeper : la mémoire intelligente du terrain."
       },
       "vehicleFleet": {
         "title": "Flotte de véhicules",
@@ -73,10 +73,10 @@
       },
       "projectControl": {
         "title": "Contrôle des projets",
-        "description": "Travaux, améliorations et travaux saisonniers sous suivi en temps réel."
+        "description": "Gestion intégrale des projets et de la documentation."
       },
       "operatorManagement": {
-        "title": "Gestion des opérateurs",
+        "title": "Gestion Organisationnelle et Employés",
         "description": "Rôles, horaires, rapports de travail et productivité."
       },
       "budgets": {
@@ -86,6 +86,18 @@
       "userCheckIn": {
         "title": "Pointage des utilisateurs",
         "description": "Contrôle horaire numérique intégré à l'application du club."
+      },
+      "planning": {
+        "title": "Planification",
+        "description": "Planification intelligente pour les greenkeepers et le personnel du terrain."
+      },
+      "field": {
+        "title": "Terrain",
+        "description": "Gestion intégrale des projets et de la documentation."
+      },
+      "projectManagement": {
+        "title": "Gestion de Projets",
+        "description": "Gestion intégrale des projets et de la documentation."
       }
     }
   },
@@ -97,13 +109,13 @@
         "features": {
           "1": "Gestion des employés et des départements",
           "2": "Gestion de projets (Projets, tâches, Chrono, Check-list, frais)",
-          "3": "Fichages",
+          "3": "Pointages.",
           "4": "Planification (Vacances, horaires, calendrier, absences)",
           "5": "Pièces jointes",
-          "6": "Informes fichages",
+          "6": "Rapports de pointages",
           "7": "Budgets",
-          "8": "Informes fitosanitaires",
-          "9": "Bannières",
+          "8": "Rapports phytosanitaires",
+          "9": "Drapeaux",
           "10": "Statut du terrain"
         }
       },
@@ -133,9 +145,9 @@
         }
       },
       "drone": {
-        "name": "Module d'informes aériens avec drone multiespectral via IA",
+        "name": "Module de rapports aériens avec drone multiespectral via IA",
         "features": {
-          "1": "1 vol par 3 mois",
+          "1": "1 vol tous les 3 mois",
           "2": "Pilote professionnel inclus",
           "3": "Planification par zone",
           "4": "Photos + vidéo",
