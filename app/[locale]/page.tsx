@@ -18,10 +18,10 @@ export default function Home() {
       <SectionAnimation delay={200}>
         <AboutUs />
       </SectionAnimation>
-      <SectionAnimation delay={400}>
+      <SectionAnimation delay={100}>
         <Pricing />
       </SectionAnimation>
-      <SectionAnimation delay={600}>
+      <SectionAnimation delay={100}>
         <ContactUs />
       </SectionAnimation>
       <Footer />

@@ -8,9 +8,9 @@
     }
   },
   "hero": {
-    "tagline": "Experts in Golf Technology",
-    "description": "At OrlegiTech, we combine agronomy, artificial intelligence, and aerial analysis to enhance the performance of every golf course. Our mission is to help you maintain turf in optimal condition, reduce operational costs, and streamline daily staff planning.",
-    "description2": "We work closely with greenkeepers, club managers, and maintenance teams to turn complex data into clear, actionable decisions. Our system adapts to each course based on its budget, category, climate, and available resources.",
+    "tagline": "Your golf course in perfect condition",
+    "description": "Smart technology to keep the turf, fleet and club operations under total control.",
+    "description2": "",
     "cta": "Contact Us",
     "stats": {
       "description": "OrlegiTech uses artificial intelligence, aerial analysis, and real-time control to help golf courses maintain optimal turf conditions and manage their resources more efficiently."
@@ -59,9 +59,9 @@
         "title": "Aerial reports",
         "description": "Multispectral maps of vigor, stress and turf density."
       },
-      "taskManagement": {
-        "title": "Task management",
-        "description": "Smart planning for greenkeepers and course staff."
+      "assistantIA": {
+        "title": "AI Assistant",
+        "description": "Virtual Greenkeeper Assistant: the intelligent memory of the course."
       },
       "vehicleFleet": {
         "title": "Vehicle fleet",
@@ -73,10 +73,10 @@
       },
       "projectControl": {
         "title": "Project control",
-        "description": "Works, improvements and seasonal tasks under real-time tracking."
+        "description": "Comprehensive project and documentation management."
       },
       "operatorManagement": {
-        "title": "Operator management",
+        "title": "Organizational and Employee Management",
         "description": "Roles, schedules, work reports and productivity."
       },
       "budgets": {
@@ -86,6 +86,18 @@
       "userCheckIn": {
         "title": "User check-in",
         "description": "Digital time control integrated with the club app."
+      },
+      "planning": {
+        "title": "Planning",
+        "description": "Smart planning for greenkeepers and course staff."
+      },
+      "field": {
+        "title": "Field",
+        "description": "Comprehensive project and documentation management."
+      },
+      "projectManagement": {
+        "title": "Project Management",
+        "description": "Comprehensive project and documentation management."
       }
     }
   },
@@ -97,13 +109,13 @@
         "features": {
           "1": "Employee and department management",
           "2": "Project management (Projects, tasks, Chrono, Check-list, expenses)",
-          "3": "Fichages",
-          "4": "Planification (Vacations, shifts, calendar, absences)",
+          "3": "Check-ins.",
+          "4": "Planning (Vacations, shifts, calendar, absences)",
           "5": "Attachments",
-          "6": "Fichages reports",
+          "6": "Check-in reports",
           "7": "Budgets",
-          "8": "Fitosanitary reports",
-          "9": "Banners",
+          "8": "Phytosanitary reports",
+          "9": "Flags",
           "10": "Field status"
         }
       },
@@ -116,7 +128,7 @@
           "4": "AI assistant for greenkeeper",
           "5": "Annual comparisons",
           "6": "CHAT",
-          "7": "Priority in support",
+          "7": "Priority support",
           "8": "Mobility"
         }
       },

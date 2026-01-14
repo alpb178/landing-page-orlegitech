@@ -79,3 +79,13 @@ jest.mock('@/i18n/routing', () => ({
     <a href={href} {...props}>{children}</a>
   ),
 }))
+
+// Mock next/navigation
+jest.mock('next/navigation', () => ({
+  useParams: () => ({ locale: 'es' }),
+  usePathname: () => '/es',
+  useRouter: () => ({
+    push: jest.fn(),
+    replace: jest.fn(),
+  }),
+}))

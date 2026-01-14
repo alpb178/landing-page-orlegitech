@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import LanguageSelector from "@/components/LanguageSelector";
@@ -11,7 +11,7 @@ export default function Header() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isInHero, setIsInHero] = useState(true);
   const [isInSection2, setIsInSection2] = useState(false);
-
+  const locale = useLocale();
   useEffect(() => {
     const heroSection = document.getElementById("home");
     const servicesSection = document.getElementById("services");
@@ -69,7 +69,7 @@ export default function Header() {
         }`}
       >
         <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <a href="#home">
+          <a href={`/${locale}/#home`}>
             <Image
               src="/logo-navbar.svg"
               alt="orlegitech logo"
