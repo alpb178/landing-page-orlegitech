@@ -32,7 +32,7 @@ export default function ProjectManagementContainer() {
 
       <div className="space-y-6">
         <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
-          <span>📁</span> Proyectos
+          Proyectos
         </h3>
         <p className="text-lg leading-relaxed">
           Cada intervención del campo puede convertirse en un proyecto:
@@ -52,7 +52,7 @@ export default function ProjectManagementContainer() {
 
       <div className="space-y-6">
         <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
-          <span>✅</span> Tareas
+          Tareas
         </h3>
         <p className="text-lg leading-relaxed">
           Dentro de cada proyecto, el trabajo se divide en tareas concretas,
@@ -70,7 +70,7 @@ export default function ProjectManagementContainer() {
 
       <div className="space-y-6">
         <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
-          <span>🧾</span> Checklist
+          Checklist
         </h3>
         <p className="text-lg leading-relaxed">
           Cada tipo de trabajo puede tener su lista de verificación: preparación
@@ -87,7 +87,7 @@ export default function ProjectManagementContainer() {
 
       <div className="space-y-6">
         <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
-          <span>⏱️</span> Chrono (control de tiempos)
+          Chrono (control de tiempos)
         </h3>
         <p className="text-lg leading-relaxed">
           OrlegiTech permite medir el tiempo real invertido en cada proyecto y
@@ -102,7 +102,7 @@ export default function ProjectManagementContainer() {
 
       <div className="space-y-6">
         <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
-          <span>💰</span> Gastos
+          Gastos
         </h3>
         <p className="text-lg leading-relaxed">
           Cada proyecto puede llevar su control de costes: materiales,

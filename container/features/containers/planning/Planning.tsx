@@ -19,7 +19,7 @@ export default function PlanningContainer() {
 
       <div className="space-y-6">
         <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
-          <span>📅</span> Calendario
+          Calendario
         </h3>
         <p className="text-lg leading-relaxed">
           Vista general de toda la actividad del campo: trabajos programados,
@@ -31,7 +31,7 @@ export default function PlanningContainer() {
 
       <div className="space-y-6">
         <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
-          <span>🗂️</span> Agenda
+          Agenda
         </h3>
         <p className="text-lg leading-relaxed">
           Planificación detallada del día a día: qué tareas se hacen hoy, quién
@@ -42,7 +42,7 @@ export default function PlanningContainer() {
 
       <div className="space-y-6">
         <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
-          <span>🌴</span> Vacaciones
+          Vacaciones
         </h3>
         <p className="text-lg leading-relaxed">
           Gestión centralizada de vacaciones, días libres y ausencias del
@@ -61,7 +61,7 @@ export default function PlanningContainer() {
 
       <div className="space-y-6">
         <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
-          <span>🔁</span> Turnos
+          Turnos
         </h3>
         <p className="text-lg leading-relaxed">
           Organización de turnos de trabajo por equipos, personas o funciones:
