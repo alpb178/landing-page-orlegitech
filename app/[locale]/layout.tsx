@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
 import { LanguageCode } from "@/constant/languages";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -73,6 +74,7 @@ export default async function LocaleLayout({
         className={`${inter.variable} ${montserratAlternates.variable} ${dancingScript.variable} font-sans antialiased`}
       >
         <NextIntlClientProvider messages={messages} locale={locale}>
+          <ScrollToTop />
           {children}
         </NextIntlClientProvider>
       </body>
