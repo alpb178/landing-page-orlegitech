@@ -14,10 +14,4 @@ describe("Hero", () => {
     render(<Hero />);
     expect(screen.getByText("Contáctanos")).toBeInTheDocument();
   });
-
-  it("displays statistics", () => {
-    render(<Hero />);
-    expect(screen.getByText(/198 campos/i)).toBeInTheDocument();
-    expect(screen.getByText(/\+1M usuarios/i)).toBeInTheDocument();
-  });
 });

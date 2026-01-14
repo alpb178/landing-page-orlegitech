@@ -59,9 +59,9 @@
         "title": "Informes aéreos",
         "description": "Mapas multiespectrales de vigor, estrés y densidad del césped."
       },
-      "taskManagement": {
-        "title": "Gestión de tareas",
-        "description": "Planificación inteligente para greenkeepers y personal del campo."
+      "assistantIA": {
+        "title": "Asistente IA",
+        "description": "Asistente Virtual del Greenkeeper: la memoria inteligente del campo."
       },
       "vehicleFleet": {
         "title": "Flota de vehículos",
@@ -73,10 +73,10 @@
       },
       "projectControl": {
         "title": "Control de proyectos",
-        "description": "Obras, mejoras y trabajos estacionales bajo seguimiento real."
+        "description": "Gestión integral de proyectos y documentación."
       },
       "operatorManagement": {
-        "title": "Gestión de operarios",
+        "title": "Gestión Organizacional y Empleados",
         "description": "Roles, horarios, partes de trabajo y productividad."
       },
       "budgets": {
@@ -86,6 +86,18 @@
       "userCheckIn": {
         "title": "Fichaje de usuarios",
         "description": "Control horario digital integrado con la app del club."
+      },
+      "planning": {
+        "title": "Planificación",
+        "description": "Planificación inteligente para greenkeepers y personal del campo."
+      },
+      "field": {
+        "title": "Campo",
+        "description": "Gestión integral de proyectos y documentación."
+      },
+      "projectManagement": {
+        "title": "Gestión de Proyectos",
+        "description": "Gestión integral de proyectos y documentación."
       }
     }
   },
