@@ -34,7 +34,7 @@ export default function AerialReportsContainer() {
 
       <div className="space-y-6">
         <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
-          <span>🚁</span> Vuelos de dron de alta precisión
+          Vuelos de dron de alta precisión
         </h3>
         <p className="text-lg leading-relaxed">
           El sistema permite realizar vuelos planificados sobre hoyos, greens,
@@ -47,7 +47,7 @@ export default function AerialReportsContainer() {
 
       <div className="space-y-6">
         <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
-          <span>🌈</span> Cámara multiespectral: salud real del césped
+          Cámara multiespectral: salud real del césped
         </h3>
         <p className="text-lg leading-relaxed">
           La cámara multiespectral permite analizar índices como vigor, estrés
@@ -65,7 +65,7 @@ export default function AerialReportsContainer() {
 
       <div className="space-y-6">
         <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
-          <span>🧠</span> Análisis con inteligencia artificial
+          Análisis con inteligencia artificial
         </h3>
         <p className="text-lg leading-relaxed">
           La IA de OrlegiTech interpreta automáticamente las imágenes y señala
@@ -76,7 +76,7 @@ export default function AerialReportsContainer() {
 
       <div className="space-y-6">
         <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
-          <span>🗺️</span> Topografía, distancias y modelos 3D
+          Topografía, distancias y modelos 3D
         </h3>
         <p className="text-lg leading-relaxed">
           Además del estado del césped, el sistema permite generar mapas

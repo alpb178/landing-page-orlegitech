@@ -29,7 +29,7 @@ export default function AssistantIAContainer() {
 
       <div className="space-y-6">
         <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
-          <span>🧠</span> Un asistente que aprende con el tiempo
+          Un asistente que aprende con el tiempo
         </h3>
         <p className="text-lg leading-relaxed">
           El sistema va acumulando información de:
@@ -49,7 +49,7 @@ export default function AssistantIAContainer() {
 
       <div className="space-y-6">
         <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
-          <span>💬</span> Pregunta al campo, literalmente
+          Pregunta al campo, literalmente
         </h3>
         <p className="text-lg leading-relaxed">
           El greenkeeper y su equipo pueden hablar con el asistente en lenguaje
@@ -78,7 +78,7 @@ export default function AssistantIAContainer() {
 
       <div className="space-y-6">
         <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
-          <span>🤖</span> Recomendaciones basadas en la historia real del campo
+          Recomendaciones basadas en la historia real del campo
         </h3>
         <p className="text-lg leading-relaxed">
           No solo responde: también ayuda a decidir:

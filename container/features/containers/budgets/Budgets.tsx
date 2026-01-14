@@ -28,7 +28,7 @@ export default function BudgetsContainer() {
 
       <div className="space-y-6">
         <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
-          <span>📄</span> Presupuestos
+          Presupuestos
         </h3>
         <p className="text-lg leading-relaxed">
           Con OrlegiTech, cada actuación, proyecto o intervención puede tener su
@@ -54,7 +54,7 @@ export default function BudgetsContainer() {
 
       <div className="space-y-6">
         <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
-          <span>📦</span> Productos
+          Productos
         </h3>
         <p className="text-lg leading-relaxed">
           OrlegiTech incluye un sistema completo de gestión de productos y
