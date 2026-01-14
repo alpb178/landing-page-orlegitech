@@ -39,7 +39,7 @@ export default function Services() {
           <p className="text-gray-600 text-sm">•{t("drone.features.2")}</p>
         </div>
       ),
-      image: "/images/services/drone.png",
+      image: "/images/services/drone.jpg",
       showStars: true,
     },
     {
@@ -84,15 +84,6 @@ export default function Services() {
                   >
                     {service.title}
                   </span>
-                  {service.showStars && (
-                    <div className="flex gap-1 px-2 py-1 mt-3">
-                      {[...Array(5)].map((_, i) => (
-                        <span key={i} className="text-yellow-400 text-2xl">
-                          ★
-                        </span>
-                      ))}
-                    </div>
-                  )}
                 </div>
               </div>
               {/* Image Card */}

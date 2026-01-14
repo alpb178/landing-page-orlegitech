@@ -2,90 +2,17 @@
 
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { ReportsFlyIcon } from "@/components/icons/ReportsFly";
-import { TasksIcon } from "@/components/icons/Task";
-import { VehicleIcon } from "@/components/icons/Vehicle";
-import { PlannerIcon } from "@/components/icons/Planner";
-import { ProjectsIcon } from "@/components/icons/Projects";
-import { EmployeeIcon } from "@/components/icons/Employee";
-import { BudgetIcon } from "@/components/icons/Budget";
-import { UserIcon } from "@/components/icons/User";
-import AnimatedCard from "@/components/AnimatedCard";
+
+import Features from "../features/features";
 
 export default function AboutUs() {
   const t = useTranslations("about");
-
-  const features = [
-    {
-      Icon: ReportsFlyIcon,
-      title: t("features.aerialReports.title"),
-      description: t("features.aerialReports.description"),
-    },
-    {
-      Icon: TasksIcon,
-      title: t("features.taskManagement.title"),
-      description: t("features.taskManagement.description"),
-    },
-    {
-      Icon: VehicleIcon,
-      title: t("features.vehicleFleet.title"),
-      description: t("features.vehicleFleet.description"),
-    },
-    {
-      Icon: PlannerIcon,
-      title: t("features.irrigationPlanning.title"),
-      description: t("features.irrigationPlanning.description"),
-    },
-    {
-      Icon: ProjectsIcon,
-      title: t("features.projectControl.title"),
-      description: t("features.projectControl.description"),
-    },
-    {
-      Icon: UserIcon,
-      title: t("features.operatorManagement.title"),
-      description: t("features.operatorManagement.description"),
-    },
-    {
-      Icon: BudgetIcon,
-      title: t("features.budgets.title"),
-      description: t("features.budgets.description"),
-    },
-    {
-      Icon: EmployeeIcon,
-      title: t("features.userCheckIn.title"),
-      description: t("features.userCheckIn.description"),
-    },
-  ];
 
   return (
     <section id="about-us" className="relative">
       {/* Top Section with Background Image */}
       {/* Features Section with Dark Green Background */}
-      <div className="bg-[#036546] py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
-            {features.map((feature, index) => {
-              const IconComponent = feature.Icon;
-              return (
-                <AnimatedCard
-                  key={index}
-                  delay={index * 100}
-                  className="text-center"
-                >
-                  <div className="flex justify-center mb-4">
-                    <IconComponent />
-                  </div>
-                  <h3 className="text-white font-semibold mb-2 text-lg">
-                    {feature.title}
-                  </h3>
-                  <p className="text-white/80 text-sm">{feature.description}</p>
-                </AnimatedCard>
-              );
-            })}
-          </div>
-        </div>
-      </div>
+      <Features />
       <div className="relative min-h-[600px] flex items-center justify-center overflow-hidden">
         {/* Background Image with Blur Effect */}
         <div className="absolute inset-0">
