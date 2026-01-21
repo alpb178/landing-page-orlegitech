@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-import Features from "../features/features";
+
 
 export default function AboutUs() {
   const t = useTranslations("about");
@@ -12,7 +12,7 @@ export default function AboutUs() {
     <section id="about-us" className="relative">
       {/* Top Section with Background Image */}
       {/* Features Section with Dark Green Background */}
-      <Features />
+     
       <div className="relative min-h-[600px] flex items-center justify-center overflow-hidden">
         {/* Background Image with Blur Effect */}
         <div className="absolute inset-0">
