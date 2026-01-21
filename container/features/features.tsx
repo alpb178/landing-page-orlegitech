@@ -8,6 +8,9 @@ import { ProjectsIcon } from "@/components/icons/Projects";
 import { EmployeeIcon } from "@/components/icons/Employee";
 import { BudgetIcon } from "@/components/icons/Budget";
 import { UserIcon } from "@/components/icons/User";
+import { PlanningIcon } from "@/components/icons/Planning";
+import { FieldIcon } from "@/components/icons/Field";
+import { ProjectManagementIcon } from "@/components/icons/ProjectManagement";
 import AnimatedCard from "@/components/AnimatedCard";
 import { useParams } from "next/navigation";
 import Link from "next/link";
@@ -66,19 +69,19 @@ export default function Features() {
     },
 
     {
-      Icon: BudgetIcon,
+      Icon: PlanningIcon,
       title: t("features.planning.title"),
       description: t("features.planning.description"),
       slug: "planning",
     },
     {
-      Icon: BudgetIcon,
+      Icon: FieldIcon,
       title: t("features.field.title"),
       description: t("features.field.description"),
       slug: "field",
     },
     {
-      Icon: BudgetIcon,
+      Icon: ProjectManagementIcon,
       title: t("features.projectManagement.title"),
       description: t("features.projectManagement.description"),
       slug: "project-management",

@@ -157,6 +157,16 @@
           "8": "Generación automática de tareas"
         }
       }
+    },
+    "price": {
+      "customTitle": "Precios Personalizados",
+      "customSubtitle": "Soluciones adaptadas a las necesidades de tu campo",
+      "description1": "En OrlegiTech entendemos que cada campo de golf es diferente: tamaño, número de hoyos, sistemas de riego, maquinaria, personal, objetivos y nivel de digitalización.",
+      "description2": "Por eso, no trabajamos con precios cerrados ni paquetes estándar.",
+      "description3": "Después de una demo personalizada, donde analizamos vuestras necesidades reales y qué módulos de OrlegiTech encajan mejor con vuestro campo, os presentamos una propuesta a medida, con:",
+      "description4": "Solo los servicios que realmente necesitáis.",
+      "description5": "Un precio ajustado al tamaño y complejidad del campo.",
+      "description6": "Un enfoque claro en ahorro de costes y mejora de la eficiencia."
     }
   },
   "contact": {
@@ -210,4 +220,5 @@
   "footer": {
     "copyright": "Copyright © 2026 Orlegitech. Todos los derechos reservados."
   }
+
 }

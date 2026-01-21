@@ -53,7 +53,7 @@ export default function Hero() {
           </button>
         </div>
       </section>
-      <section className=" hidden md:flex h-[800px] w-full aspect-video bg-[#01261A] items-center justify-center">
+      <section className=" hidden h-[800px] w-full aspect-video bg-[#01261A] items-center justify-center">
         <div className="relative hidden md:block aspect-video rounded-lg max-w-full">
           <video
             src="/movies/movie-web.mp4"
@@ -68,7 +68,7 @@ export default function Hero() {
         </div>
       </section>
 
-      <div className=" block md:hidden w-full h-full">
+      <div className="hidden w-full h-full">
         <video
           src="/movies/movie-app.mp4"
           className="w-full h-full "
@@ -81,7 +81,7 @@ export default function Hero() {
         />
       </div>
 
-      <div className="absolute hidden md:block top-[50%] left-0 right-0 mt-20 bg-[#E2ECCA] rounded-lg p-8 max-w-6xl mx-auto">
+      <div className="absolute hidden md:block top-[70%] left-0 right-0 mt-20 bg-[#E2ECCA] rounded-lg p-8 max-w-6xl mx-auto">
         <p className="text-xl font-['Montserrat_Alternates'] font-semibold text-[#1a4d3a] mb-2">
           {t("stats.description")}
         </p>
