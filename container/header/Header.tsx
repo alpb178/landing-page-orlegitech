@@ -5,6 +5,7 @@ import { useTranslations, useLocale } from "next-intl";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import LanguageSelector from "@/components/LanguageSelector";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const t = useTranslations("header.nav");
@@ -12,6 +13,7 @@ export default function Header() {
   const [isInHero, setIsInHero] = useState(true);
   const [isInSection2, setIsInSection2] = useState(false);
   const locale = useLocale();
+  const pathname = usePathname();
   useEffect(() => {
     const heroSection = document.getElementById("home");
     const servicesSection = document.getElementById("services");
@@ -50,11 +52,17 @@ export default function Header() {
     setIsDrawerOpen(false);
   };
 
+
+  const aboutUsHref = pathname === `/${locale}` ? "#about-us" : `/${locale}/#about-us`;
+  const servicesHref = pathname === `/${locale}` ? "#services" : `/${locale}/#services`;
+  const pricingHref = pathname === `/${locale}` ? "#pricing" : `/${locale}/#pricing`;
+  const contactHref = pathname === `/${locale}` ? "#contact-us" : `/${locale}/#contact-us`;
+
   const navLinks = [
-    { href: "#about-us", label: t("about") },
-    { href: "#services", label: t("services") },
-    { href: "#pricing", label: t("pricing") },
-    { href: "#contact-us", label: t("contact") },
+    { href: aboutUsHref, label: t("about") },
+    { href: servicesHref, label: t("services") },
+    { href: pricingHref, label: t("pricing") },
+    { href: contactHref, label: t("contact") },
   ];
 
   return (
@@ -68,7 +76,7 @@ export default function Header() {
             : "bg-white text-gray-800 shadow-md"
         }`}
       >
-        <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
+        <nav className="container mx-auto flex items-center justify-between">
           <a href={`/${locale}/#home`}>
             <Image
               src="/logo-navbar.svg"

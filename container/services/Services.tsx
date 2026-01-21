@@ -62,7 +62,7 @@ export default function Services() {
   return (
     <section id="services" className="py-20 bg-[#F5F5F0]">
       <div className="container mx-auto px-5">
-        <h2 className="text-7xl font-['Montserrat_Alternates'] font-semibold text-center text-gray-800 mb-[100px]">
+        <h2 className="text-7xl  font-['Montserrat_Alternates'] font-semibold text-center text-gray-800 mb-[100px]">
           {t("title")}
         </h2>
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { Check } from "lucide-react";
+import { Check, Sparkles, Target, DollarSign, Zap } from "lucide-react";
 import { useTranslations } from "next-intl";
 import AnimatedCard from "@/components/AnimatedCard";
 
@@ -119,13 +119,86 @@ export default function Pricing() {
               <ul className="space-y-3">
                 {plan.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-start">
-                    <Check className="h-5 w-5 text-[#1a4d3a] mr-3 mt-0.5 flex-shrink-0" />
+                    <Check className="h-5 w-5 text-[#1a4d3a] mr-3 mt-0.5 shrink-0" />
                     <span className="text-gray-600 text-sm">{feature}</span>
                   </li>
                 ))}
               </ul>
             </AnimatedCard>
           ))}
+        </div>
+        
+        {/* Información sobre precios personalizados */}
+        <div className="mt-16 max-w-4xl mx-auto">
+          <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 border border-gray-100">
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-[#1a4d3a]/10 rounded-full mb-4">
+                <Sparkles className="h-8 w-8 text-[#1a4d3a]" />
+              </div>
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+                {t("price.customTitle")}
+              </h3>
+              <p className="text-gray-600 text-lg">
+                {t("price.customSubtitle")}
+              </p>
+            </div>
+
+            <div className="space-y-6">
+              <div className="flex items-start gap-4">
+                <div className="shrink-0 mt-1">
+                  <div className="w-10 h-10 rounded-lg bg-[#1a4d3a]/10 flex items-center justify-center">
+                    <Target className="h-5 w-5 text-[#1a4d3a]" />
+                  </div>
+                </div>
+                <p className="text-gray-700 text-base leading-relaxed pt-2">
+                  {t("price.description1")}
+                </p>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="shrink-0 mt-1">
+                  <div className="w-10 h-10 rounded-lg bg-[#1a4d3a]/10 flex items-center justify-center">
+                    <Zap className="h-5 w-5 text-[#1a4d3a]" />
+                  </div>
+                </div>
+                <p className="text-gray-700 text-base leading-relaxed pt-2">
+                  {t("price.description2")}
+                </p>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="shrink-0 mt-1">
+                  <div className="w-10 h-10 rounded-lg bg-[#1a4d3a]/10 flex items-center justify-center">
+                    <Sparkles className="h-5 w-5 text-[#1a4d3a]" />
+                  </div>
+                </div>
+                <p className="text-gray-700 text-base leading-relaxed pt-2">
+                  {t("price.description3")}
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-4 mt-8 pt-8 border-t border-gray-200">
+                <div className="text-center p-4 rounded-xl bg-[#1a4d3a]/5">
+                  <Check className="h-6 w-6 text-[#1a4d3a] mx-auto mb-3" />
+                  <p className="text-gray-700 text-sm font-medium">
+                    {t("price.description4")}
+                  </p>
+                </div>
+                <div className="text-center p-4 rounded-xl bg-[#1a4d3a]/5">
+                  <DollarSign className="h-6 w-6 text-[#1a4d3a] mx-auto mb-3" />
+                  <p className="text-gray-700 text-sm font-medium">
+                    {t("price.description5")}
+                  </p>
+                </div>
+                <div className="text-center p-4 rounded-xl bg-[#1a4d3a]/5">
+                  <Zap className="h-6 w-6 text-[#1a4d3a] mx-auto mb-3" />
+                  <p className="text-gray-700 text-sm font-medium">
+                    {t("price.description6")}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
