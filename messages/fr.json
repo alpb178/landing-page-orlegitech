@@ -157,6 +157,16 @@
           "8": "Génération automatique de tâches"
         }
       }
+    },
+    "price": {
+      "customTitle": "Tarifs Personnalisés",
+      "customSubtitle": "Solutions adaptées aux besoins de votre terrain",
+      "description1": "Chez OrlegiTech, nous comprenons que chaque terrain de golf est différent : taille, nombre de trous, systèmes d'irrigation, machinerie, personnel, objectifs et niveau de numérisation.",
+      "description2": "C'est pourquoi nous ne travaillons pas avec des prix fixes ni des forfaits standard.",
+      "description3": "Après une démo personnalisée, où nous analysons vos besoins réels et quels modules OrlegiTech correspondent le mieux à votre terrain, nous vous présentons une proposition sur mesure, avec :",
+      "description4": "Seulement les services dont vous avez vraiment besoin.",
+      "description5": "Un prix ajusté à la taille et à la complexité du terrain.",
+      "description6": "Une approche claire axée sur l'économie de coûts et l'amélioration de l'efficacité."
     }
   },
   "contact": {

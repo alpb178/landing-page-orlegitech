@@ -157,6 +157,16 @@
           "8": "Automatic task generation"
         }
       }
+    },
+    "price": {
+      "customTitle": "Custom Pricing",
+      "customSubtitle": "Solutions tailored to your course needs",
+      "description1": "At OrlegiTech we understand that each golf course is different: size, number of holes, irrigation systems, machinery, staff, objectives and level of digitalization.",
+      "description2": "That's why we don't work with fixed prices or standard packages.",
+      "description3": "After a personalized demo, where we analyze your real needs and which OrlegiTech modules best fit your course, we present you with a tailored proposal, with:",
+      "description4": "Only the services you really need.",
+      "description5": "A price adjusted to the size and complexity of the course.",
+      "description6": "A clear focus on cost savings and efficiency improvement."
     }
   },
   "contact": {
