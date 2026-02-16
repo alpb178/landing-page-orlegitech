@@ -14,6 +14,11 @@
     "cta": "Contact Us",
     "stats": {
       "description": "OrlegiTech uses artificial intelligence, aerial analysis, and real-time control to help golf courses maintain optimal turf conditions and manage their resources more efficiently."
+    },
+    "demo": {
+      "title": "Book your demo",
+      "description": "Book your demo to learn more about OrlegiTech and how we can help you improve the performance of your golf course.",
+      "cta": "Book demo"
     }
   },
   "services": {
@@ -217,7 +222,91 @@
       "success": "Your email client will open. Complete the sending from there."
     }
   },
+  "demoPage": {
+    "title": "Book a personalized demo",
+    "description": "Discover how OrlegiTech works with a demonstration tailored to your golf course needs.",
+    "stats": {
+      "duration": "30 min",
+      "durationLabel": "Average demo length",
+      "response": "24 hrs",
+      "responseLabel": "Response time",
+      "free": "Free",
+      "freeLabel": "No commitment"
+    },
+    "form": {
+      "title": "Schedule a demo",
+      "intro": "Complete the form and our team will contact you within 24 hours to schedule your personalized demo.",
+      "fullName": "Full name *",
+      "fullNamePlaceholder": "Your full name",
+      "email": "Professional email *",
+      "emailPlaceholder": "you@email.com",
+      "phone": "Phone",
+      "phonePlaceholder": "+34 600 000 000",
+      "company": "Club or company name *",
+      "companyPlaceholder": "Your club or company",
+      "role": "Role",
+      "rolePlaceholder": "Greenkeeper, director, etc.",
+      "industry": "Type of facility *",
+      "industryPlaceholder": "Select",
+      "industryOptions": {
+        "golf": "Golf course",
+        "sports": "Sports facilities",
+        "landscape": "Landscape and parks",
+        "other": "Other"
+      },
+      "challenges": "Current challenges or needs *",
+      "challengesPlaceholder": "Irrigation, turf, fleet, staff, reports...",
+      "additional": "Additional information",
+      "additionalPlaceholder": "Any details you want to share",
+      "requiredFields": "* Required fields",
+      "submit": "Schedule my demo",
+      "success": "Your email client will open. Complete the send from there."
+    },
+    "whatYouGet": {
+      "title": "What you'll get from the demo",
+      "subtitle": "Our demos are designed to show you how OrlegiTech can transform your course management.",
+      "personalized": "Personalized experience",
+      "personalizedDesc": "Demo tailored to your course, challenges and use cases (irrigation, drone, fleet, staff).",
+      "expert": "Expert guidance",
+      "expertDesc": "Session with an expert who knows the golf industry and greenkeeper needs.",
+      "liveDemo": "Live platform demo",
+      "liveDemoDesc": "OrlegiTech in action with real data and scenarios relevant to your operations.",
+      "roi": "ROI analysis",
+      "roiDesc": "Potential savings and efficiency improvements for your facility.",
+      "roadmap": "Implementation roadmap",
+      "roadmapDesc": "Clear next steps and timeline to get started with OrlegiTech.",
+      "support": "Ongoing support",
+      "supportDesc": "Training, integration and implementation with our team."
+    },
+    "process": {
+      "title": "Simple 3-step process",
+      "step1Title": "Complete the form",
+      "step1Desc": "Provide your details and your course's specific needs.",
+      "step2Title": "We contact you",
+      "step2Desc": "We contact you within 24 hours to schedule your demo.",
+      "step3Title": "Personalized demo",
+      "step3Desc": "Join your demonstration and see OrlegiTech in action."
+    },
+    "faq": {
+      "title": "Demo FAQ",
+      "q1": "How long is the demo?",
+      "a1": "The standard demo is 30-45 minutes online, and 1-2 hours for on-site visits. We adjust the length to your needs.",
+      "q2": "Is the demo really free?",
+      "a2": "Yes. Our demos are free and with no commitment. We want you to see the value of OrlegiTech before deciding.",
+      "q3": "Can several team members join the demo?",
+      "a3": "Absolutely. The more perspectives (greenkeeper, management, maintenance), the better we can tailor the demo.",
+      "q4": "What if I'm not ready to sign up after the demo?",
+      "a4": "No pressure. We're here to support you through the entire decision process.",
+      "q5": "Can you show me features specific to my course?",
+      "a5": "Yes. We focus on irrigation, aerial reports, fleet, planning, or whatever matters most to you."
+    }
+  },
   "footer": {
     "copyright": "Copyright © 2026 Orlegitech. All rights reserved."
+  },
+  "demo": {
+    "title": "Book your demo",
+    "description": "Book your demo to learn more about OrlegiTech and how we can help you improve the performance of your golf course.",
+    "cta": "Book demo"
   }
 }
