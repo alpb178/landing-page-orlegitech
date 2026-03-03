@@ -8,12 +8,11 @@ export default function ServicesLayout({
   children: React.ReactNode;
 }) {
   return (
-    <>
+    <main className="min-h-screen bg-gradient-to-b from-[#012319] via-[#012319] via-[75%] to-[#008c63]">
       <Header />
-      <div className="mt-20">{children}</div>
-
+      <div className="pt-24 pb-12">{children}</div>
       <Features />
       <Footer />
-    </>
+    </main>
   );
 }

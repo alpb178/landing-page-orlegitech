@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function ProjectManagementContainer() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12 space-y-8 text-gray-800">
+    <div className="max-w-4xl mx-auto px-4 py-12 space-y-8 text-[#e6ebe9]">
       <div className="space-y-6">
-        <h2 className="text-4xl font-bold text-[#1a4d3a] mb-4">
+        <h2 className="text-4xl font-bold text-[#a1c353] mb-4">
           Gestión de Proyectos: orden, control y eficiencia en cada actuación
         </h2>
         <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden shadow-lg mb-6">
@@ -31,7 +31,7 @@ export default function ProjectManagementContainer() {
       </div>
 
       <div className="space-y-6">
-        <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
+        <h3 className="text-2xl font-semibold text-[#a1c353] flex items-center gap-2">
           Proyectos
         </h3>
         <p className="text-lg leading-relaxed">
@@ -51,7 +51,7 @@ export default function ProjectManagementContainer() {
       </div>
 
       <div className="space-y-6">
-        <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
+        <h3 className="text-2xl font-semibold text-[#a1c353] flex items-center gap-2">
           Tareas
         </h3>
         <p className="text-lg leading-relaxed">
@@ -69,7 +69,7 @@ export default function ProjectManagementContainer() {
       </div>
 
       <div className="space-y-6">
-        <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
+        <h3 className="text-2xl font-semibold text-[#a1c353] flex items-center gap-2">
           Checklist
         </h3>
         <p className="text-lg leading-relaxed">
@@ -86,7 +86,7 @@ export default function ProjectManagementContainer() {
       </div>
 
       <div className="space-y-6">
-        <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
+        <h3 className="text-2xl font-semibold text-[#a1c353] flex items-center gap-2">
           Chrono (control de tiempos)
         </h3>
         <p className="text-lg leading-relaxed">
@@ -101,7 +101,7 @@ export default function ProjectManagementContainer() {
       </div>
 
       <div className="space-y-6">
-        <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
+        <h3 className="text-2xl font-semibold text-[#a1c353] flex items-center gap-2">
           Gastos
         </h3>
         <p className="text-lg leading-relaxed">
@@ -116,8 +116,8 @@ export default function ProjectManagementContainer() {
         </ul>
       </div>
 
-      <div className="space-y-6 bg-gray-50 p-6 rounded-lg">
-        <h3 className="text-2xl font-semibold text-[#1a4d3a]">
+      <div className="space-y-6 bg-[rgba(255,255,255,0.1)] backdrop-blur-sm p-6 rounded-lg">
+        <h3 className="text-2xl font-semibold text-[#a1c353]">
           De trabajar &ldquo;a ojo&rdquo; a gestionar como una empresa moderna
         </h3>
         <p className="text-lg leading-relaxed">
@@ -128,7 +128,7 @@ export default function ProjectManagementContainer() {
           <li>Tener información dispersa → a tener todo centralizado</li>
           <li>No saber costes reales → a controlar cada euro invertido</li>
         </ul>
-        <p className="text-lg leading-relaxed font-semibold text-[#1a4d3a]">
+        <p className="text-lg leading-relaxed font-semibold text-[#a1c353]">
           El resultado es un equipo más organizado, más eficiente y un campo
           mejor mantenido con menos estrés, menos errores y más control.
         </p>
