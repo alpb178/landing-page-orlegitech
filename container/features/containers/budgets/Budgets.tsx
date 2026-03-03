@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function BudgetsContainer() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12 space-y-8 text-gray-800">
+    <div className="max-w-4xl mx-auto px-4 py-12 space-y-8 text-[#e6ebe9]">
       <div className="space-y-6">
-        <h2 className="text-4xl font-bold text-[#1a4d3a] mb-4">
+        <h2 className="text-4xl font-bold text-[#a1c353] mb-4">
           Presupuestos y Productos: control total de costes y materiales
         </h2>
         <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden shadow-lg mb-6">
@@ -27,7 +27,7 @@ export default function BudgetsContainer() {
       </div>
 
       <div className="space-y-6">
-        <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
+        <h3 className="text-2xl font-semibold text-[#a1c353] flex items-center gap-2">
           Presupuestos
         </h3>
         <p className="text-lg leading-relaxed">
@@ -53,7 +53,7 @@ export default function BudgetsContainer() {
       </div>
 
       <div className="space-y-6">
-        <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
+        <h3 className="text-2xl font-semibold text-[#a1c353] flex items-center gap-2">
           Productos
         </h3>
         <p className="text-lg leading-relaxed">
@@ -72,8 +72,8 @@ export default function BudgetsContainer() {
         </ul>
       </div>
 
-      <div className="space-y-6 bg-gray-50 p-6 rounded-lg">
-        <h3 className="text-2xl font-semibold text-[#1a4d3a]">
+      <div className="space-y-6 bg-[rgba(255,255,255,0.1)] backdrop-blur-sm p-6 rounded-lg">
+        <h3 className="text-2xl font-semibold text-[#a1c353]">
           De la intuición al control financiero real
         </h3>
         <p className="text-lg leading-relaxed">
@@ -91,7 +91,7 @@ export default function BudgetsContainer() {
             No poder comparar campañas → a optimizar presupuestos año tras año
           </li>
         </ul>
-        <p className="text-lg leading-relaxed font-semibold text-[#1a4d3a]">
+        <p className="text-lg leading-relaxed font-semibold text-[#a1c353]">
           El resultado: más control, menos desperdicio y una gestión económica
           mucho más profesional y rentable.
         </p>

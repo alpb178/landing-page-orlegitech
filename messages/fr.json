@@ -3,7 +3,7 @@
     "nav": {
       "about": "À propos de nous",
       "services": "Services",
-      "pricing": "Tarifs",
+      "pricing": "Forfaits",
       "contact": "Contactez-nous"
     }
   },
@@ -12,6 +12,7 @@
     "description": "Technologie intelligente pour maintenir le gazon, la flotte et les opérations du club sous contrôle total.",
     "description2": "",
     "cta": "Contactez-nous",
+    "services_cta": "Services",
     "stats": {
       "description": "OrlegiTech utilise l'intelligence artificielle, l'analyse aérienne et le contrôle en temps réel pour aider les terrains de golf à maintenir un gazon en bon état et à gérer ses ressources de manière plus efficace."
     },
@@ -107,118 +108,95 @@
     }
   },
   "pricing": {
-    "title": "Tarifs et Forfaits",
+    "title": "Forfaits",
     "plans": {
-      "basic": {
-        "name": "Forfait de Base",
+      "base": {
+        "name": "Plan Base",
         "features": {
-          "1": "Gestion des employés et des départements",
-          "2": "Gestion de projets (Projets, tâches, Chrono, Check-list, frais)",
-          "3": "Pointages.",
-          "4": "Planification (Vacances, horaires, calendrier, absences)",
-          "5": "Pièces jointes",
-          "6": "Rapports de pointages",
+          "1": "Gestion des employés et départements.",
+          "2": "Gestion de projets",
+          "3": "Pointages et rapports de pointages",
+          "4": "Planification",
+          "5": "Tournois",
+          "6": "Drapeaux",
           "7": "Budgets",
           "8": "Rapports phytosanitaires",
-          "9": "Drapeaux",
-          "10": "Statut du terrain"
+          "9": "État du terrain"
         }
       },
       "premium": {
-        "name": "Forfait Premium",
+        "name": "Plan Premium",
+        "badge": "Le plus populaire",
+        "cta": "Contacter",
         "features": {
-          "1": "Forfait de Base +",
-          "2": "Vitesse de jeu",
-          "3": "Portail du membre",
-          "4": "Assistant IA pour greenkeeper",
-          "5": "Comparaisons annuelles",
-          "6": "CHAT",
-          "7": "Priorité en support",
-          "8": "Mobilité"
+          "1": "Plan base +",
+          "2": "Vitesse de jeu.",
+          "3": "Portail du membre.",
+          "4": "Assistant IA pour greenkeeper.",
+          "5": "Comparatifs annuels",
+          "6": "Chat.",
+          "7": "Priorité au support."
         }
-      },
-      "complete": {
-        "name": "Module d'irrigation intelligent",
+      }
+    },
+    "addons": {
+      "title": "Add-Ons",
+      "riego": {
+        "name": "Module d'Irrigation Intelligente",
         "features": {
-          "1": "Humidité du sol réelle (base de tout)",
-          "2": "Décision par green (pas d'irrigation générique)",
-          "3": "Calcul de la perte d'eau (ET / demande d'eau)",
+          "1": "Humidité réelle du sol",
+          "2": "Décision par green",
+          "3": "Calcul de perte d'eau",
           "4": "Minutes exactes et cycles intelligents",
           "5": "Règles du club et contrôle humain",
-          "6": "KPIs avancés (pas seulement des données)",
+          "6": "KPIs avancés",
           "7": "Recommandation claire et explicable"
         }
       },
       "drone": {
-        "name": "Module de rapports aériens avec drone multiespectral via IA",
+        "name": "Module de rapports aériens avec drone multispectral et IA",
         "features": {
           "1": "1 vol tous les 3 mois",
           "2": "Pilote professionnel inclus",
-          "3": "Planification par zone",
+          "3": "Planification par zones",
           "4": "Photos + vidéo",
-          "5": "Rapport PDF exécutif",
+          "5": "Rapport exécutif en PDF",
           "6": "Historique comparatif",
-          "7": "Marquage des incidents",
-          "8": "Génération automatique de tâches"
+          "7": "Marquage d'incidents"
         }
       }
-    },
-    "price": {
-      "customTitle": "Tarifs Personnalisés",
-      "customSubtitle": "Solutions adaptées aux besoins de votre terrain",
-      "description1": "Chez OrlegiTech, nous comprenons que chaque terrain de golf est différent : taille, nombre de trous, systèmes d'irrigation, machinerie, personnel, objectifs et niveau de numérisation.",
-      "description2": "C'est pourquoi nous ne travaillons pas avec des prix fixes ni des forfaits standard.",
-      "description3": "Après une démo personnalisée, où nous analysons vos besoins réels et quels modules OrlegiTech correspondent le mieux à votre terrain, nous vous présentons une proposition sur mesure, avec :",
-      "description4": "Seulement les services dont vous avez vraiment besoin.",
-      "description5": "Un prix ajusté à la taille et à la complexité du terrain.",
-      "description6": "Une approche claire axée sur l'économie de coûts et l'amélioration de l'efficacité."
     }
   },
   "contact": {
-    "title": "Contactez-nous",
-    "subtitle": "Avez-vous des questions ? Nous sommes là pour vous aider. Contactez notre équipe et nous vous répondrons dans les plus brefs délais.",
-    "contactInfo": {
-      "title": "Informations de Contact",
-      "email": "Email",
-      "phone": "Téléphone",
-      "office": "Bureau",
-      "officeAddress": "Rue du Golf, 123\n28001 Madrid, Espagne",
-      "hours": "Lundi au Vendredi : 9h00 - 18h00"
-    },
-    "services": {
-      "title": "Services Disponibles",
-      "1": "Application mobile pour le golf",
-      "2": "Services de drone",
-      "3": "Location de buggies",
-      "4": "Plus de 150 parcours dans 10 pays"
+    "title": "Contact",
+    "info": {
+      "title": "Informations de contact",
+      "emailLabel": "Email",
+      "email": "info@orlegitech.com",
+      "phoneLabel": "Téléphone",
+      "phone": "+34 681264526",
+      "hours": "Lundi au vendredi : 9h00 - 18h00",
+      "address": "Calle Ferrerías 19\n20011 Donostia - San Sebastián, Espagne"
     },
     "form": {
-      "title": "Envoyez-nous un Message",
-      "name": "Nom*",
+      "title": "Envoyez-nous un message",
+      "name": "Nom",
       "namePlaceholder": "Votre nom",
-      "lastName": "Nom de famille*",
+      "lastName": "Nom de famille",
       "lastNamePlaceholder": "Votre nom de famille",
-      "email": "Email*",
-      "emailPlaceholder": "votre@email.com",
+      "email": "Email",
+      "emailPlaceholder": "vous@email.com",
       "phone": "Téléphone",
-      "phonePlaceholder": "+34 600 000 000",
-      "service": "Service d'Intérêt",
-      "servicePlaceholder": "Sélectionnez un service",
-      "services": {
-        "app": "Application mobile (APP)",
-        "drone": "Services de drone",
-        "buggy": "Location de buggies",
-        "premium": "Forfait Premium",
-        "complete": "Forfait Complet",
-        "general": "Informations générales"
+      "phonePlaceholder": "Votre téléphone",
+      "service": "Service d'intérêt",
+      "servicePlaceholder": "Sélectionner une option",
+      "serviceOptions": {
+        "irrigation": "Irrigation",
+        "other": "Autre"
       },
-      "message": "Message*",
+      "message": "Message",
       "messagePlaceholder": "Dites-nous comment nous pouvons vous aider...",
-      "privacy": "En soumettant ce formulaire, j'accepte la",
-      "privacyLink": "Politique de confidentialité",
-      "terms": "et les",
-      "termsLink": "Conditions d'utilisation",
-      "submit": "Envoyer le Message",
+      "submit": "Envoyer",
       "success": "Votre client de messagerie s'ouvrira. Complétez l'envoi depuis là."
     }
   },
@@ -303,10 +281,5 @@
   },
   "footer": {
     "copyright": "Copyright © 2026 Orlegitech. Tous droits réservés."
-  },
-  "demo": {
-    "title": "Réservez votre démo",
-    "description": "Réservez votre démo pour en savoir plus sur OrlegiTech et comment nous pouvons vous aider à améliorer le rendement de votre terrain de golf.",
-    "cta": "Réserver une démo"
   }
 }

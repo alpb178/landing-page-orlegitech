@@ -70,35 +70,38 @@ export default function DemoContainer() {
     { key: "support", icon: CheckCircle2 },
   ] as const;
 
+  const inputClasses =
+    "w-full px-4 py-3 bg-transparent border border-white rounded-lg text-white placeholder-white/50 focus:ring-2 focus:ring-[#a1c353] focus:border-transparent outline-none";
+
   return (
-    <main className="min-h-screen bg-[#013322]">
+    <div>
       {/* Hero */}
-      <section className="pt-24 pb-12 px-4 sm:px-6 lg:px-8">
+      <section className="pb-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h1 className="text-4xl md:text-5xl font-medium text-white mb-4 font-[family-name:var(--font-plus-jakarta)]">
             {t("title")}
           </h1>
-          <p className="text-lg md:text-xl text-white/90">
+          <p className="text-lg md:text-xl text-[#e6ebe9]">
             {t("description")}
           </p>
         </div>
 
         {/* Stats */}
         <div className="max-w-4xl mx-auto mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6">
-          <div className="bg-white/10 backdrop-blur rounded-2xl p-6 text-center border border-white/20">
-            <Clock className="h-10 w-10 text-white mx-auto mb-2" />
+          <div className="bg-[rgba(255,255,255,0.1)] backdrop-blur-sm rounded-2xl p-6 text-center">
+            <Clock className="h-10 w-10 text-[#a1c353] mx-auto mb-2" />
             <p className="text-2xl font-bold text-white">{t("stats.duration")}</p>
-            <p className="text-white/80 text-sm">{t("stats.durationLabel")}</p>
+            <p className="text-[#ebeed6]/80 text-sm">{t("stats.durationLabel")}</p>
           </div>
-          <div className="bg-white/10 backdrop-blur rounded-2xl p-6 text-center border border-white/20">
-            <MessageCircle className="h-10 w-10 text-white mx-auto mb-2" />
+          <div className="bg-[rgba(255,255,255,0.1)] backdrop-blur-sm rounded-2xl p-6 text-center">
+            <MessageCircle className="h-10 w-10 text-[#a1c353] mx-auto mb-2" />
             <p className="text-2xl font-bold text-white">{t("stats.response")}</p>
-            <p className="text-white/80 text-sm">{t("stats.responseLabel")}</p>
+            <p className="text-[#ebeed6]/80 text-sm">{t("stats.responseLabel")}</p>
           </div>
-          <div className="bg-white/10 backdrop-blur rounded-2xl p-6 text-center border border-white/20">
-            <Gift className="h-10 w-10 text-white mx-auto mb-2" />
+          <div className="bg-[rgba(255,255,255,0.1)] backdrop-blur-sm rounded-2xl p-6 text-center">
+            <Gift className="h-10 w-10 text-[#a1c353] mx-auto mb-2" />
             <p className="text-2xl font-bold text-white">{t("stats.free")}</p>
-            <p className="text-white/80 text-sm">{t("stats.freeLabel")}</p>
+            <p className="text-[#ebeed6]/80 text-sm">{t("stats.freeLabel")}</p>
           </div>
         </div>
       </section>
@@ -106,19 +109,19 @@ export default function DemoContainer() {
       {/* Form */}
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto">
-          <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">
+          <div className="bg-[rgba(3,101,70,0.5)] rounded-[24px] p-8">
+            <h2 className="text-2xl font-semibold text-white mb-2">
               {t("form.title")}
             </h2>
-            <p className="text-gray-600 mb-6">{t("form.intro")}</p>
+            <p className="text-[#d4dcef] mb-6">{t("form.intro")}</p>
 
             <form onSubmit={handleSubmit} className="space-y-5">
               {submitStatus.type && (
                 <div
                   className={`p-4 rounded-lg ${
                     submitStatus.type === "success"
-                      ? "bg-green-50 text-green-800 border border-green-200"
-                      : "bg-red-50 text-red-800 border border-red-200"
+                      ? "bg-green-900/50 text-green-200 border border-green-700"
+                      : "bg-red-900/50 text-red-200 border border-red-700"
                   }`}
                 >
                   {submitStatus.message}
@@ -126,7 +129,7 @@ export default function DemoContainer() {
               )}
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-xs text-white mb-1">
                   {t("form.fullName")}
                 </label>
                 <input
@@ -135,13 +138,13 @@ export default function DemoContainer() {
                   value={formData.fullName}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a4d3a] focus:border-transparent"
+                  className={inputClasses}
                   placeholder={t("form.fullNamePlaceholder")}
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-xs text-white mb-1">
                   {t("form.email")}
                 </label>
                 <input
@@ -150,13 +153,13 @@ export default function DemoContainer() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a4d3a] focus:border-transparent"
+                  className={inputClasses}
                   placeholder={t("form.emailPlaceholder")}
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-xs text-white mb-1">
                   {t("form.phone")}
                 </label>
                 <input
@@ -164,13 +167,13 @@ export default function DemoContainer() {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a4d3a] focus:border-transparent"
+                  className={inputClasses}
                   placeholder={t("form.phonePlaceholder")}
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-xs text-white mb-1">
                   {t("form.company")}
                 </label>
                 <input
@@ -179,13 +182,13 @@ export default function DemoContainer() {
                   value={formData.company}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a4d3a] focus:border-transparent"
+                  className={inputClasses}
                   placeholder={t("form.companyPlaceholder")}
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-xs text-white mb-1">
                   {t("form.role")}
                 </label>
                 <input
@@ -193,13 +196,13 @@ export default function DemoContainer() {
                   name="role"
                   value={formData.role}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a4d3a] focus:border-transparent"
+                  className={inputClasses}
                   placeholder={t("form.rolePlaceholder")}
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-xs text-white mb-1">
                   {t("form.industry")}
                 </label>
                 <select
@@ -207,26 +210,26 @@ export default function DemoContainer() {
                   value={formData.industry}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a4d3a] focus:border-transparent"
+                  className={inputClasses}
                 >
-                  <option value="">{t("form.industryPlaceholder")}</option>
-                  <option value={t("form.industryOptions.golf")}>
+                  <option value="" className="bg-[#012319]">{t("form.industryPlaceholder")}</option>
+                  <option value={t("form.industryOptions.golf")} className="bg-[#012319]">
                     {t("form.industryOptions.golf")}
                   </option>
-                  <option value={t("form.industryOptions.sports")}>
+                  <option value={t("form.industryOptions.sports")} className="bg-[#012319]">
                     {t("form.industryOptions.sports")}
                   </option>
-                  <option value={t("form.industryOptions.landscape")}>
+                  <option value={t("form.industryOptions.landscape")} className="bg-[#012319]">
                     {t("form.industryOptions.landscape")}
                   </option>
-                  <option value={t("form.industryOptions.other")}>
+                  <option value={t("form.industryOptions.other")} className="bg-[#012319]">
                     {t("form.industryOptions.other")}
                   </option>
                 </select>
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-xs text-white mb-1">
                   {t("form.challenges")}
                 </label>
                 <textarea
@@ -235,13 +238,13 @@ export default function DemoContainer() {
                   onChange={handleChange}
                   required
                   rows={3}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a4d3a] focus:border-transparent"
+                  className={inputClasses}
                   placeholder={t("form.challengesPlaceholder")}
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-xs text-white mb-1">
                   {t("form.additional")}
                 </label>
                 <textarea
@@ -249,16 +252,16 @@ export default function DemoContainer() {
                   value={formData.additional}
                   onChange={handleChange}
                   rows={2}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a4d3a] focus:border-transparent"
+                  className={inputClasses}
                   placeholder={t("form.additionalPlaceholder")}
                 />
               </div>
 
-              <p className="text-sm text-gray-500">{t("form.requiredFields")}</p>
+              <p className="text-sm text-[#ebeed6]/60">{t("form.requiredFields")}</p>
 
               <button
                 type="submit"
-                className="w-full bg-[#1a4d3a] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#2d6b52] transition-colors"
+                className="w-full bg-white text-[#024c35] px-8 py-4 rounded-[32px] font-semibold hover:bg-[#ebeed6] transition-colors"
               >
                 {t("form.submit")}
               </button>
@@ -271,10 +274,10 @@ export default function DemoContainer() {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-medium text-white mb-4 font-[family-name:var(--font-plus-jakarta)]">
               {t("whatYouGet.title")}
             </h2>
-            <p className="text-lg text-white/90 max-w-2xl mx-auto">
+            <p className="text-lg text-[#e6ebe9] max-w-2xl mx-auto">
               {t("whatYouGet.subtitle")}
             </p>
           </div>
@@ -282,13 +285,13 @@ export default function DemoContainer() {
             {benefits.map(({ key, icon: Icon }) => (
               <div
                 key={key}
-                className="bg-white rounded-2xl p-6 shadow-md border border-gray-100"
+                className="bg-[rgba(255,255,255,0.1)] backdrop-blur-sm rounded-[24px] p-6"
               >
-                <Icon className="h-8 w-8 text-[#1a4d3a] mb-3" />
-                <h3 className="text-lg font-bold text-gray-900 mb-2">
+                <Icon className="h-8 w-8 text-[#a1c353] mb-3" />
+                <h3 className="text-lg font-semibold text-white mb-2">
                   {t(`whatYouGet.${key}`)}
                 </h3>
-                <p className="text-gray-600 text-sm">
+                <p className="text-[#ebeed6]/80 text-sm">
                   {t(`whatYouGet.${key}Desc`)}
                 </p>
               </div>
@@ -298,42 +301,42 @@ export default function DemoContainer() {
       </section>
 
       {/* Process */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
+          <h2 className="text-3xl font-medium text-white text-center mb-12 font-[family-name:var(--font-plus-jakarta)]">
             {t("process.title")}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-12 h-12 rounded-full bg-[#1a4d3a] text-white font-bold text-xl flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 rounded-full bg-[#a1c353] text-[#024c35] font-bold text-xl flex items-center justify-center mx-auto mb-4">
                 1
               </div>
-              <h3 className="text-lg font-bold text-white mb-2">
+              <h3 className="text-lg font-semibold text-white mb-2">
                 {t("process.step1Title")}
               </h3>
-              <p className="text-white/80 text-sm">
+              <p className="text-[#ebeed6]/80 text-sm">
                 {t("process.step1Desc")}
               </p>
             </div>
             <div className="text-center">
-              <div className="w-12 h-12 rounded-full bg-[#1a4d3a] text-white font-bold text-xl flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 rounded-full bg-[#a1c353] text-[#024c35] font-bold text-xl flex items-center justify-center mx-auto mb-4">
                 2
               </div>
-              <h3 className="text-lg font-bold text-white mb-2">
+              <h3 className="text-lg font-semibold text-white mb-2">
                 {t("process.step2Title")}
               </h3>
-              <p className="text-white/80 text-sm">
+              <p className="text-[#ebeed6]/80 text-sm">
                 {t("process.step2Desc")}
               </p>
             </div>
             <div className="text-center">
-              <div className="w-12 h-12 rounded-full bg-[#1a4d3a] text-white font-bold text-xl flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 rounded-full bg-[#a1c353] text-[#024c35] font-bold text-xl flex items-center justify-center mx-auto mb-4">
                 3
               </div>
-              <h3 className="text-lg font-bold text-white mb-2">
+              <h3 className="text-lg font-semibold text-white mb-2">
                 {t("process.step3Title")}
               </h3>
-              <p className="text-white/80 text-sm">
+              <p className="text-[#ebeed6]/80 text-sm">
                 {t("process.step3Desc")}
               </p>
             </div>
@@ -344,19 +347,19 @@ export default function DemoContainer() {
       {/* FAQ */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-white text-center mb-10">
+          <h2 className="text-3xl font-medium text-white text-center mb-10 font-[family-name:var(--font-plus-jakarta)]">
             {t("faq.title")}
           </h2>
           <div className="space-y-6">
             {([1, 2, 3, 4, 5] as const).map((i) => (
               <div
                 key={i}
-                className="bg-white rounded-xl p-6 shadow-md border border-gray-100"
+                className="bg-[rgba(255,255,255,0.1)] backdrop-blur-sm rounded-[24px] p-6"
               >
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <h3 className="text-lg font-semibold text-white mb-2">
                   {t(`faq.q${i}`)}
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-[#ebeed6]/80 text-sm leading-relaxed">
                   {t(`faq.a${i}`)}
                 </p>
               </div>
@@ -364,6 +367,6 @@ export default function DemoContainer() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

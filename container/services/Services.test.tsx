@@ -9,8 +9,8 @@ describe("Services", () => {
 
   it("renders all three service cards", () => {
     render(<Services />);
-    expect(screen.getByText("APP")).toBeInTheDocument();
-    expect(screen.getByText("Drone")).toBeInTheDocument();
+    expect(screen.getByText("App")).toBeInTheDocument();
+    expect(screen.getByText("Dron")).toBeInTheDocument();
     expect(screen.getByText("Riego")).toBeInTheDocument();
   });
 });

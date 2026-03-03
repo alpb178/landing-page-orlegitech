@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, Clock, MapPin, Send } from "lucide-react";
 
 export default function ContactUs() {
   const t = useTranslations("contact");
@@ -31,15 +31,12 @@ export default function ContactUs() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // Email de destino (puedes cambiarlo)
-    const recipientEmail = "info@orlegitech.com"; // Cambia este email por el que quieras recibir los mensajes
+    const recipientEmail = "info@orlegitech.com";
 
-    // Construir el asunto del email
     const subject = encodeURIComponent(
-      `Contacto Orlegitech - ${formData.service || t("form.services.general")}`
+      `Contacto Orlegitech - ${formData.service || "General"}`
     );
 
-    // Construir el cuerpo del email
     const emailBody = encodeURIComponent(
       `Nombre: ${formData.name} ${formData.lastName}\n` +
         `Email: ${formData.email}\n` +
@@ -48,19 +45,13 @@ export default function ContactUs() {
         `\nMensaje:\n${formData.message}`
     );
 
-    // Crear el enlace mailto
-    const mailtoLink = `mailto:${recipientEmail}?subject=${subject}&body=${emailBody}`;
+    window.location.href = `mailto:${recipientEmail}?subject=${subject}&body=${emailBody}`;
 
-    // Abrir el cliente de correo
-    window.location.href = mailtoLink;
-
-    // Mostrar mensaje de éxito
     setSubmitStatus({
       type: "success",
       message: t("form.success"),
     });
 
-    // Limpiar el formulario después de un breve delay
     setTimeout(() => {
       setFormData({
         name: "",
@@ -73,217 +64,184 @@ export default function ContactUs() {
       setSubmitStatus({ type: null, message: "" });
     }, 3000);
   };
+
   return (
-    <section id="contact-us" className="bg-[#013322] py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center bg-white rounded-2xl p-8 shadow-md mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            {t("title")}
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            {t("subtitle")}
-          </p>
-        </div>
+    <section id="contact-us" className="py-20">
+      <div className="container mx-auto px-5">
+        <h2 className="text-5xl md:text-[60px] font-medium text-center text-white mb-16 font-[family-name:var(--font-plus-jakarta)]">
+          {t("title")}
+        </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Information */}
-          <div className="flex flex-col gap-8 justify-between space-y-8 items-center">
-            <div className="bg-white w-full rounded-2xl p-8 shadow-md">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                {t("contactInfo.title")}
+        <div className="bg-[rgba(3,101,70,0.5)] rounded-[24px] px-8 py-16 max-w-5xl mx-auto">
+          <div className="flex flex-col lg:flex-row gap-16">
+            {/* Left Side - Contact Info */}
+            <div className="lg:w-[40%] flex flex-col gap-6">
+              <h3 className="text-white text-2xl font-semibold">
+                {t("info.title")}
               </h3>
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <div className="flex-shrink-0">
-                    <Mail className="h-6 w-6 text-[#1a4d3a]" />
-                  </div>
-                  <div className="ml-4">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-1">
-                      {t("contactInfo.email")}
-                    </h4>
-                    <p className="text-gray-600">info@orlegitech.com</p>
+
+              <div className="flex flex-col gap-4">
+                {/* Email */}
+                <div className="flex items-start gap-3">
+                  <Mail className="w-6 h-6 text-[#a1c353] shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-white text-sm font-semibold">{t("info.emailLabel")}</p>
+                    <p className="text-[#d4dcef]">{t("info.email")}</p>
                   </div>
                 </div>
 
-                <div className="flex items-start">
-                  <div className="flex-shrink-0">
-                    <Phone className="h-6 w-6 text-[#1a4d3a]" />
-                  </div>
-                  <div className="ml-4">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-1">
-                      {t("contactInfo.phone")}
-                    </h4>
-                    <p className="text-gray-600">+34 681264526</p>
-                    <p className="text-gray-600">{t("contactInfo.hours")}</p>
+                {/* Phone */}
+                <div className="flex items-start gap-3">
+                  <Phone className="w-6 h-6 text-[#a1c353] shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-white text-sm font-semibold">{t("info.phoneLabel")}</p>
+                    <p className="text-[#d4dcef]">{t("info.phone")}</p>
                   </div>
                 </div>
 
-                <div className="flex items-start">
-                  <div className="flex-shrink-0">
-                    <MapPin className="h-6 w-6 text-[#1a4d3a]" />
-                  </div>
-                  <div className="ml-4">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-1">
-                      Calle Ferrerías 19
-                    </h4>
-                    <p className="text-gray-600 whitespace-pre-line">
-                      20011 Donostia-San Sebastián, España
-                    </p>
-                  </div>
+                {/* Hours */}
+                <div className="flex items-start gap-3">
+                  <Clock className="w-6 h-6 text-[#a1c353] shrink-0 mt-0.5" />
+                  <p className="text-[#d4dcef] whitespace-pre-line">{t("info.hours")}</p>
+                </div>
+
+                {/* Address */}
+                <div className="flex items-start gap-3">
+                  <MapPin className="w-6 h-6 text-[#a1c353] shrink-0 mt-0.5" />
+                  <p className="text-[#d4dcef] whitespace-pre-line">{t("info.address")}</p>
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* Contact Form */}
-          <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">
-              {t("form.title")}
-            </h3>
+            {/* Right Side - Form */}
+            <div className="lg:w-[60%]">
+              <h3 className="text-white text-2xl font-semibold mb-6">
+                {t("form.title")}
+              </h3>
 
-            <form onSubmit={handleSubmit} className="space-y-6">
-              {submitStatus.type && (
-                <div
-                  className={`p-4 rounded-lg ${
-                    submitStatus.type === "success"
-                      ? "bg-green-50 text-green-800 border border-green-200"
-                      : "bg-red-50 text-red-800 border border-red-200"
-                  }`}
-                >
-                  {submitStatus.message}
+              <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+                {submitStatus.type && (
+                  <div
+                    className={`p-4 rounded-lg ${
+                      submitStatus.type === "success"
+                        ? "bg-green-900/50 text-green-200 border border-green-700"
+                        : "bg-red-900/50 text-red-200 border border-red-700"
+                    }`}
+                  >
+                    {submitStatus.message}
+                  </div>
+                )}
+
+                {/* Row 1: Name + Last Name */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="text-xs text-white tracking-wide">
+                      {t("form.name")}
+                    </label>
+                    <input
+                      type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                      placeholder={t("form.namePlaceholder")}
+                      className="w-full mt-1 px-4 py-2 bg-transparent border border-white rounded-lg text-sm text-white placeholder-white/50 focus:ring-2 focus:ring-[#a1c353] focus:border-transparent outline-none"
+                    />
+                  </div>
+                  <div>
+                    <label className="text-xs text-white tracking-wide">
+                      {t("form.lastName")}
+                    </label>
+                    <input
+                      type="text"
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleChange}
+                      required
+                      placeholder={t("form.lastNamePlaceholder")}
+                      className="w-full mt-1 px-4 py-2 bg-transparent border border-white rounded-lg text-sm text-white placeholder-white/50 focus:ring-2 focus:ring-[#a1c353] focus:border-transparent outline-none"
+                    />
+                  </div>
                 </div>
-              )}
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Row 2: Phone + Service */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="text-xs text-white tracking-wide">
+                      {t("form.phone")}
+                    </label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      placeholder={t("form.phonePlaceholder")}
+                      className="w-full mt-1 px-4 py-2 bg-transparent border border-white rounded-lg text-sm text-white placeholder-white/50 focus:ring-2 focus:ring-[#a1c353] focus:border-transparent outline-none"
+                    />
+                  </div>
+                  <div>
+                    <label className="text-xs text-white tracking-wide">
+                      {t("form.service")}
+                    </label>
+                    <select
+                      name="service"
+                      value={formData.service}
+                      onChange={handleChange}
+                      className="w-full mt-1 px-4 py-2 bg-transparent border border-white rounded-lg text-sm text-white focus:ring-2 focus:ring-[#a1c353] focus:border-transparent outline-none"
+                    >
+                      <option value="" className="bg-[#012319]">{t("form.servicePlaceholder")}</option>
+                      <option value="app" className="bg-[#012319]">App</option>
+                      <option value="drone" className="bg-[#012319]">Drone</option>
+                      <option value="irrigation" className="bg-[#012319]">{t("form.serviceOptions.irrigation")}</option>
+                      <option value="other" className="bg-[#012319]">{t("form.serviceOptions.other")}</option>
+                    </select>
+                  </div>
+                </div>
+
+                {/* Row 3: Email */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    {t("form.name")}
+                  <label className="text-xs text-white tracking-wide">
+                    {t("form.email")}
                   </label>
                   <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
+                    type="email"
+                    name="email"
+                    value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a4d3a] focus:border-transparent"
-                    placeholder={t("form.namePlaceholder")}
+                    placeholder={t("form.emailPlaceholder")}
+                    className="w-full mt-1 px-4 py-2 bg-transparent border border-white rounded-lg text-sm text-white placeholder-white/50 focus:ring-2 focus:ring-[#a1c353] focus:border-transparent outline-none"
                   />
                 </div>
+
+                {/* Message */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    {t("form.lastName")}
+                  <label className="text-xs text-white tracking-wide">
+                    {t("form.message")}
                   </label>
-                  <input
-                    type="text"
-                    name="lastName"
-                    value={formData.lastName}
+                  <textarea
+                    name="message"
+                    value={formData.message}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a4d3a] focus:border-transparent"
-                    placeholder={t("form.lastNamePlaceholder")}
+                    rows={3}
+                    placeholder={t("form.messagePlaceholder")}
+                    className="w-full mt-1 px-4 py-2 bg-transparent border border-white rounded-lg text-sm text-white placeholder-white/50 focus:ring-2 focus:ring-[#a1c353] focus:border-transparent outline-none"
                   />
                 </div>
-              </div>
 
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  {t("form.email")}
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a4d3a] focus:border-transparent"
-                  placeholder={t("form.emailPlaceholder")}
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  {t("form.phone")}
-                </label>
-                <input
-                  type="tel"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a4d3a] focus:border-transparent"
-                  placeholder={t("form.phonePlaceholder")}
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  {t("form.service")}
-                </label>
-                <select
-                  name="service"
-                  value={formData.service}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a4d3a] focus:border-transparent"
-                >
-                  <option value="">{t("form.servicePlaceholder")}</option>
-                  <option value={t("form.services.app")}>
-                    {t("form.services.app")}
-                  </option>
-                  <option value={t("form.services.drone")}>
-                    {t("form.services.drone")}
-                  </option>
-                  <option value={t("form.services.buggy")}>
-                    {t("form.services.buggy")}
-                  </option>
-                  <option value={t("form.services.premium")}>
-                    {t("form.services.premium")}
-                  </option>
-                  <option value={t("form.services.complete")}>
-                    {t("form.services.complete")}
-                  </option>
-                  <option value={t("form.services.general")}>
-                    {t("form.services.general")}
-                  </option>
-                </select>
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  {t("form.message")}
-                </label>
-                <textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={5}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1a4d3a] focus:border-transparent"
-                  placeholder={t("form.messagePlaceholder")}
-                ></textarea>
-              </div>
-
-              <div className="flex items-start">
-                <input type="checkbox" className="mt-1 mr-3" required />
-                <p className="text-sm text-gray-600">
-                  {t("form.privacy")}{" "}
-                  <a href="#" className="text-[#1a4d3a] hover:underline">
-                    {t("form.privacyLink")}
-                  </a>{" "}
-                  {t("form.terms")}{" "}
-                  <a href="#" className="text-[#1a4d3a] hover:underline">
-                    {t("form.termsLink")}
-                  </a>
-                </p>
-              </div>
-
-              <div>
-                <button
-                  type="submit"
-                  className="w-full bg-[#1a4d3a] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#2d6b52] transition-colors"
-                >
-                  {t("form.submit")}
-                </button>
-              </div>
-            </form>
+                {/* Submit Button */}
+                <div className="flex justify-end">
+                  <button
+                    type="submit"
+                    className="bg-white text-[#024c35] px-6 py-3 rounded-[32px] font-semibold hover:bg-[#ebeed6] transition-colors flex items-center gap-2"
+                  >
+                    {t("form.submit")}
+                    <Send className="w-5 h-5" />
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>

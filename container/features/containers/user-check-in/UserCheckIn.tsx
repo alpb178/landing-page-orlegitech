@@ -1,8 +1,8 @@
 export default function UserCheckInContainer() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12 space-y-8 text-gray-800">
+    <div className="max-w-4xl mx-auto px-4 py-12 space-y-8 text-[#e6ebe9]">
       <div className="space-y-6">
-        <h2 className="text-4xl font-bold text-[#1a4d3a] mb-4">
+        <h2 className="text-4xl font-bold text-[#a1c353] mb-4">
           Control Horario y Fichajes: cumplimiento legal y control total del
           tiempo de trabajo
         </h2>
@@ -17,7 +17,7 @@ export default function UserCheckInContainer() {
       </div>
 
       <div className="space-y-6">
-        <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
+        <h3 className="text-2xl font-semibold text-[#a1c353] flex items-center gap-2">
           Fichajes de entrada y salida
         </h3>
         <p className="text-lg leading-relaxed">Cada empleado puede:</p>
@@ -33,7 +33,7 @@ export default function UserCheckInContainer() {
       </div>
 
       <div className="space-y-6">
-        <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
+        <h3 className="text-2xl font-semibold text-[#a1c353] flex items-center gap-2">
           Informes automáticos de horas trabajadas
         </h3>
         <p className="text-lg leading-relaxed">
@@ -51,7 +51,7 @@ export default function UserCheckInContainer() {
       </div>
 
       <div className="space-y-6">
-        <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
+        <h3 className="text-2xl font-semibold text-[#a1c353] flex items-center gap-2">
           Cumplimiento de la normativa laboral
         </h3>
         <p className="text-lg leading-relaxed">

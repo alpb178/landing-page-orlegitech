@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function AssistantIAContainer() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12 space-y-8 text-gray-800">
+    <div className="max-w-4xl mx-auto px-4 py-12 space-y-8 text-[#e6ebe9]">
       <div className="space-y-6">
-        <h2 className="text-4xl font-bold text-[#1a4d3a] mb-4">
+        <h2 className="text-4xl font-bold text-[#a1c353] mb-4">
           Asistente Virtual del Greenkeeper: la memoria inteligente del campo
         </h2>
         <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden shadow-lg mb-6">
@@ -28,7 +28,7 @@ export default function AssistantIAContainer() {
       </div>
 
       <div className="space-y-6">
-        <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
+        <h3 className="text-2xl font-semibold text-[#a1c353] flex items-center gap-2">
           Un asistente que aprende con el tiempo
         </h3>
         <p className="text-lg leading-relaxed">
@@ -48,7 +48,7 @@ export default function AssistantIAContainer() {
       </div>
 
       <div className="space-y-6">
-        <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
+        <h3 className="text-2xl font-semibold text-[#a1c353] flex items-center gap-2">
           Pregunta al campo, literalmente
         </h3>
         <p className="text-lg leading-relaxed">
@@ -77,7 +77,7 @@ export default function AssistantIAContainer() {
       </div>
 
       <div className="space-y-6">
-        <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
+        <h3 className="text-2xl font-semibold text-[#a1c353] flex items-center gap-2">
           Recomendaciones basadas en la historia real del campo
         </h3>
         <p className="text-lg leading-relaxed">
@@ -91,8 +91,8 @@ export default function AssistantIAContainer() {
         </ul>
       </div>
 
-      <div className="space-y-6 bg-gray-50 p-6 rounded-lg">
-        <h3 className="text-2xl font-semibold text-[#1a4d3a]">
+      <div className="space-y-6 bg-[rgba(255,255,255,0.1)] backdrop-blur-sm p-6 rounded-lg">
+        <h3 className="text-2xl font-semibold text-[#a1c353]">
           Del conocimiento en la cabeza de una persona… al conocimiento del club
         </h3>
         <p className="text-lg leading-relaxed">
@@ -112,7 +112,7 @@ export default function AssistantIAContainer() {
             experiencia acumulada
           </li>
         </ul>
-        <p className="text-lg leading-relaxed font-semibold text-[#1a4d3a]">
+        <p className="text-lg leading-relaxed font-semibold text-[#a1c353]">
           El resultado: mejores decisiones, menos errores repetidos y un campo
           cada vez mejor gestionado con el paso de los años.
         </p>

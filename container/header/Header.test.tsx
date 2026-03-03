@@ -15,8 +15,8 @@ describe("Header", () => {
     expect(sobreNosotrosLinks.length).toBeGreaterThan(0);
     const serviciosLinks = screen.getAllByText("Servicios");
     expect(serviciosLinks.length).toBeGreaterThan(0);
-    const preciosLinks = screen.getAllByText("Precios");
-    expect(preciosLinks.length).toBeGreaterThan(0);
+    const planesLinks = screen.getAllByText("Planes");
+    expect(planesLinks.length).toBeGreaterThan(0);
     const contactanosLinks = screen.getAllByText("Contáctanos");
     expect(contactanosLinks.length).toBeGreaterThan(0);
   });

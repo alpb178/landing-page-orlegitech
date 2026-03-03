@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function ProjectControlContainer() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12 space-y-8 text-gray-800">
+    <div className="max-w-4xl mx-auto px-4 py-12 space-y-8 text-[#e6ebe9]">
       <div className="space-y-6">
-        <h2 className="text-4xl font-bold text-[#1a4d3a] mb-4">
+        <h2 className="text-4xl font-bold text-[#a1c353] mb-4">
           Control de Proyectos: gestión integral de proyectos y documentación
         </h2>
         <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden shadow-lg mb-6">
@@ -24,7 +24,7 @@ export default function ProjectControlContainer() {
       </div>
 
       <div className="space-y-6">
-        <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
+        <h3 className="text-2xl font-semibold text-[#a1c353] flex items-center gap-2">
           Un repositorio documental inteligente
         </h3>
         <p className="text-lg leading-relaxed">
@@ -47,7 +47,7 @@ export default function ProjectControlContainer() {
       </div>
 
       <div className="space-y-6">
-        <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
+        <h3 className="text-2xl font-semibold text-[#a1c353] flex items-center gap-2">
           Documentos vinculados a lo que realmente importa
         </h3>
         <p className="text-lg leading-relaxed">
@@ -72,7 +72,7 @@ export default function ProjectControlContainer() {
       </div>
 
       <div className="space-y-6">
-        <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
+        <h3 className="text-2xl font-semibold text-[#a1c353] flex items-center gap-2">
           Historial y trazabilidad completa
         </h3>
         <p className="text-lg leading-relaxed">Cada documento queda:</p>
@@ -87,8 +87,8 @@ export default function ProjectControlContainer() {
         </p>
       </div>
 
-      <div className="space-y-6 bg-gray-50 p-6 rounded-lg">
-        <h3 className="text-2xl font-semibold text-[#1a4d3a]">
+      <div className="space-y-6 bg-[rgba(255,255,255,0.1)] backdrop-blur-sm p-6 rounded-lg">
+        <h3 className="text-2xl font-semibold text-[#a1c353]">
           Del caos de carpetas al archivo digital del campo
         </h3>
         <p className="text-lg leading-relaxed">
@@ -103,7 +103,7 @@ export default function ProjectControlContainer() {
             Depender de personas concretas → a tener el conocimiento documentado
           </li>
         </ul>
-        <p className="text-lg leading-relaxed font-semibold text-[#1a4d3a]">
+        <p className="text-lg leading-relaxed font-semibold text-[#a1c353]">
           El resultado: más orden, más seguridad, más profesionalidad y una
           gestión mucho más sólida del campo.
         </p>
