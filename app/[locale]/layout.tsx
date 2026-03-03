@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Dancing_Script, Montserrat_Alternates } from "next/font/google";
+import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -14,17 +14,12 @@ const inter = Inter({
   display: "swap",
 });
 
-const montserratAlternates = Montserrat_Alternates({
-  variable: "--font-montserrat-alternates",
+const plusJakartaSans = Plus_Jakarta_Sans({
+  variable: "--font-plus-jakarta",
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
+  style: ["normal", "italic"],
   display: "swap",
-});
-
-const dancingScript = Dancing_Script({
-  variable: "--font-dancing-script",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -59,19 +54,16 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
 
-  // Ensure that the incoming `locale` is valid
   if (!routing.locales.includes(locale as LanguageCode)) {
     notFound();
   }
 
-  // Providing all messages to the client
-  // side is the easiest way to get started
   const messages = await getMessages();
 
   return (
     <html lang={locale}>
       <body
-        className={`${inter.variable} ${montserratAlternates.variable} ${dancingScript.variable} font-sans antialiased`}
+        className={`${inter.variable} ${plusJakartaSans.variable} font-sans antialiased`}
       >
         <NextIntlClientProvider messages={messages} locale={locale}>
           <ScrollToTop />

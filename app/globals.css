@@ -2,12 +2,40 @@
 
 @theme {
   --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
-  --font-montserrat-alternates: var(--font-montserrat-alternates), system-ui, -apple-system, sans-serif;
+  --font-display: var(--font-plus-jakarta), system-ui, -apple-system, sans-serif;
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #012319;
+  --foreground: #ebeed6;
+
+  /* Figma design tokens */
+  --amarillo: #ebeed6;
+  --blanco: #ffffff;
+  --primario-claro: #d4dcef;
+  --gris: #586583;
+
+  /* Greens */
+  --verde-oscuro: #012319;
+  --verde-medio: #008c63;
+  --verde-profundo: #040e08;
+  --verde-claro: #a1c353;
+  --verde-bosque: #036546;
+  --verde-card-start: #26b285;
+  --verde-card-end: #012d1f;
+  --verde-cta: #024c35;
+  --verde-glow: #627c30;
+  --verde-footer: #01261a;
+  --verde-borde: #4a6435;
+
+  /* Glass effects */
+  --glass-white: rgba(255, 255, 255, 0.1);
+  --glass-green-light: rgba(3, 101, 70, 0.3);
+  --glass-green-medium: rgba(3, 101, 70, 0.5);
+  --glass-header: rgba(235, 238, 214, 0.2);
+  --glass-btn: rgba(235, 238, 214, 0.24);
+  --glass-overlay: rgba(4, 14, 8, 0.2);
+  --glass-card-overlay: rgba(1, 51, 34, 0.2);
 }
 
 body {
@@ -16,12 +44,10 @@ body {
   font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
 }
 
-/* Smooth scroll behavior */
 html {
   scroll-behavior: smooth;
 }
 
-/* Custom animations for section transitions */
 @keyframes fadeInUp {
   from {
     opacity: 0;
