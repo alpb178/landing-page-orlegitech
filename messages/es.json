@@ -3,7 +3,7 @@
     "nav": {
       "about": "Sobre nosotros",
       "services": "Servicios",
-      "pricing": "Precios",
+      "pricing": "Planes",
       "contact": "Contáctanos"
     }
   },
@@ -12,6 +12,7 @@
     "description": "Tecnología inteligente para mantener el césped, la flota y la operativa del club bajo control total.",
     "description2": "",
     "cta": "Contáctanos",
+    "services_cta": "Servicios",
     "stats": {
       "description": "OrlegiTech utiliza inteligencia artificial, análisis aéreo y control en tiempo real para ayudar a los campos de golf a mantener un césped en condiciones óptimas y gestionar sus recursos de forma más eficiente."
     },
@@ -53,7 +54,7 @@
     }
   },
   "about": {
-    "title": "Nosotros",
+    "title": "Sobre nosotros",
     "description": {
       "1": "Expertos en tecnología aplicada al golf",
       "2": "En OrlegiTech combinamos agronomía, inteligencia artificial y análisis aéreo para mejorar el rendimiento de cada campo. Nuestro objetivo es ayudarte a mantener el césped en su estado óptimo, reducir costes operativos y facilitar la planificación diaria del personal.",
@@ -107,118 +108,95 @@
     }
   },
   "pricing": {
-    "title": "Precios y Planes",
+    "title": "Planes",
     "plans": {
-      "basic": {
+      "base": {
         "name": "Plan Base",
         "features": {
-          "1": "Gestión de empleados y departamentos",
-          "2": "Gestión de proyectos (Proyectos, tareas, Chrono, Check-list, gastos)",
-          "3": "Fichajes.",
-          "4": "Planificación (Vacaciones, turnos, calendario, ausencias)",
-          "5": "Adjuntos",
-          "6": "Informes fichajes",
+          "1": "Gestión de empleados y departamentos.",
+          "2": "Gestión de proyectos",
+          "3": "Fichajes e informes de fichajes",
+          "4": "Planificación",
+          "5": "Torneos",
+          "6": "Banderas",
           "7": "Presupuestos",
           "8": "Informes Fitosanitarios",
-          "9": "Banderas",
-          "10": "Estado de campo"
+          "9": "Estado de campo"
         }
       },
       "premium": {
         "name": "Plan Premium",
+        "badge": "Más popular",
+        "cta": "Contactar",
         "features": {
           "1": "Plan base +",
-          "2": "Velocidad de juego",
-          "3": "Portal del socio",
-          "4": "Asistente IA para greenkeper",
+          "2": "Velocidad de juego.",
+          "3": "Portal del socio.",
+          "4": "Asistente IA para greenkeeper.",
           "5": "Comparativas anuales",
-          "6": "CHAT",
-          "7": "Prioridad en soporte",
-          "8": "Movilidad"
+          "6": "Chat.",
+          "7": "Prioridad en soporte."
         }
-      },
-      "complete": {
-        "name": "Módulo de riego inteligente",
+      }
+    },
+    "addons": {
+      "title": "Add-Ons",
+      "riego": {
+        "name": "Módulo de Riego Inteligente",
         "features": {
-          "1": "Humedad real del suelo (la base de todo)",
-          "2": "Decisión por green (no riego genérico)",
-          "3": "Cálculo de pérdida de agua (ET / demanda hídrica)",
+          "1": "Humedad real del suelo",
+          "2": "Decisión por green",
+          "3": "Cálculo de pérdida de agua",
           "4": "Minutos exactos y ciclos inteligentes",
           "5": "Reglas del club y control humano",
-          "6": "KPIs avanzadas (no solo datos)",
+          "6": "KPIs avanzados",
           "7": "Recomendación clara y explicable"
         }
       },
       "drone": {
-        "name": "Módulo de informes aéreos con dron multiespectral a través de IA",
+        "name": "Módulo de informes aéreos con dron multiespectral e IA",
         "features": {
           "1": "1 vuelo cada 3 meses",
           "2": "Piloto profesional incluido",
           "3": "Planificación por zonas",
           "4": "Fotos + vídeo",
-          "5": "Informe PDF ejecutivo",
+          "5": "Informe ejecutivo en PDF",
           "6": "Histórico comparativo",
-          "7": "Marcado de incidencias",
-          "8": "Generación automática de tareas"
+          "7": "Marcado de incidencias"
         }
       }
-    },
-    "price": {
-      "customTitle": "Precios Personalizados",
-      "customSubtitle": "Soluciones adaptadas a las necesidades de tu campo",
-      "description1": "En OrlegiTech entendemos que cada campo de golf es diferente: tamaño, número de hoyos, sistemas de riego, maquinaria, personal, objetivos y nivel de digitalización.",
-      "description2": "Por eso, no trabajamos con precios cerrados ni paquetes estándar.",
-      "description3": "Después de una demo personalizada, donde analizamos vuestras necesidades reales y qué módulos de OrlegiTech encajan mejor con vuestro campo, os presentamos una propuesta a medida, con:",
-      "description4": "Solo los servicios que realmente necesitáis.",
-      "description5": "Un precio ajustado al tamaño y complejidad del campo.",
-      "description6": "Un enfoque claro en ahorro de costes y mejora de la eficiencia."
     }
   },
   "contact": {
-    "title": "Contacta con Nosotros",
-    "subtitle": "¿Tienes alguna pregunta? Estamos aquí para ayudarte. Ponte en contacto con nuestro equipo y te responderemos lo antes posible.",
-    "contactInfo": {
-      "title": "Información de Contacto",
-      "email": "Email",
-      "phone": "Teléfono",
-      "office": "Oficina",
-      "officeAddress": "Calle del Golf, 123\n28001 Madrid, España",
-      "hours": "Lunes a Viernes: 9:00 - 18:00"
-    },
-    "services": {
-      "title": "Servicios Disponibles",
-      "1": "Aplicación móvil para golf",
-      "2": "Servicios de drone",
-      "3": "Alquiler de buggies",
-      "4": "Más de 150 campos en 10 países"
+    "title": "Contacto",
+    "info": {
+      "title": "Información de contacto",
+      "emailLabel": "Email",
+      "email": "info@orlegitech.com",
+      "phoneLabel": "Teléfono",
+      "phone": "+34 681264526",
+      "hours": "Lunes a viernes: 9:00 - 18:00",
+      "address": "Calle Ferrerías 19\n20011 Donostia - San Sebastián, España"
     },
     "form": {
-      "title": "Envíanos un Mensaje",
-      "name": "Nombre*",
+      "title": "Envíanos un mensaje",
+      "name": "Nombre",
       "namePlaceholder": "Tu nombre",
-      "lastName": "Apellidos*",
+      "lastName": "Apellidos",
       "lastNamePlaceholder": "Tus apellidos",
-      "email": "Email*",
+      "email": "Email",
       "emailPlaceholder": "tu@email.com",
       "phone": "Teléfono",
-      "phonePlaceholder": "+34 600 000 000",
+      "phonePlaceholder": "Tu teléfono",
       "service": "Servicio de Interés",
-      "servicePlaceholder": "Selecciona un servicio",
-      "services": {
-        "app": "Aplicación móvil (APP)",
-        "drone": "Servicios de drone",
-        "buggy": "Alquiler de buggies",
-        "premium": "Plan Premium",
-        "complete": "Plan Completo",
-        "general": "Información general"
+      "servicePlaceholder": "Seleccionar opción",
+      "serviceOptions": {
+        "irrigation": "Riego",
+        "other": "Otro"
       },
-      "message": "Mensaje*",
+      "message": "Mensaje",
       "messagePlaceholder": "Cuéntanos cómo podemos ayudarte...",
-      "privacy": "Al enviar este formulario, acepto la",
-      "privacyLink": "Política de privacidad",
-      "terms": "y las",
-      "termsLink": "Condiciones de uso",
-      "submit": "Enviar Mensaje",
+      "submit": "Enviar",
       "success": "Se abrirá tu cliente de correo. Completa el envío desde allí."
     }
   },
