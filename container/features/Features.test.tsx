@@ -14,9 +14,6 @@ describe("Features", () => {
     expect(screen.getByText("Gestión Organizacional y Empleados")).toBeInTheDocument();
     expect(screen.getByText("Presupuestos")).toBeInTheDocument();
     expect(screen.getByText("Fichaje de usuarios")).toBeInTheDocument();
-    expect(screen.getByText("Planificación")).toBeInTheDocument();
-    expect(screen.getByText("Campo")).toBeInTheDocument();
-    expect(screen.getByText("Gestión de Proyectos")).toBeInTheDocument();
   });
 
   it("renders feature descriptions", async () => {

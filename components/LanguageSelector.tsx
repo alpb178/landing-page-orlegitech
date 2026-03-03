@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { useLocale } from "next-intl";
 import { useRouter, usePathname } from "@/i18n/routing";
+import { ChevronDown } from "lucide-react";
 
 interface LanguageSelectorProps {
   variant?: "desktop" | "mobile";
@@ -49,43 +50,40 @@ export default function LanguageSelector({
     languages.find((lang) => lang.code === currentLocale) || languages[0];
 
   return (
-    <>
-      <div className="relative language-menu-container">
-        <button
-          onClick={() => setIsLanguageMenuOpen(!isLanguageMenuOpen)}
-          className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-colors ${
-            variant === "desktop"
-              ? "text-white hover:text-green-300"
-              : "bg-gray-200/90 backdrop-blur-sm text-gray-800 hover:bg-gray-300"
-          }`}
-        >
-          <span className="text-xl">{currentLanguage.flag}</span>
-          <span className="font-semibold uppercase text-sm md:-mt-1 mt-0">
-            {currentLocale}
-          </span>
-        </button>
-        {isLanguageMenuOpen && (
-          <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg z-50">
-            <ul className="py-2">
-              {languages.map((lang) => (
-                <li key={lang.code}>
-                  <button
-                    onClick={() => changeLanguage(lang.code)}
-                    className={`w-full text-left px-4 py-2 hover:bg-gray-100 transition-colors flex items-center gap-2 ${
-                      currentLocale === lang.code
-                        ? "bg-[#1a4d3a] text-white"
-                        : "text-gray-800"
-                    }`}
-                  >
-                    <span className="text-xl">{lang.flag}</span>
-                    <span>{lang.name}</span>
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
-      </div>
-    </>
+    <div className="relative language-menu-container">
+      <button
+        onClick={() => setIsLanguageMenuOpen(!isLanguageMenuOpen)}
+        className={`flex items-center gap-1 px-3 py-2 rounded-lg transition-colors ${
+          variant === "desktop"
+            ? "text-white hover:text-[#ebeed6]"
+            : "text-white hover:text-[#ebeed6]"
+        }`}
+      >
+        <span className="text-sm">{currentLanguage.flag}</span>
+        <span className="font-medium uppercase text-sm">{currentLocale}</span>
+        <ChevronDown className="w-4 h-4" />
+      </button>
+      {isLanguageMenuOpen && (
+        <div className="absolute right-0 mt-2 w-48 bg-[#012319] border border-white/20 rounded-xl shadow-lg z-50 overflow-hidden backdrop-blur-md">
+          <ul className="py-1">
+            {languages.map((lang) => (
+              <li key={lang.code}>
+                <button
+                  onClick={() => changeLanguage(lang.code)}
+                  className={`w-full text-left px-4 py-2.5 transition-colors flex items-center gap-2 ${
+                    currentLocale === lang.code
+                      ? "bg-white/20 text-white font-semibold"
+                      : "text-[#ebeed6] hover:bg-white/10"
+                  }`}
+                >
+                  <span className="text-sm">{lang.flag}</span>
+                  <span className="text-sm">{lang.name}</span>
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
   );
 }

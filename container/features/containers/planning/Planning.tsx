@@ -1,8 +1,8 @@
 export default function PlanningContainer() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12 space-y-8 text-gray-800">
+    <div className="max-w-4xl mx-auto px-4 py-12 space-y-8 text-[#e6ebe9]">
       <div className="space-y-6">
-        <h2 className="text-4xl font-bold text-[#1a4d3a] mb-4">
+        <h2 className="text-4xl font-bold text-[#a1c353] mb-4">
           Planificación: todo el equipo, en el lugar correcto, en el momento
           correcto
         </h2>
@@ -18,7 +18,7 @@ export default function PlanningContainer() {
       </div>
 
       <div className="space-y-6">
-        <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
+        <h3 className="text-2xl font-semibold text-[#a1c353] flex items-center gap-2">
           Calendario
         </h3>
         <p className="text-lg leading-relaxed">
@@ -30,7 +30,7 @@ export default function PlanningContainer() {
       </div>
 
       <div className="space-y-6">
-        <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
+        <h3 className="text-2xl font-semibold text-[#a1c353] flex items-center gap-2">
           Agenda
         </h3>
         <p className="text-lg leading-relaxed">
@@ -41,7 +41,7 @@ export default function PlanningContainer() {
       </div>
 
       <div className="space-y-6">
-        <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
+        <h3 className="text-2xl font-semibold text-[#a1c353] flex items-center gap-2">
           Vacaciones
         </h3>
         <p className="text-lg leading-relaxed">
@@ -60,7 +60,7 @@ export default function PlanningContainer() {
       </div>
 
       <div className="space-y-6">
-        <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
+        <h3 className="text-2xl font-semibold text-[#a1c353] flex items-center gap-2">
           Turnos
         </h3>
         <p className="text-lg leading-relaxed">
@@ -71,8 +71,8 @@ export default function PlanningContainer() {
         </p>
       </div>
 
-      <div className="space-y-6 bg-gray-50 p-6 rounded-lg">
-        <h3 className="text-2xl font-semibold text-[#1a4d3a]">
+      <div className="space-y-6 bg-[rgba(255,255,255,0.1)] backdrop-blur-sm p-6 rounded-lg">
+        <h3 className="text-2xl font-semibold text-[#a1c353]">
           De la improvisación a la coordinación total
         </h3>
         <p className="text-lg leading-relaxed">
@@ -89,7 +89,7 @@ export default function PlanningContainer() {
             solo sistema
           </li>
         </ul>
-        <p className="text-lg leading-relaxed font-semibold text-[#1a4d3a]">
+        <p className="text-lg leading-relaxed font-semibold text-[#a1c353]">
           El resultado: menos estrés, menos errores y un equipo mucho más
           eficiente y coordinado.
         </p>

@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function AerialReportsContainer() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12 space-y-8 text-gray-800">
+    <div className="max-w-4xl mx-auto px-4 py-12 space-y-8 text-[#e6ebe9]">
       <div className="space-y-6">
-        <h2 className="text-4xl font-bold text-[#1a4d3a] mb-4">
+        <h2 className="text-4xl font-bold text-[#a1c353] mb-4">
           Dron y Análisis Multiespectral: ver lo que el ojo humano no puede
         </h2>
         <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden shadow-lg mb-6">
@@ -33,7 +33,7 @@ export default function AerialReportsContainer() {
       </div>
 
       <div className="space-y-6">
-        <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
+        <h3 className="text-2xl font-semibold text-[#a1c353] flex items-center gap-2">
           Vuelos de dron de alta precisión
         </h3>
         <p className="text-lg leading-relaxed">
@@ -46,7 +46,7 @@ export default function AerialReportsContainer() {
       </div>
 
       <div className="space-y-6">
-        <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
+        <h3 className="text-2xl font-semibold text-[#a1c353] flex items-center gap-2">
           Cámara multiespectral: salud real del césped
         </h3>
         <p className="text-lg leading-relaxed">
@@ -64,7 +64,7 @@ export default function AerialReportsContainer() {
       </div>
 
       <div className="space-y-6">
-        <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
+        <h3 className="text-2xl font-semibold text-[#a1c353] flex items-center gap-2">
           Análisis con inteligencia artificial
         </h3>
         <p className="text-lg leading-relaxed">
@@ -75,7 +75,7 @@ export default function AerialReportsContainer() {
       </div>
 
       <div className="space-y-6">
-        <h3 className="text-2xl font-semibold text-[#1a4d3a] flex items-center gap-2">
+        <h3 className="text-2xl font-semibold text-[#a1c353] flex items-center gap-2">
           Topografía, distancias y modelos 3D
         </h3>
         <p className="text-lg leading-relaxed">
@@ -85,8 +85,8 @@ export default function AerialReportsContainer() {
         </p>
       </div>
 
-      <div className="space-y-6 bg-gray-50 p-6 rounded-lg">
-        <h3 className="text-2xl font-semibold text-[#1a4d3a]">
+      <div className="space-y-6 bg-[rgba(255,255,255,0.1)] backdrop-blur-sm p-6 rounded-lg">
+        <h3 className="text-2xl font-semibold text-[#a1c353]">
           Del mantenimiento reactivo al mantenimiento predictivo
         </h3>
         <p className="text-lg leading-relaxed">

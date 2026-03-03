@@ -8,9 +8,6 @@ import { ProjectsIcon } from "@/components/icons/Projects";
 import { EmployeeIcon } from "@/components/icons/Employee";
 import { BudgetIcon } from "@/components/icons/Budget";
 import { UserIcon } from "@/components/icons/User";
-import { PlanningIcon } from "@/components/icons/Planning";
-import { FieldIcon } from "@/components/icons/Field";
-import { ProjectManagementIcon } from "@/components/icons/ProjectManagement";
 import AnimatedCard from "@/components/AnimatedCard";
 import { useParams } from "next/navigation";
 import Link from "next/link";
@@ -50,7 +47,7 @@ export default function Features() {
       slug: "project-control",
     },
     {
-      Icon: UserIcon,
+      Icon: EmployeeIcon,
       title: t("features.operatorManagement.title"),
       description: t("features.operatorManagement.description"),
       slug: "operator-management",
@@ -62,34 +59,15 @@ export default function Features() {
       slug: "budgets",
     },
     {
-      Icon: EmployeeIcon,
+      Icon: UserIcon,
       title: t("features.userCheckIn.title"),
       description: t("features.userCheckIn.description"),
       slug: "user-check-in",
     },
-
-    {
-      Icon: PlanningIcon,
-      title: t("features.planning.title"),
-      description: t("features.planning.description"),
-      slug: "planning",
-    },
-    {
-      Icon: FieldIcon,
-      title: t("features.field.title"),
-      description: t("features.field.description"),
-      slug: "field",
-    },
-    {
-      Icon: ProjectManagementIcon,
-      title: t("features.projectManagement.title"),
-      description: t("features.projectManagement.description"),
-      slug: "project-management",
-    },
   ];
 
   return (
-    <div className="bg-[#036546] py-16">
+    <div className="py-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
           {features.map((feature, index) => {
@@ -101,13 +79,15 @@ export default function Features() {
                 className="text-center"
               >
                 <Link href={`/${locale}/${feature.slug}`}>
-                  <div className="flex justify-center mb-4">
-                    <IconComponent />
+                  <div className="bg-[rgba(255,255,255,0.1)] backdrop-blur-sm rounded-[24px] p-6 h-[251px] flex flex-col items-center justify-center hover:bg-[rgba(255,255,255,0.15)] transition-colors">
+                    <div className="flex justify-center mb-4">
+                      <IconComponent />
+                    </div>
+                    <h3 className="text-[#ebeed6] font-semibold mb-2 text-lg">
+                      {feature.title}
+                    </h3>
+                    <p className="text-[#ebeed6]/80 text-sm">{feature.description}</p>
                   </div>
-                  <h3 className="text-white font-semibold mb-2 text-lg">
-                    {feature.title}
-                  </h3>
-                  <p className="text-white/80 text-sm">{feature.description}</p>
                 </Link>
               </AnimatedCard>
             );

@@ -2,98 +2,75 @@
 
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
-import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
+import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   const t = useTranslations("hero");
-  const router = useRouter();
   const locale = useLocale();
-  const description2 = t("description2");
+  const pathname = usePathname();
+
+  const servicesHref = pathname === `/${locale}` ? "#services" : `/${locale}/#services`;
+  const contactHref = pathname === `/${locale}` ? "#contact-us" : `/${locale}/#contact-us`;
 
   return (
     <div className="relative" id="home">
-      <section className="relative min-h-dvh flex items-center justify-center">
-        {/* Background Image */}
-        <div className="absolute inset-0">
+      <section className="relative min-h-dvh flex items-center justify-center overflow-hidden">
+        {/* Background layers */}
+        <div className="absolute inset-0 bg-[#040e08]">
+          {/* Decorative botanical overlay — organic glow from blurred SVG shapes */}
           <Image
-            src="/images/hero/background.png"
-            alt="Golf course background"
-            fill
-            className="object-cover"
-            priority
+            src="/images/decorative/group-hero.svg"
+            alt=""
+            width={2703}
+            height={2650}
+            className="absolute -left-[34%] -top-[48%] w-[188%] rotate-[-55.36deg] pointer-events-none"
+            aria-hidden="true"
           />
-          {/* Gradient overlay: lighter at top for sky, darker at bottom for text */}
-          <div
-            className="absolute inset-0 bg-linear-to-b from-black/35 via-black/50 to-black/65"
-            aria-hidden
+          <Image
+            src="/images/decorative/group-top.svg"
+            alt=""
+            width={1286}
+            height={1428}
+            className="absolute left-[8%] -top-[75%] w-[89%] rotate-[-3.56deg] -scale-y-100 pointer-events-none"
+            aria-hidden="true"
           />
         </div>
 
         <div className="relative z-10 container mx-auto px-4 sm:px-6 py-28 sm:py-36 flex flex-col items-center justify-center text-center">
-          {/* Tagline — main headline */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 sm:mb-6 tracking-tight leading-tight max-w-4xl [text-shadow:0_2px_20px_rgba(0,0,0,0.4)]">
+          <h1 className="text-4xl sm:text-5xl md:text-[64px] font-extrabold text-white mb-4 sm:mb-6 tracking-tight leading-tight max-w-4xl font-[family-name:var(--font-plus-jakarta)]">
             {t("tagline")}
           </h1>
 
-          {/* Description */}
-          <p className="text-lg sm:text-xl md:text-2xl text-white/95 font-medium max-w-2xl mx-auto mb-2 leading-relaxed [text-shadow:0_1px_12px_rgba(0,0,0,0.35)]">
+          <p className="text-lg sm:text-xl md:text-2xl text-white/90 font-medium italic max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed font-[family-name:var(--font-plus-jakarta)]">
             {t("description")}
           </p>
 
-          {description2 && (
-            <p className="text-lg sm:text-xl text-white/90 max-w-xl mx-auto mb-8 sm:mb-10 [text-shadow:0_1px_10px_rgba(0,0,0,0.3)]">
-              {description2}
-            </p>
-          )}
+          <div className="flex flex-col sm:flex-row gap-4 items-center">
+            <a
+              href={servicesHref}
+              className="bg-[rgba(235,238,214,0.24)] border border-[#4a6435] text-white px-8 py-3.5 rounded-[32px] text-lg font-semibold hover:bg-[rgba(235,238,214,0.35)] transition-all duration-200"
+            >
+              {t("services_cta")}
+            </a>
+            <a
+              href={contactHref}
+              className="bg-white text-[#024c35] px-8 py-3.5 rounded-[32px] text-lg font-semibold hover:bg-[#ebeed6] transition-all duration-200 flex items-center gap-2"
+            >
+              {t("cta")}
+              <ArrowRight className="w-5 h-5" />
+            </a>
+          </div>
 
-          {/* CTA Button */}
-          <button
-            type="button"
-            onClick={() => router.push(`/${locale}/demo`)}
-            className="mt-6 sm:mt-8 bg-[#013322] text-white px-6 py-3.5 cursor-pointer rounded-xl text-lg font-semibold shadow-lg shadow-black/25 hover:bg-[#024a32] hover:shadow-xl hover:shadow-black/30 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-transparent"
-          >
-            <span>{t("demo.cta")}</span>
-            <span className="ml-2 inline-block" aria-hidden>→</span>
-          </button>
-
-          {/* Informative box — in flow so it works on all viewports */}
           <div className="mt-16 sm:mt-20 w-full max-w-3xl mx-auto">
-            <div className="bg-[#E2ECCA]/95 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-xl shadow-black/20 border border-white/30">
-              <p className="text-base sm:text-lg text-[#1a4d3a] font-medium leading-relaxed">
+            <div className="bg-[rgba(255,255,255,0.1)] backdrop-blur-md rounded-[24px] p-6 sm:p-8">
+              <p className="text-base sm:text-lg text-[#e6ebe9] font-medium leading-relaxed">
                 {t("stats.description")}
               </p>
             </div>
           </div>
         </div>
       </section>
-
-      <section className="hidden h-[800px] w-full aspect-video bg-[#01261A] items-center justify-center">
-        <div className="relative hidden md:block aspect-video rounded-lg max-w-full">
-          <video
-            src="/movies/movie-web.mp4"
-            className="w-full h-[498px] object-cover rounded-lg"
-            controls
-            autoPlay
-            muted
-            loop
-            playsInline
-            poster="/images/hero/background.png"
-          />
-        </div>
-      </section>
-
-      <div className="hidden w-full h-full">
-        <video
-          src="/movies/movie-app.mp4"
-          className="w-full h-full"
-          controls
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster="/images/hero/background.png"
-        />
-      </div>
     </div>
   );
 }
