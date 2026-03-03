@@ -1,203 +1,127 @@
 "use client";
 
-import { Check, Sparkles, Target, DollarSign, Zap } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { Check } from "lucide-react";
+import { useTranslations, useLocale } from "next-intl";
+import { usePathname } from "next/navigation";
 import AnimatedCard from "@/components/AnimatedCard";
 
 export default function Pricing() {
   const t = useTranslations("pricing");
+  const locale = useLocale();
+  const pathname = usePathname();
+  const contactHref =
+    pathname === `/${locale}` ? "#contact-us" : `/${locale}/#contact-us`;
 
-  const plans = [
-    {
-      name: t("plans.basic.name"),
-      monthlyPrice: "9,99",
-      annualPrice: "8,99",
-      currency: "€",
-      period: "mes",
-      minMonthly: "9,99 €",
-      minAnnual: "107,88 €",
-      features: [
-        t("plans.basic.features.1"),
-        t("plans.basic.features.2"),
-        t("plans.basic.features.3"),
-        t("plans.basic.features.4"),
-        t("plans.basic.features.5"),
-        t("plans.basic.features.6"),
-        t("plans.basic.features.7"),
-        t("plans.basic.features.8"),
-        t("plans.basic.features.9"),
-        t("plans.basic.features.10"),
-      ],
-      popular: false,
-    },
-    {
-      name: t("plans.premium.name"),
-      monthlyPrice: "19,99",
-      annualPrice: "17,99",
-      currency: "€",
-      period: "mes",
-      minMonthly: "19,99 €",
-      minAnnual: "215,88 €",
-      features: [
-        t("plans.premium.features.1"),
-        t("plans.premium.features.2"),
-        t("plans.premium.features.3"),
-        t("plans.premium.features.4"),
-        t("plans.premium.features.5"),
-        t("plans.premium.features.6"),
-        t("plans.premium.features.7"),
-        t("plans.premium.features.8"),
-      ],
-      popular: true,
-    },
-    {
-      name: t("plans.complete.name"),
-      monthlyPrice: "29,99",
-      annualPrice: "26,99",
-      currency: "€",
-      period: "mes",
-      minMonthly: "29,99 €",
-      minAnnual: "323,88 €",
-      features: [
-        t("plans.complete.features.1"),
-        t("plans.complete.features.2"),
-        t("plans.complete.features.3"),
-        t("plans.complete.features.4"),
-        t("plans.complete.features.5"),
-        t("plans.complete.features.6"),
-        t("plans.complete.features.7"),
-      ],
-      popular: false,
-    },
-    {
-      name: t("plans.drone.name"),
-      monthlyPrice: "29,99",
-      annualPrice: "26,99",
-      currency: "€",
-      period: "mes",
-      minMonthly: "29,99 €",
-      minAnnual: "323,88 €",
-      features: [
-        t("plans.drone.features.1"),
-        t("plans.drone.features.2"),
-        t("plans.drone.features.3"),
-        t("plans.drone.features.4"),
-        t("plans.drone.features.5"),
-        t("plans.drone.features.6"),
-        t("plans.drone.features.7"),
-      ],
-      popular: false,
-    },
-  ];
+  const baseFeatures = Array.from({ length: 9 }, (_, i) =>
+    t(`plans.base.features.${i + 1}`)
+  );
+  const premiumFeatures = Array.from({ length: 7 }, (_, i) =>
+    t(`plans.premium.features.${i + 1}`)
+  );
+  const riegoFeatures = Array.from({ length: 7 }, (_, i) =>
+    t(`addons.riego.features.${i + 1}`)
+  );
+  const droneFeatures = Array.from({ length: 7 }, (_, i) =>
+    t(`addons.drone.features.${i + 1}`)
+  );
 
   return (
-    <section
-      id="pricing"
-      className="bg-[#F5F5F0] flex flex-col justify-center items-center  py-20  mx-auto"
-    >
-      <div className="max-w-7xl text-center px-4 sm:px-6  lg:px-8 mb-20">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+    <section id="pricing" className="py-20">
+      <div className="container mx-auto px-5">
+        <h2 className="text-5xl md:text-[60px] font-medium text-center text-white mb-16 font-[family-name:var(--font-plus-jakarta)]">
           {t("title")}
-        </h1>
-      </div>
-      <div className="max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-10">
-          {plans.map((plan, index) => (
-            <AnimatedCard
-              key={index}
-              delay={index * 200}
-              className={`relative bg-white rounded-2xl shadow-lg p-8 transition-all duration-300 ease-out hover:scale-105 ${
-                plan.popular ? "ring-2 ring-[#1a4d3a] scale-105" : ""
-              }`}
-            >
-              <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  {plan.name}
-                </h3>
-              </div>
+        </h2>
 
-              <ul className="space-y-3">
-                {plan.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-start">
-                    <Check className="h-5 w-5 text-[#1a4d3a] mr-3 mt-0.5 shrink-0" />
-                    <span className="text-gray-600 text-sm">{feature}</span>
+        {/* Plan Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-[858px] mx-auto mb-16">
+          {/* Plan Base */}
+          <AnimatedCard delay={0}>
+            <div className="bg-[rgba(3,101,70,0.3)] rounded-[32px] shadow-[0px_3px_8px_0px_rgba(0,0,0,0.12)] px-8 py-8 flex flex-col gap-6 h-full">
+              <p className="text-white text-xl font-semibold">
+                {t("plans.base.name")}
+              </p>
+              <hr className="border-white/20" />
+              <ul className="flex flex-col gap-2 flex-1">
+                {baseFeatures.map((feature, i) => (
+                  <li key={i} className="flex items-center gap-2">
+                    <Check className="w-6 h-6 text-[#a1c353] shrink-0" />
+                    <span className="text-white text-base">{feature}</span>
                   </li>
                 ))}
               </ul>
-            </AnimatedCard>
-          ))}
+            </div>
+          </AnimatedCard>
+
+          {/* Plan Premium */}
+          <AnimatedCard delay={200}>
+            <div className="bg-[rgba(3,101,70,0.3)] rounded-[32px] shadow-[0px_0px_32px_0px_#627c30,0px_3px_8px_0px_rgba(0,0,0,0.12)] px-8 py-8 flex flex-col gap-6 h-full relative">
+              <div className="flex items-center justify-between">
+                <p className="text-white text-xl font-semibold">
+                  {t("plans.premium.name")}
+                </p>
+                <span className="bg-[rgba(230,240,237,0.2)] text-[#f6f9ee] text-sm px-4 py-1 rounded-full">
+                  {t("plans.premium.badge")}
+                </span>
+              </div>
+              <hr className="border-white/20" />
+              <ul className="flex flex-col gap-2 flex-1">
+                {premiumFeatures.map((feature, i) => (
+                  <li key={i} className="flex items-center gap-2">
+                    <Check className="w-6 h-6 text-[#a1c353] shrink-0" />
+                    <span className="text-white text-base">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              <a
+                href={contactHref}
+                className="bg-white text-[#024c35] text-center py-3 rounded-[32px] text-base font-semibold hover:bg-[#ebeed6] transition-colors"
+              >
+                {t("plans.premium.cta")}
+              </a>
+            </div>
+          </AnimatedCard>
         </div>
-        
-        {/* Información sobre precios personalizados */}
-        <div className="mt-16 max-w-4xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 border border-gray-100">
-            <div className="text-center mb-8">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-[#1a4d3a]/10 rounded-full mb-4">
-                <Sparkles className="h-8 w-8 text-[#1a4d3a]" />
-              </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
-                {t("price.customTitle")}
-              </h3>
-              <p className="text-gray-600 text-lg">
-                {t("price.customSubtitle")}
-              </p>
-            </div>
 
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="shrink-0 mt-1">
-                  <div className="w-10 h-10 rounded-lg bg-[#1a4d3a]/10 flex items-center justify-center">
-                    <Target className="h-5 w-5 text-[#1a4d3a]" />
-                  </div>
-                </div>
-                <p className="text-gray-700 text-base leading-relaxed pt-2">
-                  {t("price.description1")}
+        {/* Add-Ons Section */}
+        <div className="max-w-[858px] mx-auto">
+          <h3 className="text-4xl font-medium text-white mb-8 font-[family-name:var(--font-plus-jakarta)]">
+            {t("addons.title")}
+          </h3>
+
+          <div className="flex flex-col gap-8">
+            {/* Módulo de Riego Inteligente */}
+            <AnimatedCard delay={100}>
+              <div className="bg-[rgba(3,101,70,0.3)] rounded-[32px] shadow-[0px_3px_8px_0px_rgba(0,0,0,0.12)] px-8 py-8 flex flex-col gap-6">
+                <p className="text-white text-2xl font-semibold">
+                  {t("addons.riego.name")}
                 </p>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="shrink-0 mt-1">
-                  <div className="w-10 h-10 rounded-lg bg-[#1a4d3a]/10 flex items-center justify-center">
-                    <Zap className="h-5 w-5 text-[#1a4d3a]" />
-                  </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-2">
+                  {riegoFeatures.map((feature, i) => (
+                    <div key={i} className="flex items-center gap-2">
+                      <Check className="w-5 h-5 text-[#a1c353] shrink-0" />
+                      <span className="text-white text-base">{feature}</span>
+                    </div>
+                  ))}
                 </div>
-                <p className="text-gray-700 text-base leading-relaxed pt-2">
-                  {t("price.description2")}
+              </div>
+            </AnimatedCard>
+
+            {/* Módulo de informes aéreos */}
+            <AnimatedCard delay={200}>
+              <div className="bg-[rgba(3,101,70,0.3)] rounded-[32px] shadow-[0px_3px_8px_0px_rgba(0,0,0,0.12)] px-8 py-8 flex flex-col gap-6">
+                <p className="text-white text-2xl font-semibold">
+                  {t("addons.drone.name")}
                 </p>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="shrink-0 mt-1">
-                  <div className="w-10 h-10 rounded-lg bg-[#1a4d3a]/10 flex items-center justify-center">
-                    <Sparkles className="h-5 w-5 text-[#1a4d3a]" />
-                  </div>
-                </div>
-                <p className="text-gray-700 text-base leading-relaxed pt-2">
-                  {t("price.description3")}
-                </p>
-              </div>
-
-              <div className="grid md:grid-cols-3 gap-4 mt-8 pt-8 border-t border-gray-200">
-                <div className="text-center p-4 rounded-xl bg-[#1a4d3a]/5">
-                  <Check className="h-6 w-6 text-[#1a4d3a] mx-auto mb-3" />
-                  <p className="text-gray-700 text-sm font-medium">
-                    {t("price.description4")}
-                  </p>
-                </div>
-                <div className="text-center p-4 rounded-xl bg-[#1a4d3a]/5">
-                  <DollarSign className="h-6 w-6 text-[#1a4d3a] mx-auto mb-3" />
-                  <p className="text-gray-700 text-sm font-medium">
-                    {t("price.description5")}
-                  </p>
-                </div>
-                <div className="text-center p-4 rounded-xl bg-[#1a4d3a]/5">
-                  <Zap className="h-6 w-6 text-[#1a4d3a] mx-auto mb-3" />
-                  <p className="text-gray-700 text-sm font-medium">
-                    {t("price.description6")}
-                  </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-2">
+                  {droneFeatures.map((feature, i) => (
+                    <div key={i} className="flex items-center gap-2">
+                      <Check className="w-5 h-5 text-[#a1c353] shrink-0" />
+                      <span className="text-white text-base">{feature}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
-            </div>
+            </AnimatedCard>
           </div>
         </div>
       </div>
