@@ -18,7 +18,7 @@ export default function Hero() {
         {/* Background: video */}
         <div className="absolute inset-0">
           <video
-            src="/movies/background.mp4"
+            src="/movies/background-compressed.mp4"
             autoPlay
             loop
             muted
