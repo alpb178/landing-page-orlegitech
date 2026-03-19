@@ -35,7 +35,7 @@
       }
     },
     "drone": {
-      "title": "Drone",
+      "title": "Aerial reports",
       "mainTitle": "Multispectral aerial analysis",
       "features": {
         "1": "Get NDVI, NDRE maps and turf status in minutes.",
@@ -43,7 +43,7 @@
       }
     },
     "buggy": {
-      "title": "Irrigation",
+      "title": "Smart irrigation",
       "mainTitle": "Fleet location and control",
       "features": {
         "1": "Real-time GPS.",
@@ -51,6 +51,36 @@
         "3": "Safety and efficiency on the course",
         "4": "Optimize the club's daily operations."
       }
+    },
+    "appService": {
+      "badge": "OrlegiTech mobile app",
+      "title": "Your club, fully digitized.",
+      "description1": "OrlegiTech centralizes all golf course management in a single application. From task planning and staff control to project tracking, check-ins, budgets and phytosanitary reports.",
+      "description2": "The maintenance team works in a coordinated way with real-time information, automatic alerts and an AI assistant that helps the greenkeeper make data-driven decisions.",
+      "description3": "Everything accessible from your mobile or tablet, anytime and from anywhere on the course.",
+      "cta": "Digitize your club",
+      "ctaHighlight": "intelligently.",
+      "viewPlans": "View plans"
+    },
+    "intelligentIrrigation": {
+      "badge": "Smart irrigation system",
+      "title": "Do more with every drop.",
+      "description1": "Smart optimization of electricity consumption. OrlegiTech reduces the course's electricity costs by intelligently controlling the SCADA, irrigation systems, moisture sensors, electricity prices and real-time weather.",
+      "description2": "The system decides when, where and how much to irrigate based on energy costs, actual turf needs and weather forecasts, avoiding unnecessary irrigation and consumption during expensive hours.",
+      "description3": "As a result, you'll get less electricity consumption, less water usage and the same or better course condition.",
+      "cta": "Manage irrigation",
+      "ctaHighlight": "intelligently.",
+      "viewPlans": "View plans"
+    },
+    "aerialReportsService": {
+      "badge": "Aerial reports",
+      "title": "Your turf under control.",
+      "description1": "Aerial analysis for turf health. We use drones and multispectral cameras to generate indices, detect water stress, pests and deficiencies, and deliver automated reports with recommendations.",
+      "description2": "We measure outdoor productivity with AI-automated reports based on times, tasks and incident prioritization.",
+      "cta": "Detect problems",
+      "ctaHighlight": "before",
+      "ctaEnd": "they appear.",
+      "viewPlans": "View plans"
     }
   },
   "about": {

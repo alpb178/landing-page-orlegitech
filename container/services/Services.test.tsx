@@ -7,10 +7,19 @@ describe("Services", () => {
     expect(screen.getByText("Servicios")).toBeInTheDocument();
   });
 
-  it("renders all three service cards", () => {
+  it("renders all three service cards with updated names", () => {
     render(<Services />);
-    expect(screen.getByText("App")).toBeInTheDocument();
-    expect(screen.getByText("Dron")).toBeInTheDocument();
-    expect(screen.getByText("Riego")).toBeInTheDocument();
+    expect(screen.getByText("APP")).toBeInTheDocument();
+    expect(screen.getByText("Informes aéreos")).toBeInTheDocument();
+    expect(screen.getByText("Riego inteligente")).toBeInTheDocument();
+  });
+
+  it("renders links to service detail pages", () => {
+    render(<Services />);
+    const links = screen.getAllByRole("link");
+    const hrefs = links.map((l) => l.getAttribute("href"));
+    expect(hrefs).toContain("/app-service");
+    expect(hrefs).toContain("/aerial-reports-service");
+    expect(hrefs).toContain("/intelligent-irrigation");
   });
 });

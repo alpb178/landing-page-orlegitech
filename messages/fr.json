@@ -35,7 +35,7 @@
       }
     },
     "drone": {
-      "title": "Drone",
+      "title": "Rapports aériens",
       "mainTitle": "Analyse aérienne multispectrale",
       "features": {
         "1": "Obtenez des cartes NDVI, NDRE et l'état du gazon en quelques minutes.",
@@ -43,7 +43,7 @@
       }
     },
     "buggy": {
-      "title": "Irrigation",
+      "title": "Irrigation intelligente",
       "mainTitle": "Localisation et contrôle de la flotte",
       "features": {
         "1": "GPS en temps réel.",
@@ -51,6 +51,36 @@
         "3": "Sécurité et efficacité sur le terrain",
         "4": "Optimisez les opérations quotidiennes du club."
       }
+    },
+    "appService": {
+      "badge": "Application mobile OrlegiTech",
+      "title": "Votre club, entièrement numérisé.",
+      "description1": "OrlegiTech centralise toute la gestion du terrain de golf dans une seule application. De la planification des tâches et le contrôle du personnel au suivi des projets, pointages, budgets et rapports phytosanitaires.",
+      "description2": "L'équipe de maintenance travaille de manière coordonnée avec des informations en temps réel, des alertes automatiques et un assistant IA qui aide le greenkeeper à prendre des décisions basées sur les données.",
+      "description3": "Tout accessible depuis votre mobile ou tablette, à tout moment et depuis n'importe quel point du terrain.",
+      "cta": "Numérisez votre club de manière",
+      "ctaHighlight": "intelligente.",
+      "viewPlans": "Voir les forfaits"
+    },
+    "intelligentIrrigation": {
+      "badge": "Système d'irrigation intelligent",
+      "title": "Faites plus avec chaque goutte.",
+      "description1": "Optimisation intelligente de la consommation électrique. OrlegiTech réduit les dépenses d'électricité du terrain en contrôlant intelligemment le SCADA, les systèmes d'irrigation, les capteurs d'humidité, le prix de l'électricité et la météo en temps réel.",
+      "description2": "Le système décide quand, où et combien irriguer en fonction du coût de l'énergie, des besoins réels du gazon et des prévisions météorologiques, évitant les irrigations inutiles et les consommations aux heures chères.",
+      "description3": "Résultat : moins de consommation électrique, moins d'eau et un état du terrain identique ou meilleur.",
+      "cta": "Gérez l'irrigation de manière",
+      "ctaHighlight": "intelligente.",
+      "viewPlans": "Voir les forfaits"
+    },
+    "aerialReportsService": {
+      "badge": "Rapports aériens",
+      "title": "Votre gazon sous contrôle.",
+      "description1": "Analyse aérienne pour la santé du gazon. Nous utilisons des drones et des caméras multispectrales pour générer des indices, détecter le stress hydrique, les parasites et les carences, et fournir des rapports automatisés avec des recommandations.",
+      "description2": "Nous mesurons la productivité en extérieur avec des rapports automatisés par IA, basés sur les temps, les tâches et la priorisation des incidents.",
+      "cta": "Détectez les problèmes",
+      "ctaHighlight": "avant",
+      "ctaEnd": "qu'ils n'apparaissent.",
+      "viewPlans": "Voir les forfaits"
     }
   },
   "about": {

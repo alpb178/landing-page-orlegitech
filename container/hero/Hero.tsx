@@ -26,6 +26,7 @@ export default function Hero() {
             className="absolute inset-0 w-full h-full object-cover"
             aria-hidden="true"
           />
+        
         </div>
 
         <div className="relative z-10 container mx-auto px-4 sm:px-6 py-28 sm:py-36 flex flex-col items-center justify-center text-center">
@@ -40,13 +41,13 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 items-center">
             <a
               href={servicesHref}
-              className="bg-[rgba(235,238,214,0.24)] border border-[#4a6435] text-white px-8 py-3.5 rounded-[32px] text-lg font-semibold hover:bg-[rgba(235,238,214,0.35)] transition-all duration-200"
+              className="bg-[rgba(235,238,214,0.24)] border border-[#4a6435] text-white px-8 py-3.5 rounded-[32px] text-lg font-semibold hover:bg-[rgba(235,238,214,0.35)] transition-all duration-200 shadow-[0px_4px_5.2px_0px_rgba(0,0,0,0.25)]"
             >
               {t("services_cta")}
             </a>
             <a
               href={contactHref}
-              className="bg-white text-[#024c35] px-8 py-3.5 rounded-[32px] text-lg font-semibold hover:bg-[#ebeed6] transition-all duration-200 flex items-center gap-2"
+              className="bg-white text-[#024c35] px-8 py-3.5 rounded-[32px] text-lg font-semibold hover:bg-[#ebeed6] transition-all duration-200 flex items-center gap-2 shadow-[0px_4px_5.2px_0px_rgba(0,0,0,0.25)]"
             >
               {t("cta")}
               <ArrowRight className="w-5 h-5" />
@@ -55,7 +56,7 @@ export default function Hero() {
 
           <div className="mt-16 sm:mt-20 w-full max-w-3xl mx-auto">
             <div className="bg-[rgba(255,255,255,0.1)] backdrop-blur-md rounded-[24px] p-6 sm:p-8">
-              <p className="text-base sm:text-lg text-[#e6ebe9] font-medium leading-relaxed">
+              <p className="text-base sm:text-lg text-[#e6ebe9] leading-relaxed text-center">
                 {t("stats.description")}
               </p>
             </div>
