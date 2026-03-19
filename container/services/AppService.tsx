@@ -14,27 +14,15 @@ export default function AppService() {
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start max-w-6xl mx-auto">
           {/* Left: Image with badge */}
           <div className="relative w-full lg:w-[504px] h-[400px] lg:h-[499px] shrink-0">
-            <div className="relative w-full h-full rounded-[32px] overflow-hidden bg-linear-to-b from-[#eff5b3] to-[#3a4913]">
+            <div className="relative w-full h-full rounded-[32px] flex justify-center items-center overflow-hidden bg-linear-to-b from-[#eff5b3] to-[#3a4913]">
               {/* Left phone (behind) */}
-              <div className="absolute left-[23%] top-[18%] w-[29%] h-[56%] border-[3px] border-[#012319] rounded-[14px] overflow-hidden bg-[#f4f4f4] z-0">
-                <Image
-                  src="/images/services/app.png"
-                  alt={t("badge") + " screen 1"}
-                  width={863}
-                  height={3014}
-                  className="absolute w-[106%] h-[161%] -left-[3%] top-0 object-cover"
-                />
-              </div>
-              {/* Right phone (in front) */}
-              <div className="absolute left-[47%] top-[10%] w-[30%] h-[56%] border-[3px] border-[#012319] rounded-[17px] overflow-hidden bg-[#f4f4f4] z-10">
-                <Image
-                  src="/images/features/project-management.jpg"
-                  alt={t("badge") + " screen 2"}
-                  width={863}
-                  height={3014}
-                  className="absolute w-[106%] h-[161%] -left-[3%] -top-[38%] object-cover"
-                />
-              </div>
+              <Image
+                src="/images/services/app.png"
+                alt={t("badge")}
+                width={200}
+                height={200}
+                className="object-center"
+              />
             </div>
             <div className="absolute top-6 left-1/2 -translate-x-1/2 z-20">
               <div className="bg-[rgba(235,238,214,0.8)] px-4 py-2 rounded-[120px] shadow-[0px_7px_14px_0px_rgba(0,0,0,0.25)]">
