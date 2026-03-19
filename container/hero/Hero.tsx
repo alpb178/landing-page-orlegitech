@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import { ArrowRight } from "lucide-react";
@@ -16,14 +15,15 @@ export default function Hero() {
   return (
     <div className="relative" id="home">
       <section className="relative min-h-dvh flex items-center justify-center overflow-hidden">
-        {/* Background: aerial golf course photo + green gradient overlay */}
+        {/* Background: video */}
         <div className="absolute inset-0">
-          <Image
-            src="/images/hero/background.png"
-            alt=""
-            fill
-            className="object-cover"
-            priority
+          <video
+            src="/movies/background.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
             aria-hidden="true"
           />
         
