@@ -10,8 +10,18 @@ export default function ScrollToSection() {
     // Función para hacer scroll a la sección
     const scrollToHash = () => {
       const hash = window.location.hash;
-      
+
       if (hash) {
+        // Si el hash es #home, ir al top absoluto
+        if (hash === "#home") {
+          const timer = setTimeout(() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            // Limpiar el hash de la URL para no interferir con el scroll manual
+            history.replaceState(null, "", window.location.pathname);
+          }, 100);
+          return timer;
+        }
+
         // Esperar a que el DOM esté completamente renderizado
         const timer = setTimeout(() => {
           const element = document.querySelector(hash);
@@ -25,6 +35,11 @@ export default function ScrollToSection() {
               top: offsetPosition,
               behavior: "smooth",
             });
+
+            // Limpiar el hash de la URL para no interferir con el scroll manual
+            setTimeout(() => {
+              history.replaceState(null, "", window.location.pathname);
+            }, 500);
           }
         }, 300); // Delay para asegurar que el contenido esté renderizado
 

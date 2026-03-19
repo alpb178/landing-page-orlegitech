@@ -35,7 +35,7 @@
       }
     },
     "drone": {
-      "title": "Drone",
+      "title": "Informes aéreos",
       "mainTitle": "Análisis aéreo multiespectral",
       "features": {
         "1": "Obtén mapas NDVI, NDRE y estado del césped en minutos.",
@@ -43,7 +43,7 @@
       }
     },
     "buggy": {
-      "title": "Riego",
+      "title": "Riego inteligente",
       "mainTitle": "Localización y control de la flota",
       "features": {
         "1": "GPS en tiempo real.",
@@ -51,6 +51,36 @@
         "3": "Seguridad y eficiencia en el campo",
         "4": "Optimiza la operativa diaria del club."
       }
+    },
+    "appService": {
+      "badge": "Aplicación móvil OrlegiTech",
+      "title": "Tu club, digitalizado al completo.",
+      "description1": "OrlegiTech centraliza toda la gestión del campo de golf en una sola aplicación. Desde la planificación de tareas y el control del personal hasta el seguimiento de proyectos, fichajes, presupuestos e informes fitosanitarios.",
+      "description2": "El equipo de mantenimiento trabaja de forma coordinada con información en tiempo real, alertas automáticas y un asistente de IA que ayuda al greenkeeper a tomar decisiones basadas en datos.",
+      "description3": "Todo accesible desde el móvil o la tablet, en cualquier momento y desde cualquier punto del campo.",
+      "cta": "Digitaliza tu club de forma",
+      "ctaHighlight": "inteligente.",
+      "viewPlans": "Ver planes"
+    },
+    "intelligentIrrigation": {
+      "badge": "Sistema inteligente de riego",
+      "title": "Haz más con cada gota.",
+      "description1": "Optimización inteligente del consumo eléctrico. OrlegiTech reduce el gasto en electricidad del campo controlando de forma inteligente la SCADA, los sistemas de riego, los sensores de humedad, el precio de la electricidad y el clima en tiempo real.",
+      "description2": "El sistema decide cuándo, dónde y cuánto regar en función del coste de la energía, las necesidades reales del césped y la previsión meteorológica, evitando riegos innecesarios y consumos en horas caras.",
+      "description3": "Como resultado obtendrás menos consumo eléctrico, menos agua y el mismo o mejor estado del campo.",
+      "cta": "Gestiona el riego de forma",
+      "ctaHighlight": "inteligente.",
+      "viewPlans": "Ver planes"
+    },
+    "aerialReportsService": {
+      "badge": "Informes aéreos",
+      "title": "Tu césped bajo control.",
+      "description1": "Análisis aéreo para la salud del césped. Usamos drones y cámaras multiespectrales para generar índices, detectar estrés hídrico, plagas y deficiencias, y entregar informes automatizados con recomendaciones.",
+      "description2": "Medimos productividad en exteriores con informes automatizados por IA, basados en tiempos, tareas y priorización de incidencias.",
+      "cta": "Detecta problemas",
+      "ctaHighlight": "antes",
+      "ctaEnd": "de que aparezcan.",
+      "viewPlans": "Ver planes"
     }
   },
   "about": {
