@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import { ArrowRight } from "lucide-react";
@@ -16,23 +15,15 @@ export default function Hero() {
   return (
     <div className="relative" id="home">
       <section className="relative min-h-dvh flex items-center justify-center overflow-hidden">
-        {/* Background layers */}
-        <div className="absolute inset-0 bg-[#040e08]">
-          {/* Decorative botanical overlay — organic glow from blurred SVG shapes */}
-          <Image
-            src="/images/decorative/group-hero.svg"
-            alt=""
-            width={2703}
-            height={2650}
-            className="absolute -left-[34%] -top-[48%] w-[188%] rotate-[-55.36deg] pointer-events-none"
-            aria-hidden="true"
-          />
-          <Image
-            src="/images/decorative/group-top.svg"
-            alt=""
-            width={1286}
-            height={1428}
-            className="absolute left-[8%] -top-[75%] w-[89%] rotate-[-3.56deg] -scale-y-100 pointer-events-none"
+        {/* Background: video */}
+        <div className="absolute inset-0">
+          <video
+            src="/movies/background.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
             aria-hidden="true"
           />
         </div>
