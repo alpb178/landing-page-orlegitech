@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 export default function AboutUs() {
@@ -10,19 +9,10 @@ export default function AboutUs() {
     <section id="about-us" className="relative">
       <div className="relative min-h-[600px] flex items-center justify-center overflow-hidden">
         {/* Background Image with Blur */}
-        <div className="absolute inset-0">
-          <Image
-            src="/images/about/background.png"
-            alt="Background"
-            fill
-            className="object-cover blur-[8px] scale-105"
-            priority
-          />
-          <div className="absolute inset-0 bg-[rgba(4,14,8,0.2)]"></div>
-        </div>
+       
 
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <h2 className="text-5xl md:text-[60px] font-medium text-center text-white mb-12 font-[family-name:var(--font-plus-jakarta)]">
+          <h2 className="text-5xl md:text-[60px] font-medium text-center text-white mb-12 font-(family-name:--font-plus-jakarta)">
             {t("title")}
           </h2>
 
