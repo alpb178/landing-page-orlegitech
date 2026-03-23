@@ -31,7 +31,7 @@ export default function ContactUs() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const recipientEmail = "mikel@errasbi.com";
+    const recipientEmail = "info@orlegitech.com";
 
     const subject = encodeURIComponent(
       `Contacto Orlegitech - ${formData.service || "General"}`
