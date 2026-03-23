@@ -12,7 +12,7 @@ import Services from "@/container/services/Services";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-[#012319] via-[#012319] via-[75%] to-[#008c63] relative overflow-clip">
+    <main className="min-h-screen bg-linear-to-b from-[#012319] via-[#012319] via-75% to-[#008c63] relative overflow-clip">
       {/* Decorative leaf overlays */}
       <Image
         src="/images/decorative/leaf-3.svg"
