@@ -74,9 +74,9 @@
     },
     "aerialReportsService": {
       "badge": "Rapports aériens",
-      "title": "Votre gazon sous contrôle.",
-      "description1": "Analyse aérienne pour la santé du gazon. Nous utilisons des drones et des caméras multispectrales pour générer des indices, détecter le stress hydrique, les parasites et les carences, et fournir des rapports automatisés avec des recommandations.",
-      "description2": "Nous mesurons la productivité en extérieur avec des rapports automatisés par IA, basés sur les temps, les tâches et la priorisation des incidents.",
+      "title": "Contrôle total depuis le ciel.",
+      "description1": "L'analyse aérienne pour la santé du gazon permet une gestion plus précise, efficace et proactive du terrain. Grâce à l'utilisation de drones et de caméras multispectrales, nous capturons des informations détaillées invisibles à l'œil nu, générant des indices qui révèlent l'état réel de chaque zone. Cette technologie facilite la détection précoce du stress hydrique, des parasites, des maladies et des carences nutritionnelles, permettant d'intervenir à temps et d'éviter des problèmes majeurs, tout en générant des rapports automatisés avec des recommandations claires et exploitables.",
+      "description2": "De plus, nous mesurons la productivité en extérieur avec des rapports automatisés par IA, basés sur les temps, les tâches et la priorisation des incidents.",
       "cta": "Détectez les problèmes",
       "ctaHighlight": "avant",
       "ctaEnd": "qu'ils n'apparaissent.",
@@ -296,10 +296,10 @@
       "step3Desc": "Rejoignez votre démonstration et découvrez OrlegiTech en action."
     },
     "faq": {
-      "title": "FAQ démo",
+      "title": "Questions fréquentes",
       "q1": "Combien de temps dure la démo ?",
       "a1": "La démo standard est de 30-45 minutes en ligne, et 1-2 heures en visite sur site. Nous adaptons la durée à vos besoins.",
-      "q2": "La démo est-elle vraiment gratuite ?",
+      "q2": "La démo est-elle gratuite ?",
       "a2": "Oui. Nos démos sont gratuites et sans engagement. Nous voulons que vous découvriez la valeur d'OrlegiTech avant de décider.",
       "q3": "Plusieurs membres de l'équipe peuvent-ils participer ?",
       "a3": "Absolument. Plus il y a de perspectives (greenkeeper, direction, maintenance), mieux nous adaptons la démo.",

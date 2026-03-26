@@ -23,6 +23,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://orlegitech.com"),
   title: "Orlegitech - Tu aliado para una experiencia de golf inigualable",
   description:
     "Orlegitech ofrece servicios de golf con más de 150 campos en 10 países. Aplicación móvil, drones y alquiler de buggies.",
