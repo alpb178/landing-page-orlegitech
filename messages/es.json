@@ -74,9 +74,9 @@
     },
     "aerialReportsService": {
       "badge": "Informes aéreos",
-      "title": "Tu césped bajo control.",
-      "description1": "Análisis aéreo para la salud del césped. Usamos drones y cámaras multiespectrales para generar índices, detectar estrés hídrico, plagas y deficiencias, y entregar informes automatizados con recomendaciones.",
-      "description2": "Medimos productividad en exteriores con informes automatizados por IA, basados en tiempos, tareas y priorización de incidencias.",
+      "title": "Control total desde el cielo.",
+      "description1": "El análisis aéreo para la salud del césped permite una gestión más precisa, eficiente y proactiva del campo. A través del uso de drones y cámaras multiespectrales, capturamos información detallada que no es visible a simple vista, generando índices que revelan el estado real de cada zona. Esta tecnología facilita la detección temprana de estrés hídrico, plagas, enfermedades y deficiencias nutricionales, permitiendo intervenir a tiempo y evitar problemas mayores, mientras se generan informes automatizados con recomendaciones claras y accionables.",
+      "description2": "Además. Medimos productividad en exteriores con informes automatizados por IA, basados en tiempos, tareas y priorización de incidencias.",
       "cta": "Detecta problemas",
       "ctaHighlight": "antes",
       "ctaEnd": "de que aparezcan.",
