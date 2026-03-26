@@ -18,7 +18,7 @@ export default function AboutUs() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {/* Video Card */}
-            <div className="relative w-full h-[400px] rounded-[32px] overflow-hidden">
+            <div className="relative w-full h-[500px] rounded-[32px] overflow-hidden">
               <video
                 src="/movies/movie-about.mp4"
                 className="w-full h-full object-cover"
@@ -32,7 +32,7 @@ export default function AboutUs() {
             </div>
 
             {/* Text Card */}
-            <div className="bg-[rgba(255,255,255,0.1)] backdrop-blur-md rounded-[24px] p-8">
+            <div className="bg-[rgba(255,255,255,0.1)] h-[500px] backdrop-blur-md rounded-[24px] p-8">
               <p className="text-white text-xl leading-relaxed mb-4 [text-shadow:0_1px_8px_rgba(0,0,0,0.3)]">
                 {t("description.1")}
               </p>

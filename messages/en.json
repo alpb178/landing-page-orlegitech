@@ -74,9 +74,9 @@
     },
     "aerialReportsService": {
       "badge": "Aerial reports",
-      "title": "Your turf under control.",
-      "description1": "Aerial analysis for turf health. We use drones and multispectral cameras to generate indices, detect water stress, pests and deficiencies, and deliver automated reports with recommendations.",
-      "description2": "We measure outdoor productivity with AI-automated reports based on times, tasks and incident prioritization.",
+      "title": "Total control from the sky.",
+      "description1": "Aerial analysis for turf health enables more precise, efficient and proactive course management. Through the use of drones and multispectral cameras, we capture detailed information not visible to the naked eye, generating indices that reveal the real condition of each zone. This technology facilitates early detection of water stress, pests, diseases and nutritional deficiencies, allowing timely intervention and preventing major problems, while generating automated reports with clear and actionable recommendations.",
+      "description2": "Additionally, we measure outdoor productivity with AI-automated reports based on times, tasks and incident prioritization.",
       "cta": "Detect problems",
       "ctaHighlight": "before",
       "ctaEnd": "they appear.",
@@ -236,7 +236,7 @@
     "stats": {
       "duration": "30 min",
       "durationLabel": "Average demo length",
-      "response": "24 hrs",
+      "response": "24 h",
       "responseLabel": "Response time",
       "free": "Free",
       "freeLabel": "No commitment"
@@ -287,7 +287,7 @@
       "supportDesc": "Training, integration and implementation with our team."
     },
     "process": {
-      "title": "Simple 3-step process",
+      "title": "3-step process",
       "step1Title": "Complete the form",
       "step1Desc": "Provide your details and your course's specific needs.",
       "step2Title": "We contact you",
@@ -296,10 +296,10 @@
       "step3Desc": "Join your demonstration and see OrlegiTech in action."
     },
     "faq": {
-      "title": "Demo FAQ",
+      "title": "Frequently asked questions",
       "q1": "How long is the demo?",
       "a1": "The standard demo is 30-45 minutes online, and 1-2 hours for on-site visits. We adjust the length to your needs.",
-      "q2": "Is the demo really free?",
+      "q2": "Is the demo free?",
       "a2": "Yes. Our demos are free and with no commitment. We want you to see the value of OrlegiTech before deciding.",
       "q3": "Can several team members join the demo?",
       "a3": "Absolutely. The more perspectives (greenkeeper, management, maintenance), the better we can tailor the demo.",
