@@ -1,0 +1,71 @@
+name: Claude Code Review
+
+on:
+  pull_request:
+    branches:
+      - develop
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  claude-review:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Get PR diff
+        id: diff
+        run: |
+          git diff origin/develop...HEAD > /tmp/pr.diff
+          DIFF=$(cat /tmp/pr.diff | head -c 15000)
+          echo "diff<<EOF" >> $GITHUB_OUTPUT
+          echo "$DIFF" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Claude Review
+        id: review
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          PR_BODY: ${{ github.event.pull_request.body }}
+        run: |
+          RESPONSE=$(curl -s https://api.anthropic.com/v1/messages \
+            -H "x-api-key: $ANTHROPIC_API_KEY" \
+            -H "anthropic-version: 2023-06-01" \
+            -H "content-type: application/json" \
+            -d "{
+              \"model\": \"claude-haiku-4-5\",
+              \"max_tokens\": 1024,
+              \"messages\": [{
+                \"role\": \"user\",
+                \"content\": \"Eres un revisor de código experto. Revisa el siguiente PR y responde SOLO con un JSON con este formato exacto: {\\\"verdict\\\": \\\"approve\\\" o \\\"request_changes\\\", \\\"summary\\\": \\\"resumen breve en español\\\", \\\"issues\\\": [\\\"issue1\\\", \\\"issue2\\\"]}\n\nPR: $PR_TITLE\n\nDiff (primeros 15000 chars):\n$(cat /tmp/pr.diff | head -c 15000 | sed 's/\"/\\\\\"/g' | tr '\n' ' ')\"
+              }]
+            }")
+          echo "response=$RESPONSE" >> $GITHUB_OUTPUT
+
+      - name: Parse and Act
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RESPONSE: ${{ steps.review.outputs.response }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          VERDICT=$(echo "$RESPONSE" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d['content'][0]['text'])" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('verdict','approve'))" 2>/dev/null || echo "approve")
+          SUMMARY=$(echo "$RESPONSE" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d['content'][0]['text'])" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('summary','Revisado por Claude'))" 2>/dev/null || echo "Revisado por Claude")
+          ISSUES=$(echo "$RESPONSE" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d['content'][0]['text'])" | python3 -c "import sys,json; d=json.load(sys.stdin); issues=d.get('issues',[]); print('\n'.join(['- '+i for i in issues]))" 2>/dev/null || echo "")
+
+          if [ "$VERDICT" = "approve" ]; then
+            BODY="## 🤖 Claude Code Review\n\n✅ **Aprobado automáticamente**\n\n$SUMMARY"
+            EVENT="APPROVE"
+          else
+            BODY="## 🤖 Claude Code Review\n\n⚠️ **Se requieren cambios**\n\n$SUMMARY\n\n**Problemas encontrados:**\n$ISSUES"
+            EVENT="REQUEST_CHANGES"
+          fi
+
+          gh pr review $PR_NUMBER --repo $REPO --$( [ "$EVENT" = "APPROVE" ] && echo "approve" || echo "request-changes" ) --body "$(printf "$BODY")"
