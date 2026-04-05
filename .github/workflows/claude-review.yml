@@ -4,6 +4,7 @@ on:
   pull_request:
     branches:
       - develop
+      - dev
     types: [opened, synchronize, reopened]
 
 permissions:
@@ -21,8 +22,11 @@ jobs:
 
       - name: Get PR diff
         id: diff
+        env:
+          BASE_BRANCH: ${{ github.event.pull_request.base.ref }}
         run: |
-          git diff origin/develop...HEAD > /tmp/pr.diff
+          git fetch origin $BASE_BRANCH
+          git diff origin/$BASE_BRANCH...HEAD > /tmp/pr.diff
           DIFF=$(cat /tmp/pr.diff | head -c 15000)
           echo "diff<<EOF" >> $GITHUB_OUTPUT
           echo "$DIFF" >> $GITHUB_OUTPUT
@@ -33,8 +37,8 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           PR_TITLE: ${{ github.event.pull_request.title }}
-          PR_BODY: ${{ github.event.pull_request.body }}
         run: |
+          DIFF_CONTENT=$(cat /tmp/pr.diff | head -c 12000 | python3 -c "import sys; print(sys.stdin.read().replace('\\\\', '\\\\\\\\').replace('\"', '\\\\\"').replace('\n', '\\\\n')[:12000])")
           RESPONSE=$(curl -s https://api.anthropic.com/v1/messages \
             -H "x-api-key: $ANTHROPIC_API_KEY" \
             -H "anthropic-version: 2023-06-01" \
@@ -44,10 +48,12 @@ jobs:
               \"max_tokens\": 1024,
               \"messages\": [{
                 \"role\": \"user\",
-                \"content\": \"Eres un revisor de código experto. Revisa el siguiente PR y responde SOLO con un JSON con este formato exacto: {\\\"verdict\\\": \\\"approve\\\" o \\\"request_changes\\\", \\\"summary\\\": \\\"resumen breve en español\\\", \\\"issues\\\": [\\\"issue1\\\", \\\"issue2\\\"]}\n\nPR: $PR_TITLE\n\nDiff (primeros 15000 chars):\n$(cat /tmp/pr.diff | head -c 15000 | sed 's/\"/\\\\\"/g' | tr '\n' ' ')\"
+                \"content\": \"Eres un revisor de código experto. Revisa el siguiente PR y responde SOLO con un JSON: {\\\"verdict\\\": \\\"approve\\\" o \\\"request_changes\\\", \\\"summary\\\": \\\"resumen breve en español de max 200 chars\\\", \\\"issues\\\": [\\\"issue1\\\"]}.\\n\\nPR: $PR_TITLE\\n\\nDiff:\\n$DIFF_CONTENT\"
               }]
             }")
-          echo "response=$RESPONSE" >> $GITHUB_OUTPUT
+          echo "response<<EOF" >> $GITHUB_OUTPUT
+          echo "$RESPONSE" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
 
       - name: Parse and Act
         env:
@@ -56,16 +62,26 @@ jobs:
           PR_NUMBER: ${{ github.event.pull_request.number }}
           REPO: ${{ github.repository }}
         run: |
-          VERDICT=$(echo "$RESPONSE" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d['content'][0]['text'])" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('verdict','approve'))" 2>/dev/null || echo "approve")
-          SUMMARY=$(echo "$RESPONSE" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d['content'][0]['text'])" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('summary','Revisado por Claude'))" 2>/dev/null || echo "Revisado por Claude")
-          ISSUES=$(echo "$RESPONSE" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d['content'][0]['text'])" | python3 -c "import sys,json; d=json.load(sys.stdin); issues=d.get('issues',[]); print('\n'.join(['- '+i for i in issues]))" 2>/dev/null || echo "")
+          TEXT=$(echo "$RESPONSE" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d['content'][0]['text'])" 2>/dev/null || echo '{"verdict":"approve","summary":"Revisado por Claude","issues":[]}')
+          VERDICT=$(echo "$TEXT" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('verdict','approve'))" 2>/dev/null || echo "approve")
+          SUMMARY=$(echo "$TEXT" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('summary','Revisado por Claude'))" 2>/dev/null || echo "Revisado por Claude")
+          ISSUES=$(echo "$TEXT" | python3 -c "import sys,json; d=json.load(sys.stdin); issues=d.get('issues',[]); print(chr(10).join(['- '+i for i in issues]))" 2>/dev/null || echo "")
 
           if [ "$VERDICT" = "approve" ]; then
-            BODY="## 🤖 Claude Code Review\n\n✅ **Aprobado automáticamente**\n\n$SUMMARY"
-            EVENT="APPROVE"
-          else
-            BODY="## 🤖 Claude Code Review\n\n⚠️ **Se requieren cambios**\n\n$SUMMARY\n\n**Problemas encontrados:**\n$ISSUES"
-            EVENT="REQUEST_CHANGES"
-          fi
+            BODY="## 🤖 Claude Code Review
 
-          gh pr review $PR_NUMBER --repo $REPO --$( [ "$EVENT" = "APPROVE" ] && echo "approve" || echo "request-changes" ) --body "$(printf "$BODY")"
+✅ **Aprobado automáticamente**
+
+$SUMMARY"
+            gh pr review $PR_NUMBER --repo $REPO --approve --body "$BODY"
+          else
+            BODY="## 🤖 Claude Code Review
+
+⚠️ **Se requieren cambios**
+
+$SUMMARY
+
+**Problemas encontrados:**
+$ISSUES"
+            gh pr review $PR_NUMBER --repo $REPO --request-changes --body "$BODY"
+          fi
