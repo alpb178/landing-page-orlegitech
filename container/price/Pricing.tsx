@@ -1,6 +1,6 @@
 "use client";
 
-import { Check } from "lucide-react";
+import { Check, ArrowRight } from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
 import { usePathname } from "next/navigation";
 import AnimatedCard from "@/components/AnimatedCard";
@@ -28,7 +28,7 @@ export default function Pricing() {
   return (
     <section id="pricing" className="py-20">
       <div className="container mx-auto px-5">
-        <h2 className="text-5xl md:text-[60px] font-medium text-center text-white mb-16 font-[family-name:var(--font-plus-jakarta)]">
+        <h2 className="text-5xl md:text-[64px] text-center text-white mb-16 font-[family-name:var(--font-great-vibes)]">
           {t("title")}
         </h2>
 
@@ -74,9 +74,10 @@ export default function Pricing() {
               </ul>
               <a
                 href={contactHref}
-                className="bg-white text-[#024c35] text-center py-3 rounded-[32px] text-base font-semibold hover:bg-[#ebeed6] transition-colors"
+                className="bg-white border border-[#036546] text-[#024c35] py-3 rounded-[32px] text-base font-semibold flex items-center justify-center gap-2 hover:bg-[#ebeed6] transition-colors"
               >
                 {t("plans.premium.cta")}
+                <ArrowRight className="w-5 h-5" />
               </a>
             </div>
           </AnimatedCard>

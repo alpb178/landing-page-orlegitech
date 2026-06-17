@@ -22,7 +22,7 @@ export default function AerialReportsService() {
                 className="object-cover"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[rgba(1,35,25,0.4)] to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-[rgba(1,35,25,0.4)] to-transparent" />
             </div>
             <div className="absolute top-6 left-1/2 -translate-x-1/2">
               <div className="bg-[rgba(235,238,214,0.7)] px-4 py-2 rounded-[120px] shadow-[0px_7px_14px_0px_rgba(0,0,0,0.25)]">

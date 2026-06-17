@@ -1,10 +1,16 @@
 {
+  "demoCta": {
+    "title": "¡Agenda una Demo ahora!",
+    "subtitle": "No tomará más de un minuto.",
+    "cta": "Agendar Demo gratis"
+  },
   "header": {
     "nav": {
       "about": "Sobre nosotros",
       "services": "Servicios",
       "pricing": "Planes",
-      "contact": "Contáctanos"
+      "contact": "Contáctanos",
+      "demo": "Agendar Demo gratis"
     }
   },
   "hero": {
@@ -13,6 +19,7 @@
     "description2": "",
     "cta": "Contáctanos",
     "services_cta": "Servicios",
+    "demo_cta": "Agendar Demo gratis",
     "stats": {
       "description": "OrlegiTech utiliza inteligencia artificial, análisis aéreo y control en tiempo real para ayudar a los campos de golf a mantener un césped en condiciones óptimas y gestionar sus recursos de forma más eficiente."
     },
@@ -74,9 +81,9 @@
     },
     "aerialReportsService": {
       "badge": "Informes aéreos",
-      "title": "Tu césped bajo control.",
-      "description1": "Análisis aéreo para la salud del césped. Usamos drones y cámaras multiespectrales para generar índices, detectar estrés hídrico, plagas y deficiencias, y entregar informes automatizados con recomendaciones.",
-      "description2": "Medimos productividad en exteriores con informes automatizados por IA, basados en tiempos, tareas y priorización de incidencias.",
+      "title": "Control total desde el cielo.",
+      "description1": "El análisis aéreo para la salud del césped permite una gestión más precisa, eficiente y proactiva del campo. A través del uso de drones y cámaras multiespectrales, capturamos información detallada que no es visible a simple vista, generando índices que revelan el estado real de cada zona. Esta tecnología facilita la detección temprana de estrés hídrico, plagas, enfermedades y deficiencias nutricionales, permitiendo intervenir a tiempo y evitar problemas mayores, mientras se generan informes automatizados con recomendaciones claras y accionables.",
+      "description2": "Además. Medimos productividad en exteriores con informes automatizados por IA, basados en tiempos, tareas y priorización de incidencias.",
       "cta": "Detecta problemas",
       "ctaHighlight": "antes",
       "ctaEnd": "de que aparezcan.",
@@ -85,6 +92,7 @@
   },
   "about": {
     "title": "Sobre nosotros",
+    "demo_cta": "Agenda una Demo con nosotros",
     "description": {
       "1": "Expertos en tecnología aplicada al golf",
       "2": "En OrlegiTech combinamos agronomía, inteligencia artificial y análisis aéreo para mejorar el rendimiento de cada campo. Nuestro objetivo es ayudarte a mantener el césped en su estado óptimo, reducir costes operativos y facilitar la planificación diaria del personal.",
@@ -157,7 +165,7 @@
       "premium": {
         "name": "Plan Premium",
         "badge": "Más popular",
-        "cta": "Contactar",
+        "cta": "Agendar Demo",
         "features": {
           "1": "Plan base +",
           "2": "Velocidad de juego.",
@@ -210,22 +218,15 @@
     },
     "form": {
       "title": "Envíanos un mensaje",
+      "subtitle": "Agenda 15 minutos con nuestro equipo y descubre cómo optimizar tu campo.",
       "name": "Nombre",
       "namePlaceholder": "Tu nombre",
-      "lastName": "Apellidos",
-      "lastNamePlaceholder": "Tus apellidos",
-      "email": "Email",
-      "emailPlaceholder": "tu@email.com",
       "phone": "Teléfono",
       "phonePlaceholder": "Tu teléfono",
-      "service": "Servicio de Interés",
-      "servicePlaceholder": "Seleccionar opción",
-      "serviceOptions": {
-        "irrigation": "Riego",
-        "other": "Otro"
-      },
-      "message": "Mensaje",
-      "messagePlaceholder": "Cuéntanos cómo podemos ayudarte...",
+      "club": "Nombre del club",
+      "clubPlaceholder": "El nombre del club",
+      "email": "Email",
+      "emailPlaceholder": "tu@email.com",
       "submit": "Enviar",
       "success": "Se abrirá tu cliente de correo. Completa el envío desde allí."
     }

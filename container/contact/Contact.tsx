@@ -2,28 +2,22 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { Mail, Phone, Clock, MapPin, Send } from "lucide-react";
+import { Mail, Phone, Clock, MapPin, ArrowRight } from "lucide-react";
 
 export default function ContactUs() {
   const t = useTranslations("contact");
   const [formData, setFormData] = useState({
     name: "",
-    lastName: "",
-    email: "",
     phone: "",
-    service: "",
-    message: "",
+    club: "",
+    email: "",
   });
   const [submitStatus, setSubmitStatus] = useState<{
     type: "success" | "error" | null;
     message: string;
   }>({ type: null, message: "" });
 
-  const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
-  ) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
@@ -34,15 +28,14 @@ export default function ContactUs() {
     const recipientEmail = "info@orlegitech.com";
 
     const subject = encodeURIComponent(
-      `Contacto Orlegitech - ${formData.service || "General"}`
+      `Contacto Orlegitech - ${formData.club || "General"}`
     );
 
     const emailBody = encodeURIComponent(
-      `Nombre: ${formData.name} ${formData.lastName}\n` +
-        `Email: ${formData.email}\n` +
-        (formData.phone ? `Teléfono: ${formData.phone}\n` : "") +
-        (formData.service ? `Servicio de interés: ${formData.service}\n` : "") +
-        `\nMensaje:\n${formData.message}`
+      `Nombre: ${formData.name}\n` +
+        `Teléfono: ${formData.phone}\n` +
+        `Club: ${formData.club}\n` +
+        `Email: ${formData.email}`
     );
 
     window.location.href = `mailto:${recipientEmail}?subject=${subject}&body=${emailBody}`;
@@ -55,11 +48,9 @@ export default function ContactUs() {
     setTimeout(() => {
       setFormData({
         name: "",
-        lastName: "",
-        email: "",
         phone: "",
-        service: "",
-        message: "",
+        club: "",
+        email: "",
       });
       setSubmitStatus({ type: null, message: "" });
     }, 3000);
@@ -68,7 +59,7 @@ export default function ContactUs() {
   return (
     <section id="contact-us" className="py-20">
       <div className="container mx-auto px-5">
-        <h2 className="text-5xl md:text-[60px] font-medium text-center text-white mb-16 font-[family-name:var(--font-plus-jakarta)]">
+        <h2 className="text-5xl md:text-[64px] text-center text-white mb-16 font-[family-name:var(--font-great-vibes)]">
           {t("title")}
         </h2>
 
@@ -115,11 +106,14 @@ export default function ContactUs() {
 
             {/* Right Side - Form */}
             <div className="lg:w-[60%]">
-              <h3 className="text-white text-2xl font-semibold mb-6">
+              <h3 className="text-white text-2xl font-semibold">
                 {t("form.title")}
               </h3>
+              <p className="text-[#d4dcef] text-base mt-2 mb-6">
+                {t("form.subtitle")}
+              </p>
 
-              <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+              <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                 {submitStatus.type && (
                   <div
                     className={`p-4 rounded-lg ${
@@ -132,76 +126,58 @@ export default function ContactUs() {
                   </div>
                 )}
 
-                {/* Row 1: Name + Last Name */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="text-xs text-white tracking-wide">
-                      {t("form.name")}
-                    </label>
-                    <input
-                      type="text"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      placeholder={t("form.namePlaceholder")}
-                      className="w-full mt-1 px-4 py-2 bg-transparent border border-white rounded-lg text-sm text-white placeholder-white/50 focus:ring-2 focus:ring-[#a1c353] focus:border-transparent outline-none"
-                    />
-                  </div>
-                  <div>
-                    <label className="text-xs text-white tracking-wide">
-                      {t("form.lastName")}
-                    </label>
-                    <input
-                      type="text"
-                      name="lastName"
-                      value={formData.lastName}
-                      onChange={handleChange}
-                      required
-                      placeholder={t("form.lastNamePlaceholder")}
-                      className="w-full mt-1 px-4 py-2 bg-transparent border border-white rounded-lg text-sm text-white placeholder-white/50 focus:ring-2 focus:ring-[#a1c353] focus:border-transparent outline-none"
-                    />
-                  </div>
-                </div>
-
-                {/* Row 2: Phone + Service */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="text-xs text-white tracking-wide">
-                      {t("form.phone")}
-                    </label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      placeholder={t("form.phonePlaceholder")}
-                      className="w-full mt-1 px-4 py-2 bg-transparent border border-white rounded-lg text-sm text-white placeholder-white/50 focus:ring-2 focus:ring-[#a1c353] focus:border-transparent outline-none"
-                    />
-                  </div>
-                  <div>
-                    <label className="text-xs text-white tracking-wide">
-                      {t("form.service")}
-                    </label>
-                    <select
-                      name="service"
-                      value={formData.service}
-                      onChange={handleChange}
-                      className="w-full mt-1 px-4 py-2 bg-transparent border border-white rounded-lg text-sm text-white focus:ring-2 focus:ring-[#a1c353] focus:border-transparent outline-none"
-                    >
-                      <option value="" className="bg-[#012319]">{t("form.servicePlaceholder")}</option>
-                      <option value="app" className="bg-[#012319]">App</option>
-                      <option value="drone" className="bg-[#012319]">Drone</option>
-                      <option value="irrigation" className="bg-[#012319]">{t("form.serviceOptions.irrigation")}</option>
-                      <option value="other" className="bg-[#012319]">{t("form.serviceOptions.other")}</option>
-                    </select>
-                  </div>
-                </div>
-
-                {/* Row 3: Email */}
-                <div>
+                {/* Nombre */}
+                <div className="flex flex-col gap-1">
                   <label className="text-xs text-white tracking-wide">
-                    {t("form.email")}
+                    {t("form.name")} <span className="text-[#c47e81]">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    placeholder={t("form.namePlaceholder")}
+                    className="w-full px-4 py-2 bg-transparent border border-white rounded-[24px] text-sm text-white placeholder-[#d4dcef] focus:ring-2 focus:ring-[#a1c353] focus:border-transparent outline-none"
+                  />
+                </div>
+
+                {/* Teléfono */}
+                <div className="flex flex-col gap-1">
+                  <label className="text-xs text-white tracking-wide">
+                    {t("form.phone")} <span className="text-[#c47e81]">*</span>
+                  </label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    required
+                    placeholder={t("form.phonePlaceholder")}
+                    className="w-full px-4 py-2 bg-transparent border border-white rounded-[24px] text-sm text-white placeholder-[#d4dcef] focus:ring-2 focus:ring-[#a1c353] focus:border-transparent outline-none"
+                  />
+                </div>
+
+                {/* Nombre del club */}
+                <div className="flex flex-col gap-1">
+                  <label className="text-xs text-white tracking-wide">
+                    {t("form.club")} <span className="text-[#c47e81]">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="club"
+                    value={formData.club}
+                    onChange={handleChange}
+                    required
+                    placeholder={t("form.clubPlaceholder")}
+                    className="w-full px-4 py-2 bg-transparent border border-white rounded-[24px] text-sm text-white placeholder-[#d4dcef] focus:ring-2 focus:ring-[#a1c353] focus:border-transparent outline-none"
+                  />
+                </div>
+
+                {/* Email */}
+                <div className="flex flex-col gap-1">
+                  <label className="text-xs text-white tracking-wide">
+                    {t("form.email")} <span className="text-[#c47e81]">*</span>
                   </label>
                   <input
                     type="email"
@@ -210,34 +186,18 @@ export default function ContactUs() {
                     onChange={handleChange}
                     required
                     placeholder={t("form.emailPlaceholder")}
-                    className="w-full mt-1 px-4 py-2 bg-transparent border border-white rounded-lg text-sm text-white placeholder-white/50 focus:ring-2 focus:ring-[#a1c353] focus:border-transparent outline-none"
-                  />
-                </div>
-
-                {/* Message */}
-                <div>
-                  <label className="text-xs text-white tracking-wide">
-                    {t("form.message")}
-                  </label>
-                  <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={3}
-                    placeholder={t("form.messagePlaceholder")}
-                    className="w-full mt-1 px-4 py-2 bg-transparent border border-white rounded-lg text-sm text-white placeholder-white/50 focus:ring-2 focus:ring-[#a1c353] focus:border-transparent outline-none"
+                    className="w-full px-4 py-2 bg-transparent border border-white rounded-[24px] text-sm text-white placeholder-[#d4dcef] focus:ring-2 focus:ring-[#a1c353] focus:border-transparent outline-none"
                   />
                 </div>
 
                 {/* Submit Button */}
-                <div className="flex justify-end">
+                <div className="flex justify-end mt-2">
                   <button
                     type="submit"
-                    className="bg-white text-[#024c35] px-6 py-3 rounded-[32px] font-semibold hover:bg-[#ebeed6] transition-colors flex items-center gap-2"
+                    className="bg-white border border-[#036546] text-[#024c35] px-6 py-4 rounded-[32px] text-xl font-medium hover:bg-[#ebeed6] transition-colors flex items-center gap-2.5 drop-shadow-[0px_4px_2.6px_rgba(0,0,0,0.25)]"
                   >
                     {t("form.submit")}
-                    <Send className="w-5 h-5" />
+                    <ArrowRight className="w-6 h-6" />
                   </button>
                 </div>
               </form>

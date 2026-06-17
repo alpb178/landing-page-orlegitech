@@ -1,9 +1,15 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import { usePathname } from "next/navigation";
+import { ArrowRight } from "lucide-react";
 
 export default function AboutUs() {
   const t = useTranslations("about");
+  const locale = useLocale();
+  const pathname = usePathname();
+  const contactHref =
+    pathname === `/${locale}` ? "#contact-us" : `/${locale}/#contact-us`;
 
   return (
     <section id="about-us" className="relative">
@@ -12,13 +18,13 @@ export default function AboutUs() {
        
 
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <h2 className="text-5xl md:text-[60px] font-medium text-center text-white mb-12 font-(family-name:--font-plus-jakarta)">
+          <h2 className="text-5xl md:text-[64px] text-center text-white mb-12 font-(family-name:--font-great-vibes)">
             {t("title")}
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {/* Video Card */}
-            <div className="relative w-full h-[400px] rounded-[32px] overflow-hidden">
+            <div className="relative w-full h-[500px] rounded-[32px] overflow-hidden">
               <video
                 src="/movies/movie-about.mp4"
                 className="w-full h-full object-cover"
@@ -32,7 +38,7 @@ export default function AboutUs() {
             </div>
 
             {/* Text Card */}
-            <div className="bg-[rgba(255,255,255,0.1)] backdrop-blur-md rounded-[24px] p-8">
+            <div className="bg-[rgba(255,255,255,0.1)] h-[500px] backdrop-blur-md rounded-[24px] p-8">
               <p className="text-white text-xl leading-relaxed mb-4 [text-shadow:0_1px_8px_rgba(0,0,0,0.3)]">
                 {t("description.1")}
               </p>
@@ -43,6 +49,16 @@ export default function AboutUs() {
                 {t("description.3")}
               </p>
             </div>
+          </div>
+
+          <div className="flex justify-center mt-10">
+            <a
+              href={contactHref}
+              className="bg-white border border-[#036546] text-[#024c35] px-6 py-4 rounded-[32px] text-xl md:text-2xl font-medium flex items-center gap-2.5 hover:bg-[#ebeed6] transition-all duration-200 drop-shadow-[0px_4px_2.6px_rgba(0,0,0,0.25)]"
+            >
+              {t("demo_cta")}
+              <ArrowRight className="w-6 h-6" />
+            </a>
           </div>
         </div>
       </div>
