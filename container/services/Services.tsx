@@ -12,7 +12,7 @@ export default function Services() {
   return (
     <section id="services" className="py-20">
       <div className="container mx-auto px-5">
-        <h2 className="text-4xl md:text-5xl font-medium text-center text-white mb-16 uppercase font-(family-name:--font-plus-jakarta)">
+        <h2 className="text-5xl md:text-[64px] text-center text-white mb-16 font-(family-name:--font-great-vibes)">
           {t("title")}
         </h2>
 

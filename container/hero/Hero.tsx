@@ -9,7 +9,6 @@ export default function Hero() {
   const locale = useLocale();
   const pathname = usePathname();
 
-  const servicesHref = pathname === `/${locale}` ? "#services" : `/${locale}/#services`;
   const contactHref = pathname === `/${locale}` ? "#contact-us" : `/${locale}/#contact-us`;
 
   return (
@@ -30,7 +29,7 @@ export default function Hero() {
         </div>
 
         <div className="relative z-10 container mx-auto px-4 sm:px-6 py-28 sm:py-36 flex flex-col items-center justify-center text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-[64px] font-extrabold text-white mb-4 sm:mb-6 tracking-tight leading-tight max-w-4xl font-[family-name:var(--font-plus-jakarta)]">
+          <h1 className="text-5xl sm:text-6xl md:text-[96px] text-white mb-4 sm:mb-6 leading-[1.05] max-w-4xl font-[family-name:var(--font-great-vibes)]">
             {t("tagline")}
           </h1>
 
@@ -38,19 +37,13 @@ export default function Hero() {
             {t("description")}
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 items-center">
-            <a
-              href={servicesHref}
-              className="bg-[rgba(235,238,214,0.24)] border border-[#4a6435] text-white px-8 py-3.5 rounded-[32px] text-lg font-semibold hover:bg-[rgba(235,238,214,0.35)] transition-all duration-200 shadow-[0px_4px_5.2px_0px_rgba(0,0,0,0.25)]"
-            >
-              {t("services_cta")}
-            </a>
+          <div className="flex items-center justify-center">
             <a
               href={contactHref}
-              className="bg-white text-[#024c35] px-8 py-3.5 rounded-[32px] text-lg font-semibold hover:bg-[#ebeed6] transition-all duration-200 flex items-center gap-2 shadow-[0px_4px_5.2px_0px_rgba(0,0,0,0.25)]"
+              className="bg-white border border-[#036546] text-[#024c35] px-6 py-4 rounded-[32px] text-xl md:text-2xl font-medium flex items-center gap-2.5 hover:bg-[#ebeed6] transition-all duration-200 drop-shadow-[0px_4px_2.6px_rgba(0,0,0,0.25)]"
             >
-              {t("cta")}
-              <ArrowRight className="w-5 h-5" />
+              {t("demo_cta")}
+              <ArrowRight className="w-6 h-6" />
             </a>
           </div>
 

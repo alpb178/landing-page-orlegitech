@@ -1,10 +1,16 @@
 {
+  "demoCta": {
+    "title": "Réservez une démo maintenant !",
+    "subtitle": "Cela ne prendra pas plus d'une minute.",
+    "cta": "Réserver une démo gratuite"
+  },
   "header": {
     "nav": {
       "about": "À propos de nous",
       "services": "Services",
       "pricing": "Forfaits",
-      "contact": "Contactez-nous"
+      "contact": "Contactez-nous",
+      "demo": "Réserver une démo gratuite"
     }
   },
   "hero": {
@@ -13,6 +19,7 @@
     "description2": "",
     "cta": "Contactez-nous",
     "services_cta": "Services",
+    "demo_cta": "Réserver une démo gratuite",
     "stats": {
       "description": "OrlegiTech utilise l'intelligence artificielle, l'analyse aérienne et le contrôle en temps réel pour aider les terrains de golf à maintenir un gazon en bon état et à gérer ses ressources de manière plus efficace."
     },
@@ -85,6 +92,7 @@
   },
   "about": {
     "title": "À propos de nous",
+    "demo_cta": "Réservez une démo avec nous",
     "description": {
       "1": "Experts en technologie appliquée au golf",
       "2": "Chez OrlegiTech, nous combinons l'agronomie, l'intelligence artificielle et l'analyse aérienne pour améliorer les performances de chaque parcours. Notre objectif est de vous aider à maintenir le gazon dans un état optimal, réduire les coûts opérationnels et faciliter la planification quotidienne du personnel.",
@@ -157,7 +165,7 @@
       "premium": {
         "name": "Plan Premium",
         "badge": "Le plus populaire",
-        "cta": "Contacter",
+        "cta": "Réserver une démo",
         "features": {
           "1": "Plan base +",
           "2": "Vitesse de jeu.",
@@ -210,22 +218,15 @@
     },
     "form": {
       "title": "Envoyez-nous un message",
+      "subtitle": "Réservez 15 minutes avec notre équipe et découvrez comment optimiser votre terrain.",
       "name": "Nom",
       "namePlaceholder": "Votre nom",
-      "lastName": "Nom de famille",
-      "lastNamePlaceholder": "Votre nom de famille",
-      "email": "Email",
-      "emailPlaceholder": "vous@email.com",
       "phone": "Téléphone",
       "phonePlaceholder": "Votre téléphone",
-      "service": "Service d'intérêt",
-      "servicePlaceholder": "Sélectionner une option",
-      "serviceOptions": {
-        "irrigation": "Irrigation",
-        "other": "Autre"
-      },
-      "message": "Message",
-      "messagePlaceholder": "Dites-nous comment nous pouvons vous aider...",
+      "club": "Nom du club",
+      "clubPlaceholder": "Le nom du club",
+      "email": "Email",
+      "emailPlaceholder": "vous@email.com",
       "submit": "Envoyer",
       "success": "Votre client de messagerie s'ouvrira. Complétez l'envoi depuis là."
     }
