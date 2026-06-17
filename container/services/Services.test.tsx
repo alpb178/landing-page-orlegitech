@@ -9,7 +9,7 @@ describe("Services", () => {
 
   it("renders all three service cards with updated names", () => {
     render(<Services />);
-    expect(screen.getByText("APP")).toBeInTheDocument();
+    expect(screen.getByText("App")).toBeInTheDocument();
     expect(screen.getByText("Informes aéreos")).toBeInTheDocument();
     expect(screen.getByText("Riego inteligente")).toBeInTheDocument();
   });

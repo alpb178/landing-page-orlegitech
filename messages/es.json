@@ -1,6 +1,6 @@
 {
   "demoCta": {
-    "title": "¡Agenda una Demo ahora!",
+    "title": "¿Estás listo para <h>transformar</h> tu campo?",
     "subtitle": "No tomará más de un minuto.",
     "cta": "Agendar Demo gratis"
   },
@@ -32,7 +32,7 @@
   "services": {
     "title": "Servicios",
     "app": {
-      "title": "APP",
+      "title": "App",
       "mainTitle": "Tu club, digitalizado al completo",
       "features": {
         "1": "Gestión del personal y tareas",
@@ -311,6 +311,7 @@
     }
   },
   "footer": {
-    "copyright": "Copyright © 2026 Orlegitech. Todos los derechos reservados."
+    "copyright": "Copyright © 2026 Orlegitech. Todos los derechos reservados.",
+    "legal": "© Orlegitech 2026. Calle Ferrerías 19, oficina 1, 20011 Donostia - San Sebastián, España. Orlegitech usa un gestor de pagos Virtuopay OOD - 35 Petrohan Street, Ruse 7006, Bulgaria."
   }
 }

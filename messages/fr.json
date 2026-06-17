@@ -1,6 +1,6 @@
 {
   "demoCta": {
-    "title": "Réservez une démo maintenant !",
+    "title": "Prêt à <h>transformer</h> votre terrain ?",
     "subtitle": "Cela ne prendra pas plus d'une minute.",
     "cta": "Réserver une démo gratuite"
   },
@@ -32,7 +32,7 @@
   "services": {
     "title": "Services",
     "app": {
-      "title": "APP",
+      "title": "App",
       "mainTitle": "Votre club, entièrement numérisé",
       "features": {
         "1": "Gestion du personnel et des tâches",
@@ -311,6 +311,7 @@
     }
   },
   "footer": {
-    "copyright": "Copyright © 2026 Orlegitech. Tous droits réservés."
+    "copyright": "Copyright © 2026 Orlegitech. Tous droits réservés.",
+    "legal": "© Orlegitech 2026. Calle Ferrerías 19, bureau 1, 20011 Donostia - San Sebastián, Espagne. Orlegitech utilise le prestataire de paiement Virtuopay OOD - 35 Petrohan Street, Ruse 7006, Bulgarie."
   }
 }

@@ -17,8 +17,8 @@ export default function Footer() {
             className="w-auto h-auto"
           />
 
-          <p className="text-base text-[#f4f4f4] text-center font-[family-name:var(--font-poppins)]">
-            {t("copyright")}
+          <p className="max-w-3xl text-sm text-[#f4f4f4] text-center leading-relaxed font-[family-name:var(--font-poppins)]">
+            {t("legal")}
           </p>
         </div>
       </div>
