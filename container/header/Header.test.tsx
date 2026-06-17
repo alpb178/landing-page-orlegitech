@@ -17,8 +17,8 @@ describe("Header", () => {
     expect(serviciosLinks.length).toBeGreaterThan(0);
     const planesLinks = screen.getAllByText("Planes");
     expect(planesLinks.length).toBeGreaterThan(0);
-    const contactanosLinks = screen.getAllByText("Contáctanos");
-    expect(contactanosLinks.length).toBeGreaterThan(0);
+    const demoLinks = screen.getAllByText("Agendar Demo gratis");
+    expect(demoLinks.length).toBeGreaterThan(0);
   });
 
   it("has correct navigation structure", () => {

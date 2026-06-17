@@ -73,7 +73,7 @@ export default function Header() {
               href={contactHref}
               className="bg-white text-[#024c35] px-6 py-2.5 rounded-[32px] text-base font-semibold hover:bg-[#ebeed6] transition-colors"
             >
-              {t("contact")}
+              {t("demo")}
             </a>
             <LanguageSelector />
           </div>
@@ -121,7 +121,7 @@ export default function Header() {
               ))}
               <li>
                 <a href={contactHref} onClick={closeDrawer} className="block text-center bg-white text-[#024c35] text-lg py-3 px-4 rounded-[32px] font-semibold mt-4">
-                  {t("contact")}
+                  {t("demo")}
                 </a>
               </li>
             </ul>
