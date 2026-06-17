@@ -1,10 +1,16 @@
 {
+  "demoCta": {
+    "title": "Book a Demo now!",
+    "subtitle": "It won't take more than a minute.",
+    "cta": "Book a Free Demo"
+  },
   "header": {
     "nav": {
       "about": "About Us",
       "services": "Services",
       "pricing": "Plans",
-      "contact": "Contact Us"
+      "contact": "Contact Us",
+      "demo": "Book a Free Demo"
     }
   },
   "hero": {
@@ -13,6 +19,7 @@
     "description2": "",
     "cta": "Contact Us",
     "services_cta": "Services",
+    "demo_cta": "Book a Free Demo",
     "stats": {
       "description": "OrlegiTech uses artificial intelligence, aerial analysis, and real-time control to help golf courses maintain optimal turf conditions and manage their resources more efficiently."
     },
@@ -85,6 +92,7 @@
   },
   "about": {
     "title": "About Us",
+    "demo_cta": "Book a Demo with us",
     "description": {
       "1": "Experts in golf technology",
       "2": "At OrlegiTech we combine agronomy, artificial intelligence and aerial analysis to improve the performance of each course. Our goal is to help you keep the turf in optimal condition, reduce operating costs and facilitate daily staff planning.",
@@ -157,7 +165,7 @@
       "premium": {
         "name": "Premium Plan",
         "badge": "Most popular",
-        "cta": "Contact",
+        "cta": "Book a Demo",
         "features": {
           "1": "Base plan +",
           "2": "Speed of play.",
@@ -210,22 +218,15 @@
     },
     "form": {
       "title": "Send us a message",
+      "subtitle": "Book 15 minutes with our team and discover how to optimize your course.",
       "name": "Name",
       "namePlaceholder": "Your name",
-      "lastName": "Last name",
-      "lastNamePlaceholder": "Your last name",
-      "email": "Email",
-      "emailPlaceholder": "you@email.com",
       "phone": "Phone",
       "phonePlaceholder": "Your phone",
-      "service": "Service of Interest",
-      "servicePlaceholder": "Select option",
-      "serviceOptions": {
-        "irrigation": "Irrigation",
-        "other": "Other"
-      },
-      "message": "Message",
-      "messagePlaceholder": "Tell us how we can help you...",
+      "club": "Club name",
+      "clubPlaceholder": "The club name",
+      "email": "Email",
+      "emailPlaceholder": "you@email.com",
       "submit": "Send",
       "success": "Your email client will open. Complete the sending from there."
     }

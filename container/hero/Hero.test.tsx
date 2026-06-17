@@ -12,6 +12,6 @@ describe("Hero", () => {
 
   it("renders the CTA button", () => {
     render(<Hero />);
-    expect(screen.getByText("Contáctanos")).toBeInTheDocument();
+    expect(screen.getByText("Agendar Demo gratis")).toBeInTheDocument();
   });
 });
