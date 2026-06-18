@@ -2,6 +2,15 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Additional Rules
+
+These repo documents are part of Claude's working rules. Read and follow them:
+
+- **[AGENTS.md](./AGENTS.md)** — coding conventions and engineering standards (role, naming, code style, TypeScript/validation, state & data fetching, error handling, testing/TDD, file structure).
+- **[FLUJO-TRABAJO-DEVS.md](./FLUJO-TRABAJO-DEVS.md)** — team Git workflow: branch model (`feature/*` → `develop` → `main`), commit conventions, PR process, and review/merge rules.
+
+Where these documents conflict with the sections below, prefer the repo-specific details in this file (e.g. Jest as the test runner, next-intl routing).
+
 ## Project Overview
 
 OrlegiTech landing page — a Next.js 16 app (React 19, TypeScript) for a golf course technology company. Uses Tailwind CSS v4, next-intl for i18n (Spanish/English/French), and lucide-react for icons.
