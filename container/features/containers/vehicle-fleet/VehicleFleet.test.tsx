@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import VehiclesFleetContainer from "./VehicleFleet";
+import { VehiclesFleetContainer } from "./VehicleFleet";
 
 describe("VehiclesFleetContainer", () => {
   it("renders the main title", () => {

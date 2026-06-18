@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import Hero from "@/container/hero/Hero";
+import { Hero } from "@/container/hero/Hero";
 
 describe("Hero", () => {
   it("renders the main title and subtitle", () => {

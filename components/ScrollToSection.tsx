@@ -3,7 +3,12 @@
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 
-export default function ScrollToSection() {
+const HEADER_OFFSET = 100;
+const HOME_SCROLL_DELAY_MS = 100;
+const SECTION_SCROLL_DELAY_MS = 300;
+const HASH_CLEANUP_DELAY_MS = 500;
+
+export const ScrollToSection = (): null => {
   const pathname = usePathname();
 
   useEffect(() => {
@@ -18,7 +23,7 @@ export default function ScrollToSection() {
             window.scrollTo({ top: 0, behavior: "smooth" });
             // Limpiar el hash de la URL para no interferir con el scroll manual
             history.replaceState(null, "", window.location.pathname);
-          }, 100);
+          }, HOME_SCROLL_DELAY_MS);
           return timer;
         }
 
@@ -27,7 +32,7 @@ export default function ScrollToSection() {
           const element = document.querySelector(hash);
           if (element) {
             // Calcular el offset del header fijo (ajustar según la altura de tu header)
-            const headerOffset = 100;
+            const headerOffset = HEADER_OFFSET;
             const elementPosition = element.getBoundingClientRect().top;
             const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -39,9 +44,9 @@ export default function ScrollToSection() {
             // Limpiar el hash de la URL para no interferir con el scroll manual
             setTimeout(() => {
               history.replaceState(null, "", window.location.pathname);
-            }, 500);
+            }, HASH_CLEANUP_DELAY_MS);
           }
-        }, 300); // Delay para asegurar que el contenido esté renderizado
+        }, SECTION_SCROLL_DELAY_MS);
 
         return timer;
       }

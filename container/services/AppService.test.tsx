@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import AppService from "@/container/services/AppService";
+import { AppService } from "@/container/services/AppService";
 
 describe("AppService", () => {
   it("renders the page title", () => {

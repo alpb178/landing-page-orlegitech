@@ -1,10 +1,10 @@
 import { render, screen } from "@testing-library/react";
-import AerialReportsService from "@/container/services/AerialReportsService";
+import { AerialReportsService } from "@/container/services/AerialReportsService";
 
 describe("AerialReportsService", () => {
   it("renders the page title", () => {
     render(<AerialReportsService />);
-    expect(screen.getByText("Tu césped bajo control.")).toBeInTheDocument();
+    expect(screen.getByText("Control total desde el cielo.")).toBeInTheDocument();
   });
 
   it("renders the badge label", () => {
@@ -20,7 +20,7 @@ describe("AerialReportsService", () => {
 
   it("renders description paragraphs", () => {
     render(<AerialReportsService />);
-    expect(screen.getByText(/Análisis aéreo para la salud del césped/)).toBeInTheDocument();
+    expect(screen.getByText(/análisis aéreo para la salud del césped/)).toBeInTheDocument();
     expect(screen.getByText(/Medimos productividad en exteriores/)).toBeInTheDocument();
   });
 

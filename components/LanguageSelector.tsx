@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, type JSX } from "react";
 import { useLocale } from "next-intl";
 import { useRouter, usePathname } from "@/i18n/routing";
 import { ChevronDown } from "lucide-react";
@@ -9,9 +9,9 @@ interface LanguageSelectorProps {
   variant?: "desktop" | "mobile";
 }
 
-export default function LanguageSelector({
+export const LanguageSelector = ({
   variant = "desktop",
-}: LanguageSelectorProps) {
+}: LanguageSelectorProps): JSX.Element => {
   const router = useRouter();
   const pathname = usePathname();
   const locale = useLocale();
@@ -34,8 +34,8 @@ export default function LanguageSelector({
     };
   }, [isLanguageMenuOpen]);
 
-  const changeLanguage = (locale: string) => {
-    router.replace(pathname, { locale });
+  const handleChangeLanguage = (nextLocale: string): void => {
+    router.replace(pathname, { locale: nextLocale });
     setIsLanguageMenuOpen(false);
   };
 
@@ -52,6 +52,10 @@ export default function LanguageSelector({
   return (
     <div className="relative language-menu-container">
       <button
+        type="button"
+        aria-haspopup="listbox"
+        aria-expanded={isLanguageMenuOpen}
+        aria-label={currentLanguage.name}
         onClick={() => setIsLanguageMenuOpen(!isLanguageMenuOpen)}
         className={`flex items-center gap-1 px-3 py-2 rounded-lg transition-colors ${
           variant === "desktop"
@@ -69,7 +73,8 @@ export default function LanguageSelector({
             {languages.map((lang) => (
               <li key={lang.code}>
                 <button
-                  onClick={() => changeLanguage(lang.code)}
+                  type="button"
+                  onClick={() => handleChangeLanguage(lang.code)}
                   className={`w-full text-left px-4 py-2.5 transition-colors flex items-center gap-2 ${
                     currentLocale === lang.code
                       ? "bg-white/20 text-white font-semibold"

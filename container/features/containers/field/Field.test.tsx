@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import FieldContainer from "./Field";
+import { FieldContainer } from "./Field";
 
 describe("FieldContainer", () => {
   it("renders the main title", () => {

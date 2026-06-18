@@ -1,9 +1,10 @@
 "use client";
 
+import type { JSX } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-export default function Footer() {
+export const Footer = (): JSX.Element => {
   const t = useTranslations("footer");
   return (
     <footer className="bg-[#01261a] text-white py-12">
@@ -17,8 +18,8 @@ export default function Footer() {
             className="w-auto h-auto"
           />
 
-          <p className="text-base text-[#f4f4f4] text-center font-[family-name:var(--font-poppins)]">
-            {t("copyright")}
+          <p className="max-w-3xl text-sm text-[#f4f4f4] text-center leading-relaxed font-[family-name:var(--font-poppins)]">
+            {t("legal")}
           </p>
         </div>
       </div>

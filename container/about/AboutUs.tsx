@@ -1,10 +1,11 @@
 "use client";
 
+import type { JSX } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { usePathname } from "next/navigation";
 import { ArrowRight } from "lucide-react";
 
-export default function AboutUs() {
+export const AboutUs = (): JSX.Element => {
   const t = useTranslations("about");
   const locale = useLocale();
   const pathname = usePathname();

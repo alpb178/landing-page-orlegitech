@@ -1,6 +1,9 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type JSX } from "react";
+
+const INTERSECTION_THRESHOLD = 0.15;
+const INTERSECTION_ROOT_MARGIN = "0px 0px -100px 0px";
 
 interface SectionAnimationProps {
   children: React.ReactNode;
@@ -8,11 +11,11 @@ interface SectionAnimationProps {
   className?: string;
 }
 
-export default function SectionAnimation({
+export const SectionAnimation = ({
   children,
   delay = 0,
   className = "",
-}: SectionAnimationProps) {
+}: SectionAnimationProps): JSX.Element => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 
@@ -26,8 +29,8 @@ export default function SectionAnimation({
         });
       },
       {
-        threshold: 0.15, // Se activa cuando el 15% de la sección es visible
-        rootMargin: "0px 0px -100px 0px", // Se activa un poco antes de que entre completamente
+        threshold: INTERSECTION_THRESHOLD,
+        rootMargin: INTERSECTION_ROOT_MARGIN,
       }
     );
 

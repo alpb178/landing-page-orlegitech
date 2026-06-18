@@ -1,11 +1,12 @@
 "use client";
 
+import type { JSX } from "react";
 import { Check, ArrowRight } from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
 import { usePathname } from "next/navigation";
-import AnimatedCard from "@/components/AnimatedCard";
+import { AnimatedCard } from "@/components/AnimatedCard";
 
-export default function Pricing() {
+export const Pricing = (): JSX.Element => {
   const t = useTranslations("pricing");
   const locale = useLocale();
   const pathname = usePathname();

@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import Footer from "@/container/footer/Footer";
+import { Footer } from "@/container/footer/Footer";
 
 describe("Footer", () => {
   it("renders the company name", () => {
@@ -8,8 +8,8 @@ describe("Footer", () => {
     expect(orlegitechElements.length).toBeGreaterThan(0);
   });
 
-  it("renders copyright text", () => {
+  it("renders the legal text", () => {
     render(<Footer />);
-    expect(screen.getByText(/Copyright/i)).toBeInTheDocument();
+    expect(screen.getByText(/Virtuopay/i)).toBeInTheDocument();
   });
 });

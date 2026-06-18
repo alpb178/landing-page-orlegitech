@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import BudgetsContainer from "./Budgets";
+import { BudgetsContainer } from "./Budgets";
 
 describe("BudgetsContainer", () => {
   it("renders the main title", () => {

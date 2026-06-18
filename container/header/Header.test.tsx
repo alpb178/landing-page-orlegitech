@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import Header from "@/container/header/Header";
+import { Header } from "@/container/header/Header";
 
 describe("Header", () => {
   it("renders the logo and company name", () => {

@@ -1,6 +1,6 @@
 {
   "demoCta": {
-    "title": "Book a Demo now!",
+    "title": "Ready to <h>transform</h> your course?",
     "subtitle": "It won't take more than a minute.",
     "cta": "Book a Free Demo"
   },
@@ -32,7 +32,7 @@
   "services": {
     "title": "Services",
     "app": {
-      "title": "APP",
+      "title": "App",
       "mainTitle": "Your club, fully digitized",
       "features": {
         "1": "Staff and task management",
@@ -311,6 +311,7 @@
     }
   },
   "footer": {
-    "copyright": "Copyright © 2026 Orlegitech. All rights reserved."
+    "copyright": "Copyright © 2026 Orlegitech. All rights reserved.",
+    "legal": "© Orlegitech 2026. Calle Ferrerías 19, office 1, 20011 Donostia - San Sebastián, Spain. Orlegitech uses the payment processor Virtuopay OOD - 35 Petrohan Street, Ruse 7006, Bulgaria."
   }
 }
