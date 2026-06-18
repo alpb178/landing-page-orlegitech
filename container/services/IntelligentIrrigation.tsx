@@ -1,11 +1,12 @@
 "use client";
 
+import type { JSX } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/routing";
 
-export default function IntelligentIrrigation() {
+export const IntelligentIrrigation = (): JSX.Element => {
   const t = useTranslations("services.intelligentIrrigation");
 
   return (

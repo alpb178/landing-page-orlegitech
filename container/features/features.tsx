@@ -1,4 +1,5 @@
 "use client";
+import type { JSX } from "react";
 import { useTranslations } from "next-intl";
 import { ReportsFlyIcon } from "@/components/icons/ReportsFly";
 import { TasksIcon } from "@/components/icons/Task";
@@ -8,11 +9,11 @@ import { ProjectsIcon } from "@/components/icons/Projects";
 import { EmployeeIcon } from "@/components/icons/Employee";
 import { BudgetIcon } from "@/components/icons/Budget";
 import { UserIcon } from "@/components/icons/User";
-import AnimatedCard from "@/components/AnimatedCard";
+import { AnimatedCard } from "@/components/AnimatedCard";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 
-export default function Features() {
+export const Features = (): JSX.Element => {
   const t = useTranslations("about");
   const { locale } = useParams();
   const features = [

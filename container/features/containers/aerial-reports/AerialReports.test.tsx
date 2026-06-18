@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import AerialReportsContainer from "./AerialReports";
+import { AerialReportsContainer } from "./AerialReports";
 
 describe("AerialReportsContainer", () => {
   it("renders the main title", () => {

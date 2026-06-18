@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import IntelligentIrrigation from "@/container/services/IntelligentIrrigation";
+import { IntelligentIrrigation } from "@/container/services/IntelligentIrrigation";
 
 describe("IntelligentIrrigation", () => {
   it("renders the page title", () => {

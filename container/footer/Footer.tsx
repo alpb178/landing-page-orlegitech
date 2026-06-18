@@ -1,9 +1,10 @@
 "use client";
 
+import type { JSX } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-export default function Footer() {
+export const Footer = (): JSX.Element => {
   const t = useTranslations("footer");
   return (
     <footer className="bg-[#01261a] text-white py-12">

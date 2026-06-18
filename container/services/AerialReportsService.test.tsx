@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import AerialReportsService from "@/container/services/AerialReportsService";
+import { AerialReportsService } from "@/container/services/AerialReportsService";
 
 describe("AerialReportsService", () => {
   it("renders the page title", () => {

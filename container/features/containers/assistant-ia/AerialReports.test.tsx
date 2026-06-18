@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import AssistantIAContainer from "./AerialReports";
+import { AssistantIAContainer } from "./AerialReports";
 
 describe("AssistantIAContainer", () => {
   it("renders the main title", () => {

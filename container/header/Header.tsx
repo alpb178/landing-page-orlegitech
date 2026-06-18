@@ -1,13 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type JSX } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
-import LanguageSelector from "@/components/LanguageSelector";
+import { LanguageSelector } from "@/components/LanguageSelector";
 import { usePathname } from "next/navigation";
 
-const Logo = () => {
+const Logo = (): JSX.Element => {
   return <svg width="153" height="26" viewBox="0 0 153 26" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M4.82347 14.8801C4.72176 14.8015 4.79135 14.6389 4.91876 14.658C6.12646 14.8451 9.18533 15.234 11.3673 15.234C13.7795 15.234 16.2431 14.8907 17.3769 14.6878C17.5097 14.6644 17.5804 14.8344 17.4701 14.9109C16.3609 15.6792 13.62 17.5707 12.6414 18.2009C12.6061 18.2243 12.5879 18.2604 12.5879 18.3029V24.512C12.5879 24.5693 12.5483 24.6193 12.4926 24.632L10.0494 25.2335C9.97012 25.2526 9.89411 25.1931 9.89411 25.1134V18.3369C9.89411 18.2933 9.87055 18.253 9.83308 18.2306C9.41874 17.9873 6.97871 16.5389 4.82347 14.8801Z" fill="white"/>
   <path d="M11.6043 13.9451C11.6043 13.9451 15.0454 13.4446 16.6043 12.5764C18.01 11.7933 20.7392 9.08032 21.5871 7.39921C23.1439 4.31009 23.0978 2.6513 23.1439 1.95952C23.191 1.26774 23.055 0 23.055 0C23.055 0 19.8291 0.184901 15.525 3.98705C10.8613 8.10906 11.6043 13.944 11.6043 13.944V13.9451Z" fill="white"/>
@@ -26,14 +26,14 @@ const Logo = () => {
   
 };
 
-export default function Header() {
+export const Header = (): JSX.Element => {
   const t = useTranslations("header.nav");
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const locale = useLocale();
   const pathname = usePathname();
 
-  const toggleDrawer = () => setIsDrawerOpen(!isDrawerOpen);
-  const closeDrawer = () => setIsDrawerOpen(false);
+  const handleToggleDrawer = (): void => setIsDrawerOpen(!isDrawerOpen);
+  const handleCloseDrawer = (): void => setIsDrawerOpen(false);
 
   const isHome = pathname === `/${locale}`;
   const servicesHref = isHome ? "#services" : `/${locale}/#services`;
@@ -81,7 +81,7 @@ export default function Header() {
           <div className="md:hidden flex items-center gap-2">
             <LanguageSelector variant="mobile" />
             <button
-              onClick={toggleDrawer}
+              onClick={handleToggleDrawer}
               className="p-2 rounded-lg text-white hover:bg-white/10 transition-colors"
               aria-label="Toggle menu"
             >
@@ -92,7 +92,7 @@ export default function Header() {
       </header>
 
       {isDrawerOpen && (
-        <div className="fixed inset-0 bg-black/50 z-40 md:hidden" onClick={closeDrawer} />
+        <div className="fixed inset-0 bg-black/50 z-40 md:hidden" onClick={handleCloseDrawer} />
       )}
 
       <div
@@ -106,7 +106,7 @@ export default function Header() {
               <Image src="/icons.svg" alt="orlegitech logo" width={24} height={24} className="w-6 h-6" />
               <span className="text-white text-lg font-semibold">Orlegitech</span>
             </div>
-            <button onClick={closeDrawer} className="p-2 text-white hover:bg-white/10 rounded-lg transition-colors" aria-label="Close menu">
+            <button onClick={handleCloseDrawer} className="p-2 text-white hover:bg-white/10 rounded-lg transition-colors" aria-label="Close menu">
               <X className="w-6 h-6" />
             </button>
           </div>
@@ -114,13 +114,13 @@ export default function Header() {
             <ul className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <a href={link.href} onClick={closeDrawer} className="block text-[#ebeed6] text-lg py-3 px-4 rounded-lg hover:bg-white/10 transition-colors">
+                  <a href={link.href} onClick={handleCloseDrawer} className="block text-[#ebeed6] text-lg py-3 px-4 rounded-lg hover:bg-white/10 transition-colors">
                     {link.label}
                   </a>
                 </li>
               ))}
               <li>
-                <a href={contactHref} onClick={closeDrawer} className="block text-center bg-white text-[#024c35] text-lg py-3 px-4 rounded-[32px] font-semibold mt-4">
+                <a href={contactHref} onClick={handleCloseDrawer} className="block text-center bg-white text-[#024c35] text-lg py-3 px-4 rounded-[32px] font-semibold mt-4">
                   {t("demo")}
                 </a>
               </li>

@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import Footer from "@/container/footer/Footer";
+import { Footer } from "@/container/footer/Footer";
 
 describe("Footer", () => {
   it("renders the company name", () => {

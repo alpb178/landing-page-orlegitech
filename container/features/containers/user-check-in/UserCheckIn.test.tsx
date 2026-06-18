@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import UserCheckInContainer from "./UserCheckIn";
+import { UserCheckInContainer } from "./UserCheckIn";
 
 describe("UserCheckInContainer", () => {
   it("renders the main title", () => {

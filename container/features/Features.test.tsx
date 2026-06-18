@@ -1,5 +1,5 @@
 import { render, screen, waitFor } from "@testing-library/react";
-import Features from "@/container/features/features";
+import { Features } from "@/container/features/features";
 
 describe("Features", () => {
   it("renders all feature items", async () => {

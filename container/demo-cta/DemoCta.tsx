@@ -1,10 +1,11 @@
 "use client";
 
+import type { JSX } from "react";
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import { usePathname } from "next/navigation";
 
-export default function DemoCta() {
+export const DemoCta = (): JSX.Element => {
   const t = useTranslations("demoCta");
   const locale = useLocale();
   const pathname = usePathname();

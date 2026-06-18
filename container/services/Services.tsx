@@ -1,12 +1,13 @@
 "use client";
 
+import type { JSX } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import AnimatedCard from "@/components/AnimatedCard";
+import { AnimatedCard } from "@/components/AnimatedCard";
 import { Link } from "@/i18n/routing";
 import { ArrowUpRight } from "lucide-react";
 
-export default function Services() {
+export const Services = (): JSX.Element => {
   const t = useTranslations("services");
 
   return (

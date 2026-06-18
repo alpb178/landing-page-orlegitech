@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import ProjectManagementContainer from "./ProjectManagement";
+import { ProjectManagementContainer } from "./ProjectManagement";
 
 describe("ProjectManagementContainer", () => {
   it("renders the main title", () => {

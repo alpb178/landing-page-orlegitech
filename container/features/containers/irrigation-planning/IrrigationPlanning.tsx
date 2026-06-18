@@ -1,6 +1,7 @@
+import type { JSX } from "react";
 import Image from "next/image";
 
-export default function IrrigationPlanningContainer() {
+export const IrrigationPlanningContainer = (): JSX.Element => {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12 space-y-8 text-[#e6ebe9]">
       <div className="space-y-6">
