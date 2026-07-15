@@ -6,7 +6,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
 import { LanguageCode } from "@/constant/languages";
-import ScrollToTop from "@/components/ScrollToTop";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 const inter = Inter({
   variable: "--font-inter",

@@ -1,12 +1,12 @@
 import Image from "next/image";
-import SectionAnimation from "@/components/SectionAnimation";
-import ScrollToSection from "@/components/ScrollToSection";
-import Header from "@/container/header/Header";
-import Footer from "@/container/footer/Footer";
-import Features from "@/container/features/features";
-import AboutUs from "@/container/about/AboutUs";
-import Pricing from "@/container/price/Pricing";
-import ContactUs from "@/container/contact/Contact";
+import { SectionAnimation } from "@/components/SectionAnimation";
+import { ScrollToSection } from "@/components/ScrollToSection";
+import { Header } from "@/container/header/Header";
+import { Footer } from "@/container/footer/Footer";
+import { Features } from "@/container/features/features";
+import { AboutUs } from "@/container/about/AboutUs";
+import { Pricing } from "@/container/price/Pricing";
+import { ContactUs } from "@/container/contact/Contact";
 
 export default function ServicesLayout({
   children,

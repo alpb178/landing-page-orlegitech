@@ -1,5 +1,5 @@
 import { render, screen, waitFor } from "@testing-library/react";
-import Features from "@/container/features/features";
+import { Features } from "@/container/features/features";
 
 describe("Features", () => {
   it("renders all feature items", async () => {
@@ -29,6 +29,15 @@ describe("Features", () => {
     await waitFor(() => {
       const links = screen.getAllByRole("link");
       expect(links.length).toBeGreaterThan(0);
+    });
+  });
+
+  it("renders a stroke icon badge on each of the 8 cards", async () => {
+    const { container } = render(<Features />);
+    await waitFor(() => {
+      expect(
+        container.querySelectorAll("svg[aria-hidden='true']")
+      ).toHaveLength(8);
     });
   });
 });

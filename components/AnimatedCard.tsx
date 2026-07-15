@@ -1,6 +1,9 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type JSX } from "react";
+
+const INTERSECTION_THRESHOLD = 0.2;
+const INTERSECTION_ROOT_MARGIN = "0px 0px -50px 0px";
 
 interface AnimatedCardProps {
   children: React.ReactNode;
@@ -8,11 +11,11 @@ interface AnimatedCardProps {
   className?: string;
 }
 
-export default function AnimatedCard({
+export const AnimatedCard = ({
   children,
   delay = 0,
   className = "",
-}: AnimatedCardProps) {
+}: AnimatedCardProps): JSX.Element => {
   const [isVisible, setIsVisible] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
 
@@ -26,8 +29,8 @@ export default function AnimatedCard({
         });
       },
       {
-        threshold: 0.2,
-        rootMargin: "0px 0px -50px 0px",
+        threshold: INTERSECTION_THRESHOLD,
+        rootMargin: INTERSECTION_ROOT_MARGIN,
       }
     );
 

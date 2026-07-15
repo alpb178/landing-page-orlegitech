@@ -1,4 +1,4 @@
-import DemoContainer from "@/container/demo/Demo";
+import { DemoContainer } from "@/container/demo/Demo";
 
 
 export default function Demos() {

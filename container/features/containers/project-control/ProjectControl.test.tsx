@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import ProjectControlContainer from "./ProjectControl";
+import { ProjectControlContainer } from "./ProjectControl";
 
 describe("ProjectControlContainer", () => {
   it("renders the main title", () => {

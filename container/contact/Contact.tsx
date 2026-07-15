@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type JSX } from "react";
 import { useTranslations } from "next-intl";
 import { Mail, Phone, Clock, MapPin, ArrowRight } from "lucide-react";
 
-export default function ContactUs() {
+export const ContactUs = (): JSX.Element => {
   const t = useTranslations("contact");
   const [formData, setFormData] = useState({
     name: "",

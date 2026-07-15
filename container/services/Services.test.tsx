@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import Services from "@/container/services/Services";
+import { Services } from "@/container/services/Services";
 
 describe("Services", () => {
   it("renders the services section title", () => {

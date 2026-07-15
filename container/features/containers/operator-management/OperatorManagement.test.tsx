@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import OperatorManagementContainer from "./OperatorManagement";
+import { OperatorManagementContainer } from "./OperatorManagement";
 
 describe("OperatorManagementContainer", () => {
   it("renders the main title", () => {

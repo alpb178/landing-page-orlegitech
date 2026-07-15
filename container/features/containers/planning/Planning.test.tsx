@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import PlanningContainer from "./Planning";
+import { PlanningContainer } from "./Planning";
 
 describe("PlanningContainer", () => {
   it("renders the main title", () => {
