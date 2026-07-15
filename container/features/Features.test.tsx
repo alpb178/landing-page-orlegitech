@@ -31,4 +31,13 @@ describe("Features", () => {
       expect(links.length).toBeGreaterThan(0);
     });
   });
+
+  it("renders a stroke icon badge on each of the 8 cards", async () => {
+    const { container } = render(<Features />);
+    await waitFor(() => {
+      expect(
+        container.querySelectorAll("svg[aria-hidden='true']")
+      ).toHaveLength(8);
+    });
+  });
 });

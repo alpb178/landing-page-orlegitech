@@ -1,66 +1,63 @@
 "use client";
 import type { JSX } from "react";
 import { useTranslations } from "next-intl";
-import { ReportsFlyIcon } from "@/components/icons/ReportsFly";
-import { TasksIcon } from "@/components/icons/Task";
-import { VehicleIcon } from "@/components/icons/Vehicle";
-import { PlannerIcon } from "@/components/icons/Planner";
-import { ProjectsIcon } from "@/components/icons/Projects";
-import { EmployeeIcon } from "@/components/icons/Employee";
-import { BudgetIcon } from "@/components/icons/Budget";
-import { UserIcon } from "@/components/icons/User";
+import { FeatureIcon } from "@/components/icons/FeatureIcon";
 import { AnimatedCard } from "@/components/AnimatedCard";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 
+const ANIMATION_DELAY_STEP_MS = 100;
+
+// Card design mirrors the static landing (orlegitech-landing-static):
+// frosted glass surface, circular leaf-green icon badge, centered text.
 export const Features = (): JSX.Element => {
   const t = useTranslations("about");
   const { locale } = useParams();
   const features = [
     {
-      Icon: ReportsFlyIcon,
+      icon: "drone",
       title: t("features.aerialReports.title"),
       description: t("features.aerialReports.description"),
       slug: "aerial-reports",
     },
     {
-      Icon: TasksIcon,
+      icon: "tasks",
       title: t("features.assistantIA.title"),
       description: t("features.assistantIA.description"),
       slug: "assistant-ia",
     },
     {
-      Icon: VehicleIcon,
+      icon: "vehicle",
       title: t("features.vehicleFleet.title"),
       description: t("features.vehicleFleet.description"),
       slug: "vehicle-fleet",
     },
     {
-      Icon: PlannerIcon,
+      icon: "water",
       title: t("features.irrigationPlanning.title"),
       description: t("features.irrigationPlanning.description"),
       slug: "irrigation-planning",
     },
     {
-      Icon: ProjectsIcon,
+      icon: "projects",
       title: t("features.projectControl.title"),
       description: t("features.projectControl.description"),
       slug: "project-control",
     },
     {
-      Icon: EmployeeIcon,
+      icon: "team",
       title: t("features.operatorManagement.title"),
       description: t("features.operatorManagement.description"),
       slug: "operator-management",
     },
     {
-      Icon: BudgetIcon,
+      icon: "euro",
       title: t("features.budgets.title"),
       description: t("features.budgets.description"),
       slug: "budgets",
     },
     {
-      Icon: UserIcon,
+      icon: "clock",
       title: t("features.userCheckIn.title"),
       description: t("features.userCheckIn.description"),
       slug: "user-check-in",
@@ -68,33 +65,27 @@ export const Features = (): JSX.Element => {
   ];
 
   return (
-    <div className="py-16">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
-          {features.map((feature, index) => {
-            const IconComponent = feature.Icon;
-            return (
-              <AnimatedCard
-                key={index}
-                delay={index * 100}
-                className="text-center"
-              >
-                <Link href={`/${locale}/${feature.slug}`}>
-                  <div className="bg-[rgba(255,255,255,0.1)] backdrop-blur-sm rounded-[24px] p-6 h-[251px] flex flex-col items-center justify-center hover:bg-[rgba(255,255,255,0.15)] transition-colors">
-                    <div className="flex justify-center mb-4">
-                      <IconComponent />
-                    </div>
-                    <h3 className="text-[#ebeed6] font-semibold mb-2 text-lg">
-                      {feature.title}
-                    </h3>
-                    <p className="text-[#ebeed6]/80 text-sm">{feature.description}</p>
-                  </div>
-                </Link>
-              </AnimatedCard>
-            );
-          })}
-        </div>
+    <section className="mx-auto max-w-[1080px] px-6 py-12">
+      <div className="grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-4">
+        {features.map((feature, index) => (
+          <AnimatedCard key={feature.slug} delay={index * ANIMATION_DELAY_STEP_MS}>
+            <Link
+              href={`/${locale}/${feature.slug}`}
+              className="flex h-full flex-col items-center gap-3 rounded-2xl border border-white/[0.08] bg-white/5 px-5 py-7 text-center backdrop-blur-[8px] transition hover:border-[#a1c353]/40"
+            >
+              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#a1c353]/15 text-[#a1c353]">
+                <FeatureIcon name={feature.icon} className="h-7 w-7" />
+              </span>
+              <h3 className="text-sm font-semibold text-white sm:text-base">
+                {feature.title}
+              </h3>
+              <p className="text-xs leading-relaxed text-[#e6f0ed]/70">
+                {feature.description}
+              </p>
+            </Link>
+          </AnimatedCard>
+        ))}
       </div>
-    </div>
+    </section>
   );
-}
+};
