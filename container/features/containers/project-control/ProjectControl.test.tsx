@@ -5,7 +5,10 @@ describe("ProjectControlContainer", () => {
   it("renders the main title", () => {
     render(<ProjectControlContainer />);
     expect(
-      screen.getByText(/Control de Proyectos/)
+      screen.getByRole("heading", {
+        level: 1,
+        name: /Control de Proyectos/,
+      })
     ).toBeInTheDocument();
   });
 

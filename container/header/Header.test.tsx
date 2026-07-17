@@ -21,6 +21,13 @@ describe("Header", () => {
     expect(demoLinks.length).toBeGreaterThan(0);
   });
 
+  it("gives the logo link an accessible name", () => {
+    render(<Header />);
+    expect(
+      screen.getByRole("link", { name: "Orlegitech - inicio" })
+    ).toBeInTheDocument();
+  });
+
   it("has correct navigation structure", () => {
     render(<Header />);
     // Use getAllByRole since there are multiple nav elements (desktop and mobile)
