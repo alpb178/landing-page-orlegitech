@@ -3,6 +3,7 @@
 import { useState, type JSX } from "react";
 import { useTranslations } from "next-intl";
 import { Mail, Phone, Clock, MapPin, ArrowRight } from "lucide-react";
+import { buildContactMailtoHref } from "./contact-mailto";
 
 export const ContactUs = (): JSX.Element => {
   const t = useTranslations("contact");
@@ -25,20 +26,7 @@ export const ContactUs = (): JSX.Element => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const recipientEmail = "info@orlegitech.com";
-
-    const subject = encodeURIComponent(
-      `Contacto Orlegitech - ${formData.club || "General"}`
-    );
-
-    const emailBody = encodeURIComponent(
-      `Nombre: ${formData.name}\n` +
-        `Teléfono: ${formData.phone}\n` +
-        `Club: ${formData.club}\n` +
-        `Email: ${formData.email}`
-    );
-
-    window.location.href = `mailto:${recipientEmail}?subject=${subject}&body=${emailBody}`;
+    window.location.href = buildContactMailtoHref(t, formData);
 
     setSubmitStatus({
       type: "success",
@@ -128,10 +116,14 @@ export const ContactUs = (): JSX.Element => {
 
                 {/* Nombre */}
                 <div className="flex flex-col gap-1">
-                  <label className="text-xs text-white tracking-wide">
+                  <label
+                    htmlFor="contact-name"
+                    className="text-xs text-white tracking-wide"
+                  >
                     {t("form.name")} <span className="text-[#c47e81]">*</span>
                   </label>
                   <input
+                    id="contact-name"
                     type="text"
                     name="name"
                     value={formData.name}
@@ -144,10 +136,14 @@ export const ContactUs = (): JSX.Element => {
 
                 {/* Teléfono */}
                 <div className="flex flex-col gap-1">
-                  <label className="text-xs text-white tracking-wide">
+                  <label
+                    htmlFor="contact-phone"
+                    className="text-xs text-white tracking-wide"
+                  >
                     {t("form.phone")} <span className="text-[#c47e81]">*</span>
                   </label>
                   <input
+                    id="contact-phone"
                     type="tel"
                     name="phone"
                     value={formData.phone}
@@ -160,10 +156,14 @@ export const ContactUs = (): JSX.Element => {
 
                 {/* Nombre del club */}
                 <div className="flex flex-col gap-1">
-                  <label className="text-xs text-white tracking-wide">
+                  <label
+                    htmlFor="contact-club"
+                    className="text-xs text-white tracking-wide"
+                  >
                     {t("form.club")} <span className="text-[#c47e81]">*</span>
                   </label>
                   <input
+                    id="contact-club"
                     type="text"
                     name="club"
                     value={formData.club}
@@ -176,10 +176,14 @@ export const ContactUs = (): JSX.Element => {
 
                 {/* Email */}
                 <div className="flex flex-col gap-1">
-                  <label className="text-xs text-white tracking-wide">
+                  <label
+                    htmlFor="contact-email"
+                    className="text-xs text-white tracking-wide"
+                  >
                     {t("form.email")} <span className="text-[#c47e81]">*</span>
                   </label>
                   <input
+                    id="contact-email"
                     type="email"
                     name="email"
                     value={formData.email}

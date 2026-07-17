@@ -5,7 +5,10 @@ describe("VehiclesFleetContainer", () => {
   it("renders the main title", () => {
     render(<VehiclesFleetContainer />);
     expect(
-      screen.getByText(/Movilidad: control total de vehículos/)
+      screen.getByRole("heading", {
+        level: 1,
+        name: /Movilidad: control total de vehículos/,
+      })
     ).toBeInTheDocument();
   });
 

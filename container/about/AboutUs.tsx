@@ -39,7 +39,7 @@ export const AboutUs = (): JSX.Element => {
             </div>
 
             {/* Text Card */}
-            <div className="bg-[rgba(255,255,255,0.1)] h-[500px] backdrop-blur-md rounded-[24px] p-8">
+            <div className="bg-[rgba(255,255,255,0.1)] h-auto lg:h-[500px] backdrop-blur-md rounded-[24px] p-8">
               <p className="text-white text-xl leading-relaxed mb-4 [text-shadow:0_1px_8px_rgba(0,0,0,0.3)]">
                 {t("description.1")}
               </p>

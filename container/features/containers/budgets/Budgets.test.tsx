@@ -4,13 +4,12 @@ import { BudgetsContainer } from "./Budgets";
 describe("BudgetsContainer", () => {
   it("renders the main title", () => {
     render(<BudgetsContainer />);
-    const headings = screen.getAllByText(/Presupuestos y Productos/);
-    expect(headings.length).toBeGreaterThan(0);
-    // Check that at least one is an h2
-    const h2Heading = headings.find(
-      (el) => el.tagName === "H2" && el.textContent?.includes("Presupuestos y Productos")
-    );
-    expect(h2Heading).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", {
+        level: 1,
+        name: /Presupuestos y Productos/,
+      })
+    ).toBeInTheDocument();
   });
 
   it("renders section headings", () => {

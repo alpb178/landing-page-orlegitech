@@ -2,15 +2,11 @@
 
 import type { JSX } from "react";
 import Image from "next/image";
-import { useTranslations, useLocale } from "next-intl";
-import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 
 export const DemoCta = (): JSX.Element => {
   const t = useTranslations("demoCta");
-  const locale = useLocale();
-  const pathname = usePathname();
-  const contactHref =
-    pathname === `/${locale}` ? "#contact-us" : `/${locale}/#contact-us`;
 
   return (
     <section className="py-10">
@@ -48,12 +44,12 @@ export const DemoCta = (): JSX.Element => {
                   {t("subtitle")}
                 </p>
               </div>
-              <a
-                href={contactHref}
+              <Link
+                href="/demo"
                 className="bg-white border border-[#036546] text-[#024c35] px-6 py-4 rounded-[32px] text-xl md:text-2xl font-medium inline-flex items-center justify-center hover:bg-[#ebeed6] transition-all duration-200 drop-shadow-[0px_4px_2.6px_rgba(0,0,0,0.25)] whitespace-nowrap"
               >
                 {t("cta")}
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -3,6 +3,7 @@
 import { useState, type JSX } from "react";
 import { useTranslations } from "next-intl";
 import { Clock, MessageCircle, Gift, CheckCircle2 } from "lucide-react";
+import { buildDemoMailtoHref } from "./demo-mailto";
 
 export const DemoContainer = (): JSX.Element => {
   const t = useTranslations("demoPage");
@@ -32,19 +33,7 @@ export const DemoContainer = (): JSX.Element => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const recipientEmail = "info@orlegitech.com";
-    const subject = encodeURIComponent("OrlegiTech - Solicitud de demo");
-    const emailBody = encodeURIComponent(
-      `Nombre: ${formData.fullName}\n` +
-        `Email: ${formData.email}\n` +
-        (formData.phone ? `Teléfono: ${formData.phone}\n` : "") +
-        `Club/Empresa: ${formData.company}\n` +
-        (formData.role ? `Cargo: ${formData.role}\n` : "") +
-        (formData.industry ? `Tipo: ${formData.industry}\n` : "") +
-        `Necesidades: ${formData.challenges}\n` +
-        (formData.additional ? `Otros: ${formData.additional}\n` : "")
-    );
-    window.location.href = `mailto:${recipientEmail}?subject=${subject}&body=${emailBody}`;
+    window.location.href = buildDemoMailtoHref(t, formData);
     setSubmitStatus({ type: "success", message: t("form.success") });
     setTimeout(() => {
       setFormData({
@@ -129,10 +118,14 @@ export const DemoContainer = (): JSX.Element => {
               )}
 
               <div>
-                <label className="block text-xs text-white mb-1">
+                <label
+                  htmlFor="demo-fullname"
+                  className="block text-xs text-white mb-1"
+                >
                   {t("form.fullName")}
                 </label>
                 <input
+                  id="demo-fullname"
                   type="text"
                   name="fullName"
                   value={formData.fullName}
@@ -144,10 +137,14 @@ export const DemoContainer = (): JSX.Element => {
               </div>
 
               <div>
-                <label className="block text-xs text-white mb-1">
+                <label
+                  htmlFor="demo-email"
+                  className="block text-xs text-white mb-1"
+                >
                   {t("form.email")}
                 </label>
                 <input
+                  id="demo-email"
                   type="email"
                   name="email"
                   value={formData.email}
@@ -159,10 +156,14 @@ export const DemoContainer = (): JSX.Element => {
               </div>
 
               <div>
-                <label className="block text-xs text-white mb-1">
+                <label
+                  htmlFor="demo-phone"
+                  className="block text-xs text-white mb-1"
+                >
                   {t("form.phone")}
                 </label>
                 <input
+                  id="demo-phone"
                   type="tel"
                   name="phone"
                   value={formData.phone}
@@ -173,10 +174,14 @@ export const DemoContainer = (): JSX.Element => {
               </div>
 
               <div>
-                <label className="block text-xs text-white mb-1">
+                <label
+                  htmlFor="demo-company"
+                  className="block text-xs text-white mb-1"
+                >
                   {t("form.company")}
                 </label>
                 <input
+                  id="demo-company"
                   type="text"
                   name="company"
                   value={formData.company}
@@ -188,10 +193,14 @@ export const DemoContainer = (): JSX.Element => {
               </div>
 
               <div>
-                <label className="block text-xs text-white mb-1">
+                <label
+                  htmlFor="demo-role"
+                  className="block text-xs text-white mb-1"
+                >
                   {t("form.role")}
                 </label>
                 <input
+                  id="demo-role"
                   type="text"
                   name="role"
                   value={formData.role}
@@ -202,10 +211,14 @@ export const DemoContainer = (): JSX.Element => {
               </div>
 
               <div>
-                <label className="block text-xs text-white mb-1">
+                <label
+                  htmlFor="demo-industry"
+                  className="block text-xs text-white mb-1"
+                >
                   {t("form.industry")}
                 </label>
                 <select
+                  id="demo-industry"
                   name="industry"
                   value={formData.industry}
                   onChange={handleChange}
@@ -229,10 +242,14 @@ export const DemoContainer = (): JSX.Element => {
               </div>
 
               <div>
-                <label className="block text-xs text-white mb-1">
+                <label
+                  htmlFor="demo-challenges"
+                  className="block text-xs text-white mb-1"
+                >
                   {t("form.challenges")}
                 </label>
                 <textarea
+                  id="demo-challenges"
                   name="challenges"
                   value={formData.challenges}
                   onChange={handleChange}
@@ -244,10 +261,14 @@ export const DemoContainer = (): JSX.Element => {
               </div>
 
               <div>
-                <label className="block text-xs text-white mb-1">
+                <label
+                  htmlFor="demo-additional"
+                  className="block text-xs text-white mb-1"
+                >
                   {t("form.additional")}
                 </label>
                 <textarea
+                  id="demo-additional"
                   name="additional"
                   value={formData.additional}
                   onChange={handleChange}

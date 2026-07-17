@@ -3,10 +3,10 @@ export const UserCheckInContainer = (): JSX.Element => {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12 space-y-8 text-[#e6ebe9]">
       <div className="space-y-6">
-        <h2 className="text-4xl font-bold text-[#a1c353] mb-4">
+        <h1 className="text-4xl font-bold text-[#a1c353] mb-4">
           Control Horario y Fichajes: cumplimiento legal y control total del
           tiempo de trabajo
-        </h2>
+        </h1>
         <p className="text-lg leading-relaxed">
           OrlegiTech incluye un sistema completo de control de jornada laboral
           que permite al campo de golf cumplir con la normativa vigente y, al
