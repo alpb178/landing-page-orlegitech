@@ -4,13 +4,12 @@ import { AssistantIAContainer } from "./AerialReports";
 describe("AssistantIAContainer", () => {
   it("renders the main title", () => {
     render(<AssistantIAContainer />);
-    const headings = screen.getAllByText(/Asistente Virtual del Greenkeeper/);
-    expect(headings.length).toBeGreaterThan(0);
-    // Check that at least one is an h2
-    const h2Heading = headings.find(
-      (el) => el.tagName === "H2" && el.textContent?.includes("Asistente Virtual del Greenkeeper")
-    );
-    expect(h2Heading).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", {
+        level: 1,
+        name: /Asistente Virtual del Greenkeeper/,
+      })
+    ).toBeInTheDocument();
   });
 
   it("renders section headings", () => {

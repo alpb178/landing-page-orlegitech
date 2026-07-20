@@ -52,7 +52,7 @@ export const Header = (): JSX.Element => {
     <>
       <header className="fixed top-4 left-0 right-0 z-50 flex justify-center px-4">
         <nav className="flex items-center justify-between gap-6 px-6 py-2 rounded-[120px] bg-[rgba(235,238,214,0.2)] backdrop-blur-md shadow-[0px_7px_14px_rgba(0,0,0,0.25)] max-w-5xl w-full">
-          <a href={logoHref}>
+          <a href={logoHref} aria-label="Orlegitech - inicio">
             <Logo />
           </a>
 

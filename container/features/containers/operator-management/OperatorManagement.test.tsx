@@ -5,7 +5,10 @@ describe("OperatorManagementContainer", () => {
   it("renders the main title", () => {
     render(<OperatorManagementContainer />);
     expect(
-      screen.getByText(/Gestión Organizacional y Empleados/)
+      screen.getByRole("heading", {
+        level: 1,
+        name: /Gestión Organizacional y Empleados/,
+      })
     ).toBeInTheDocument();
   });
 

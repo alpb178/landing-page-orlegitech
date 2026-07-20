@@ -5,7 +5,10 @@ describe("UserCheckInContainer", () => {
   it("renders the main title", () => {
     render(<UserCheckInContainer />);
     expect(
-      screen.getByText(/Control Horario y Fichajes/)
+      screen.getByRole("heading", {
+        level: 1,
+        name: /Control Horario y Fichajes/,
+      })
     ).toBeInTheDocument();
   });
 

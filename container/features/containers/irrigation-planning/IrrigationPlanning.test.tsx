@@ -4,13 +4,12 @@ import { IrrigationPlanningContainer } from "./IrrigationPlanning";
 describe("IrrigationPlanningContainer", () => {
   it("renders the main title", () => {
     render(<IrrigationPlanningContainer />);
-    const headings = screen.getAllByText(/Riego Inteligente/);
-    expect(headings.length).toBeGreaterThan(0);
-    // Check that at least one is an h2
-    const h2Heading = headings.find(
-      (el) => el.tagName === "H2" && el.textContent?.includes("Riego Inteligente")
-    );
-    expect(h2Heading).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", {
+        level: 1,
+        name: /Riego Inteligente/,
+      })
+    ).toBeInTheDocument();
   });
 
   it("renders section headings", () => {

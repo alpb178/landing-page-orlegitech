@@ -5,9 +5,9 @@ export const VehiclesFleetContainer = (): JSX.Element => {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12 space-y-8 text-[#e6ebe9]">
       <div className="space-y-6">
-        <h2 className="text-4xl font-bold text-[#a1c353] mb-4">
+        <h1 className="text-4xl font-bold text-[#a1c353] mb-4">
           Movilidad: control total de vehículos, maquinaria y desplazamientos
-        </h2>
+        </h1>
         <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden shadow-lg mb-6">
           <Image
             src="/images/features/vehicles-fleet.jpg"

@@ -40,18 +40,18 @@ jest.mock('next-intl', () => {
 
   return {
     useTranslations: (namespace) => {
-      return (key) => {
+      const translate = (key) => {
         // If namespace is provided, look in that namespace first
         let fullKey = key
         if (namespace) {
           fullKey = `${namespace}.${key}`
         }
-        
+
         const translated = getNestedValue(messages, fullKey)
         if (translated) {
           return translated
         }
-        
+
         // Fallback: try without namespace if namespace was provided
         if (namespace) {
           const fallback = getNestedValue(messages, key)
@@ -59,10 +59,20 @@ jest.mock('next-intl', () => {
             return fallback
           }
         }
-        
+
         // Last resort: return the key
         return key
       }
+
+      // Minimal t.rich support: strip rich-text tags and return plain text
+      translate.rich = (key) => {
+        const translated = translate(key)
+        return typeof translated === 'string'
+          ? translated.replace(/<[^>]+>/g, '')
+          : translated
+      }
+
+      return translate
     },
     useLocale: () => 'es',
     NextIntlClientProvider: ({ children }) => children,

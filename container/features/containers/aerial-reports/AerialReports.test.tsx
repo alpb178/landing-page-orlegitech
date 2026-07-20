@@ -4,13 +4,12 @@ import { AerialReportsContainer } from "./AerialReports";
 describe("AerialReportsContainer", () => {
   it("renders the main title", () => {
     render(<AerialReportsContainer />);
-    const headings = screen.getAllByText(/Dron y Análisis Multiespectral/);
-    expect(headings.length).toBeGreaterThan(0);
-    // Check that at least one is an h2
-    const h2Heading = headings.find(
-      (el) => el.tagName === "H2" && el.textContent?.includes("Dron y Análisis Multiespectral")
-    );
-    expect(h2Heading).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", {
+        level: 1,
+        name: /Dron y Análisis Multiespectral/,
+      })
+    ).toBeInTheDocument();
   });
 
   it("renders section headings", () => {

@@ -229,6 +229,14 @@
       "emailPlaceholder": "you@email.com",
       "submit": "Send",
       "success": "Your email client will open. Complete the sending from there."
+    },
+    "mailto": {
+      "subject": "Orlegitech contact",
+      "subjectFallback": "General",
+      "name": "Name",
+      "phone": "Phone",
+      "club": "Club",
+      "email": "Email"
     }
   },
   "demoPage": {
@@ -270,6 +278,17 @@
       "requiredFields": "* Required fields",
       "submit": "Schedule my demo",
       "success": "Your email client will open. Complete the send from there."
+    },
+    "mailto": {
+      "subject": "OrlegiTech - Demo request",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "company": "Club/Company",
+      "role": "Role",
+      "industry": "Facility type",
+      "challenges": "Needs",
+      "additional": "Other"
     },
     "whatYouGet": {
       "title": "What you'll get from the demo",
