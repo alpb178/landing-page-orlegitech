@@ -73,14 +73,18 @@ export default async function LocaleLayout({
     notFound();
   }
 
-  const messages = await getMessages();
+  // The `legal` namespace holds the full privacy/terms documents (~14 KB) and
+  // is only read from server components, so it is kept out of the client
+  // provider instead of shipping with every page.
+  const { legal, ...clientMessages } = await getMessages();
+  void legal;
 
   return (
     <html lang={locale}>
       <body
         className={`${inter.variable} ${plusJakartaSans.variable} ${greatVibes.variable} ${poppins.variable} font-sans antialiased`}
       >
-        <NextIntlClientProvider messages={messages} locale={locale}>
+        <NextIntlClientProvider messages={clientMessages} locale={locale}>
           <ScrollToTop />
           {children}
         </NextIntlClientProvider>

@@ -331,6 +331,516 @@
   },
   "footer": {
     "copyright": "Copyright © 2026 Orlegitech. Todos los derechos reservados.",
-    "legal": "© Orlegitech 2026. Calle Ferrerías 19, oficina 1, 20011 Donostia - San Sebastián, España. Orlegitech usa un gestor de pagos Virtuopay OOD - 35 Petrohan Street, Ruse 7006, Bulgaria."
+    "legal": "© Orlegitech 2026. Calle Ferrerías 19, oficina 1, 20011 Donostia - San Sebastián, España. Orlegitech usa un gestor de pagos Virtuopay OOD - 35 Petrohan Street, Ruse 7006, Bulgaria.",
+    "support": "Soporte",
+    "privacy": "Privacidad",
+    "terms": "Términos"
+  },
+  "support": {
+    "title": "Soporte",
+    "description": "¿Tienes una duda, un problema con la aplicación o una sugerencia? Escríbenos y nuestro equipo te responderá lo antes posible. Completa el formulario y se abrirá tu aplicación de correo con el mensaje listo para enviar.",
+    "emailLabel": "Correo de soporte:",
+    "form": {
+      "subject": "Asunto",
+      "subjectPlaceholder": "¿En qué podemos ayudarte?",
+      "message": "Mensaje",
+      "messagePlaceholder": "Cuéntanos los detalles de tu consulta…",
+      "submit": "Enviar mensaje",
+      "success": "Se abrirá tu aplicación de correo con el mensaje preparado. Si no se abre, escríbenos directamente."
+    },
+    "fallback": "Si el formulario no abre tu aplicación de correo, escríbenos directamente a",
+    "mailto": {
+      "defaultSubject": "Soporte OrlegiTech"
+    }
+  },
+  "legal": {
+    "privacy": {
+      "title": "Política de Privacidad",
+      "updated": "Última actualización: 16 de septiembre de 2026",
+      "intro": "OrlegiTech (“nosotros”, “nuestra” o “la plataforma”) se compromete a proteger la privacidad de las personas que utilizan sus servicios. Esta Política de Privacidad describe cómo recopilamos, usamos, almacenamos y compartimos la información cuando utilizas nuestro sitio web, nuestra aplicación móvil y los módulos contratados por tu club.",
+      "sections": [
+        {
+          "title": "1. Responsable del tratamiento",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Orlegitech, con domicilio en Calle Ferrerías 19, oficina 1, 20011 Donostia - San Sebastián (España), es el responsable del tratamiento de los datos personales recogidos a través de este sitio web y de la plataforma OrlegiTech. Puedes contactarnos en info@orlegitech.com o en el +34 681264526."
+            }
+          ]
+        },
+        {
+          "title": "2. Información que recopilamos",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Recopilamos los siguientes tipos de información:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                {
+                  "text": "nombre, apellidos, correo electrónico, teléfono, club o empresa y cargo, facilitados a través de los formularios de contacto y de solicitud de demo.",
+                  "term": "Información de contacto:"
+                },
+                {
+                  "text": "nombre de usuario, contraseña cifrada, idioma, rol dentro del club y permisos asignados.",
+                  "term": "Información de cuenta:"
+                },
+                {
+                  "text": "tareas, fichajes, turnos, partes de trabajo, proyectos, presupuestos, informes fitosanitarios y estado del campo introducidos en la plataforma.",
+                  "term": "Datos operativos del club:"
+                },
+                {
+                  "text": "posición GPS de vehículos, maquinaria y dispositivos asignados al personal durante la jornada laboral, cuando el club activa los módulos de flota y riego.",
+                  "term": "Datos de ubicación:"
+                },
+                {
+                  "text": "ortofotos e índices multiespectrales (NDVI, NDRE) del campo captados mediante dron en los vuelos contratados.",
+                  "term": "Imágenes y datos aéreos:"
+                },
+                {
+                  "text": "razón social, NIF, dirección fiscal y datos de pago, tratados a través de nuestro proveedor de pagos.",
+                  "term": "Datos de facturación:"
+                },
+                {
+                  "text": "modelo del dispositivo, sistema operativo y versión de la aplicación.",
+                  "term": "Datos del dispositivo:"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "3. Cómo usamos tu información",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Utilizamos la información recopilada para:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                {
+                  "text": "Crear y gestionar las cuentas de usuario del club."
+                },
+                {
+                  "text": "Prestar los módulos contratados: gestión de personal y tareas, fichajes, proyectos, presupuestos y planificación."
+                },
+                {
+                  "text": "Controlar el riego y localizar la flota y la maquinaria en el campo."
+                },
+                {
+                  "text": "Generar informes aéreos, fitosanitarios y de estado del campo."
+                },
+                {
+                  "text": "Atender solicitudes de información, demo y soporte."
+                },
+                {
+                  "text": "Emitir y gestionar las facturas de los planes contratados."
+                },
+                {
+                  "text": "Mejorar y optimizar la plataforma y su rendimiento."
+                },
+                {
+                  "text": "Prevenir fraudes, accesos no autorizados y usos indebidos."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "4. Base legal del tratamiento",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Tratamos tus datos amparados en las siguientes bases legales:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                {
+                  "text": "para prestar los módulos contratados por tu club y gestionar la relación comercial.",
+                  "term": "Ejecución de contrato:"
+                },
+                {
+                  "text": "para atender solicitudes de demo, contacto y comunicaciones comerciales.",
+                  "term": "Consentimiento:"
+                },
+                {
+                  "text": "para cumplir las obligaciones contables, fiscales y de registro de jornada previstas en la normativa aplicable, incluido el Real Decreto-ley 8/2019.",
+                  "term": "Obligación legal:"
+                },
+                {
+                  "text": "para garantizar la seguridad de la plataforma y mejorar nuestros servicios.",
+                  "term": "Interés legítimo:"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "5. Permisos del dispositivo",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "La aplicación móvil solicita los siguientes permisos:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                {
+                  "text": "para adjuntar fotografías a tareas, partes de trabajo e informes fitosanitarios.",
+                  "term": "Cámara:"
+                },
+                {
+                  "text": "para seleccionar imágenes ya existentes y adjuntarlas a un registro.",
+                  "term": "Galería/Almacenamiento:"
+                },
+                {
+                  "text": "para registrar fichajes en el campo y localizar vehículos y maquinaria durante la jornada.",
+                  "term": "Ubicación:"
+                },
+                {
+                  "text": "para avisar de tareas asignadas, alertas de riego e incidencias.",
+                  "term": "Notificaciones:"
+                }
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "Cada permiso se solicita en el momento de uso y puedes revocarlo en cualquier momento desde la configuración de tu dispositivo."
+            }
+          ]
+        },
+        {
+          "title": "6. Almacenamiento y seguridad de los datos",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                {
+                  "text": "Los datos se almacenan en servidores ubicados en la Unión Europea, con cifrado en tránsito (HTTPS/TLS)."
+                },
+                {
+                  "text": "Las contraseñas se almacenan cifradas y nunca en texto plano."
+                },
+                {
+                  "text": "El acceso a la información está controlado por roles y permisos definidos por cada club."
+                },
+                {
+                  "text": "Realizamos copias de seguridad automáticas y aplicamos medidas técnicas y organizativas para proteger la información frente a accesos no autorizados."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "7. Compartición de datos con terceros",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "No vendemos tu información personal. Podemos compartir datos en los siguientes casos:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                {
+                  "text": "los datos operativos son visibles para los usuarios de tu club según el rol y los permisos que este les asigne.",
+                  "term": "Dentro de tu club:"
+                },
+                {
+                  "text": "utilizamos servicios de terceros para alojamiento, comunicaciones y cartografía, que actúan como encargados del tratamiento con los contratos exigidos por el RGPD.",
+                  "term": "Proveedores de servicios:"
+                },
+                {
+                  "text": "los pagos se gestionan a través de Virtuopay OOD, con domicilio en 35 Petrohan Street, Ruse 7006 (Bulgaria).",
+                  "term": "Proveedor de pagos:"
+                },
+                {
+                  "text": "podemos divulgar información cuando lo exija la ley o sea necesario para proteger nuestros derechos legales.",
+                  "term": "Requisitos legales:"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "8. Retención de datos",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Conservamos la información mientras exista una relación contractual con el club o hasta que se solicite su supresión. Una vez finalizada la relación, los datos se eliminan en un plazo máximo de 30 días, salvo que la normativa aplicable exija conservarlos durante un periodo mayor."
+            }
+          ]
+        },
+        {
+          "title": "9. Tratamiento por cuenta del club",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Respecto de los datos de los empleados y socios que el club introduce en la plataforma, el club actúa como responsable del tratamiento y OrlegiTech como encargado, en los términos del artículo 28 del RGPD. El club garantiza que dispone de base legal suficiente para dicho tratamiento e informa a las personas afectadas."
+            }
+          ]
+        },
+        {
+          "title": "10. Tus derechos",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Como usuario, tienes derecho a:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                {
+                  "text": "solicitar una copia de tus datos personales.",
+                  "term": "Acceso:"
+                },
+                {
+                  "text": "corregir datos inexactos desde tu perfil o solicitándolo por escrito.",
+                  "term": "Rectificación:"
+                },
+                {
+                  "text": "solicitar la eliminación de tu cuenta y de los datos asociados.",
+                  "term": "Supresión:"
+                },
+                {
+                  "text": "solicitar tus datos en un formato estructurado y de uso común.",
+                  "term": "Portabilidad:"
+                },
+                {
+                  "text": "oponerte al tratamiento de tus datos para determinados fines.",
+                  "term": "Oposición:"
+                },
+                {
+                  "text": "solicitar la limitación del tratamiento en los supuestos previstos por la normativa.",
+                  "term": "Limitación:"
+                }
+              ]
+            },
+            {
+              "kind": "paragraph",
+              "text": "Puedes ejercer estos derechos escribiendo a info@orlegitech.com. También tienes derecho a presentar una reclamación ante la Agencia Española de Protección de Datos (www.aepd.es)."
+            }
+          ]
+        },
+        {
+          "title": "11. Cambios en esta política",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Podemos actualizar esta Política de Privacidad periódicamente. Te notificaremos los cambios significativos a través de la plataforma o por correo electrónico. El uso continuado de OrlegiTech tras dichos cambios constituye la aceptación de la política actualizada."
+            }
+          ]
+        },
+        {
+          "title": "12. Contacto",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Si tienes preguntas sobre esta Política de Privacidad o deseas ejercer tus derechos, puedes contactarnos en:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                {
+                  "text": "info@orlegitech.com",
+                  "term": "Correo electrónico:",
+                  "email": "info@orlegitech.com"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Términos y Condiciones",
+      "updated": "Última actualización: 16 de septiembre de 2026",
+      "intro": "Estos Términos y Condiciones (“Términos”) regulan la contratación y el uso de OrlegiTech (“nosotros”, “nuestra” o “la plataforma”). Al crear una cuenta o utilizar la plataforma aceptas estos Términos en su totalidad. Si no estás de acuerdo con ellos, no debes utilizar OrlegiTech.",
+      "sections": [
+        {
+          "title": "1. Aceptación de los Términos",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Al registrarte, acceder o utilizar OrlegiTech confirmas que has leído, entendido y aceptado estos Términos, así como nuestra Política de Privacidad. Si utilizas la plataforma en nombre de un club o empresa, declaras contar con la autorización necesaria para obligarle."
+            }
+          ]
+        },
+        {
+          "title": "2. Identificación del titular y objeto",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "OrlegiTech es una plataforma de digitalización y gestión de campos de golf operada por Orlegitech, con domicilio en Calle Ferrerías 19, oficina 1, 20011 Donostia - San Sebastián (España). Estos Términos regulan la contratación y el uso de la plataforma por parte de los clubes cliente y de los usuarios que estos autoricen."
+            }
+          ]
+        },
+        {
+          "title": "3. Registro y seguridad de la cuenta",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                {
+                  "text": "Cada usuario debe facilitar información veraz y mantenerla actualizada."
+                },
+                {
+                  "text": "Las credenciales de acceso son personales e intransferibles y el usuario es responsable de custodiarlas."
+                },
+                {
+                  "text": "El club es responsable de asignar y revocar los roles y permisos de sus usuarios."
+                },
+                {
+                  "text": "Debes notificarnos de inmediato cualquier uso no autorizado de tu cuenta."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "4. Normas de uso",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Al utilizar OrlegiTech te comprometes a:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                {
+                  "text": "Hacer un uso lícito de la plataforma y conforme a estos Términos."
+                },
+                {
+                  "text": "No intentar acceder a datos de otros clubes ni a áreas restringidas del servicio."
+                },
+                {
+                  "text": "No introducir contenido ilícito, ofensivo o que vulnere derechos de terceros."
+                },
+                {
+                  "text": "No realizar ingeniería inversa, copiar o revender la plataforma sin autorización."
+                },
+                {
+                  "text": "No interferir en el funcionamiento del servicio ni en su seguridad."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "5. Datos y contenido del cliente",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "El club conserva la titularidad de los datos operativos, imágenes e informes que introduce o genera en la plataforma. El club garantiza que dispone de base legal suficiente para tratar los datos de sus empleados y socios dentro de OrlegiTech, y nos autoriza a procesarlos con la única finalidad de prestar el servicio contratado, conforme a nuestra",
+              "link": {
+                "label": "Política de Privacidad",
+                "href": "/privacy",
+                "suffix": "."
+              }
+            }
+          ]
+        },
+        {
+          "title": "6. Funcionalidades del servicio",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Las funcionalidades disponibles dependen del plan y de los módulos contratados. Los informes aéreos, los índices multiespectrales y las recomendaciones del asistente son herramientas de apoyo a la decisión: no sustituyen el criterio técnico del equipo de mantenimiento ni garantizan un resultado agronómico concreto. Podemos añadir, modificar o retirar funcionalidades, informando previamente de los cambios relevantes."
+            }
+          ]
+        },
+        {
+          "title": "7. Planes, suscripciones y pagos",
+          "blocks": [
+            {
+              "kind": "list",
+              "items": [
+                {
+                  "text": "Los precios vigentes de cada plan y de los módulos adicionales son los publicados en la página de planes."
+                },
+                {
+                  "text": "Salvo indicación expresa, los precios no incluyen los impuestos aplicables."
+                },
+                {
+                  "text": "La facturación se realiza según la periodicidad del plan contratado."
+                },
+                {
+                  "text": "Los pagos se gestionan a través de Virtuopay OOD, con domicilio en 35 Petrohan Street, Ruse 7006 (Bulgaria)."
+                },
+                {
+                  "text": "El club puede cancelar su suscripción en cualquier momento; la cancelación impide la renovación siguiente y el acceso se mantiene hasta el final del periodo ya facturado."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "8. Suspensión y terminación",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Podemos suspender o cancelar el acceso a la plataforma en caso de incumplimiento de estos Términos, impago o uso que comprometa la seguridad del servicio o los derechos de terceros. Finalizada la relación, el club podrá solicitar la exportación de sus datos antes de su eliminación en los plazos indicados en la Política de Privacidad."
+            }
+          ]
+        },
+        {
+          "title": "9. Propiedad intelectual",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "La plataforma, su software, su diseño y sus marcas son titularidad de Orlegitech o de sus licenciantes. La contratación de un plan concede al club un derecho de uso limitado, no exclusivo e intransferible durante la vigencia de la suscripción, sin transmitir ningún otro derecho de propiedad intelectual o industrial."
+            }
+          ]
+        },
+        {
+          "title": "10. Limitación de responsabilidad",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "OrlegiTech se presta en los términos descritos y no garantizamos que el servicio esté libre de interrupciones o errores. En la medida permitida por la ley, no respondemos de los daños indirectos, la pérdida de beneficios o las decisiones agronómicas u operativas adoptadas por el club a partir de la información mostrada en la plataforma."
+            }
+          ]
+        },
+        {
+          "title": "11. Cambios en los Términos",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Podemos modificar estos Términos para reflejar cambios legales o del servicio. Te notificaremos los cambios significativos a través de la plataforma o por correo electrónico. El uso continuado tras dichos cambios constituye su aceptación."
+            }
+          ]
+        },
+        {
+          "title": "12. Legislación aplicable",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Estos Términos se rigen por la legislación española. Para cualquier controversia, las partes se someten a los juzgados y tribunales de Donostia - San Sebastián, salvo que la normativa aplicable disponga otro fuero."
+            }
+          ]
+        },
+        {
+          "title": "13. Contacto",
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Si tienes preguntas sobre estos Términos, puedes contactarnos en:"
+            },
+            {
+              "kind": "list",
+              "items": [
+                {
+                  "text": "info@orlegitech.com",
+                  "term": "Correo electrónico:",
+                  "email": "info@orlegitech.com"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
   }
 }
