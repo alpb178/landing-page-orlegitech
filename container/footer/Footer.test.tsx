@@ -13,3 +13,17 @@ describe("Footer", () => {
     expect(screen.getByText(/Virtuopay/i)).toBeInTheDocument();
   });
 });
+
+describe("Footer standalone-page links", () => {
+  it.each([
+    ["Soporte", "/support"],
+    ["Privacidad", "/privacy"],
+    ["Términos", "/terms"],
+  ])("links %s to %s", (label, href) => {
+    render(<Footer />);
+    expect(screen.getByRole("link", { name: label })).toHaveAttribute(
+      "href",
+      href
+    );
+  });
+});
