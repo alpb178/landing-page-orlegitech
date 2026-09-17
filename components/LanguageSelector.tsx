@@ -57,7 +57,7 @@ export const LanguageSelector = ({
         aria-expanded={isLanguageMenuOpen}
         aria-label={currentLanguage.name}
         onClick={() => setIsLanguageMenuOpen(!isLanguageMenuOpen)}
-        className={`flex items-center gap-1 px-3 py-2 rounded-lg transition-colors ${
+        className={`flex items-center gap-1 px-3 py-2 rounded-lg transition-colors cursor-pointer ${
           variant === "desktop"
             ? "text-white hover:text-[#ebeed6]"
             : "text-white hover:text-[#ebeed6]"
@@ -75,7 +75,7 @@ export const LanguageSelector = ({
                 <button
                   type="button"
                   onClick={() => handleChangeLanguage(lang.code)}
-                  className={`w-full text-left px-4 py-2.5 transition-colors flex items-center gap-2 ${
+                  className={`w-full text-left px-4 py-2.5 transition-colors flex items-center gap-2 cursor-pointer ${
                     currentLocale === lang.code
                       ? "bg-white/20 text-white font-semibold"
                       : "text-[#ebeed6] hover:bg-white/10"
